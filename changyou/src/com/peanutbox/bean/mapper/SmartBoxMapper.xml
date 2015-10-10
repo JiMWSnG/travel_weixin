@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peanutbox.bean.SmartBox">
+
+	<insert id="insert" parameterType="SmartBox" useGeneratedKeys="true"
+		keyProperty="smartBoxId">
+		insert into SMART_BOX ( SMART_BOX_CODE,
+		SMART_BOX_NAME,
+		SMART_BOX_VERSION,
+		SMART_BOX_STATUS,
+		SMART_BOX_IP,
+		SMART_BOX_ADDR,
+		UPDATE_TIME,
+		DESCRIPTION)
+		values
+		(#{smartBoxCode},#{smartBoxName},#{smartBoxVersion},#{smartBoxStatus},#{smartBoxIp},#{smartBoxAddr},#{updateTime},#{description})
+	</insert>
+	<select id="selectAll"  resultMap="smartBoxResultMap">
+		select * from SMART_BOX
+	</select>
+	
+	<resultMap id="smartBoxResultMap" type="SmartBox">
+		<id property="smartBoxId" column="SMART_BOX_ID" />
+		<result property="smartBoxName" column="SMART_BOX_NAME"/>
+		<result property="smartBoxCode" column="SMART_BOX_CODE"/>
+		<result property="smartBoxVersion" column="SMART_BOX_VERSION"/>
+		<result property="smartBoxStatus" column="SMART_BOX_STATUS"/>
+		<result property="smartBoxUrl" column="SMART_BOX_URL"/>
+		<result property="smartBoxAddr" column="SMART_BOX_ADDR"/>
+		<result property="updateTime" column="UPDATE_TIME"/>
+		<result property="description" column="DESCRIPTION"/>
+	</resultMap>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peanutbox.bean.SysUser">
+
+	<insert id="insert" parameterType="SysUser" useGeneratedKeys="true"
+		keyProperty="sysUserId">
+		insert into SYS_USER ( USER_ACCOUNT,
+		PASSWORD,
+		USER_TYPE,
+		PHONE_NUMBER,
+		USER_STATUS,
+		CREATE_TIME,
+		LAST_LOGIN_TIME,
+		DESCRIPTION)
+		values
+		(#{userAccount},#{password},#{userType},#{phoneNumber},#{userStatus},#{createTime},#{lastLoginTime},#{description})
+	</insert>
+	<select id="selectSysUserByUserAccount"  resultMap="sysUserResultMap" parameterType="string">
+		select * from SYS_USER where USER_ACCOUNT = #{userAccount}
+	</select>
+	<select id="selectSysUserByPhoneNumber"  resultMap="sysUserResultMap" parameterType="string">
+		select * from SYS_USER where PHONE_NUMBER = #{phoneNumber}
+	</select>
+	<resultMap id="sysUserResultMap" type="SysUser">
+		<id property="sysUserId" column="SYS_USER_ID" />
+		<result property="userAccount" column="USER_ACCOUNT"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="userType" column="USER_TYPE"/>
+		<result property="phoneNumber" column="PHONE_NUMBER"/>
+		<result property="userStatus" column="USER_STATUS"/>
+		<result property="createTime" column="CREATE_TIME"/>
+		<result property="lastLoginTime" column="LAST_LOGIN_TIME"/>
+		<result property="description" column="DESCRIPTION"/>
+	</resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.peanutbox.bean.SmartBox" alias="SmartBox" />
+		<typeAlias type="com.peanutbox.bean.SmartBoxCell" alias="SmartBoxCell" />
+		<typeAlias type="com.peanutbox.bean.ServiceOrder" alias="ServiceOrder" />
+		<typeAlias type="com.peanutbox.bean.ServiceOrderVO" alias="ServiceOrderVO" />
+		<typeAlias type="com.peanutbox.bean.SysUser" alias="SysUser" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/peanutbox/bean/mapper/SmartBoxMapper.xml" />
+		<mapper resource="com/peanutbox/bean/mapper/SmartBoxCellMapper.xml" />
+		<mapper resource="com/peanutbox/bean/mapper/ServiceOrderMapper.xml" />
+		<mapper resource="com/peanutbox/bean/mapper/SysUserMapper.xml" />
+	</mappers>
+</configuration>
