@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- <typeAlias type="com.travel.bean.Account" alias="Account" />
+		<typeAlias type="com.travel.bean.Collection" alias="E_Collection" />
+		<typeAlias type="com.travel.bean.Comment" alias="Comment" />
+		<typeAlias type="com.travel.bean.Contact" alias="Contact" />
+		<typeAlias type="com.travel.bean.Coupon" alias="Coupon" />
+		<typeAlias type="com.travel.bean.DepartureDate" alias="DepartureDate" />
+		<typeAlias type="com.travel.bean.Help" alias="Help" />
+		<typeAlias type="com.travel.bean.Hotel" alias="Hotel" />
+		<typeAlias type="com.travel.bean.Order" alias="Order" />
+		<typeAlias type="com.travel.bean.OrderItem" alias="OrderItem" />
+		<typeAlias type="com.travel.bean.Picture" alias="Picture" />
+		<typeAlias type="com.travel.bean.RouteHotel" alias="RouteHotel" />
+		<typeAlias type="com.travel.bean.RouteItem" alias="RouteItem" />
+		<typeAlias type="com.travel.bean.Tag" alias="Tag" />
+		<typeAlias type="com.travel.bean.Theme" alias="Theme" />
+		<typeAlias type="com.travel.bean.TravelNote" alias="TravelNote" />
+		<typeAlias type="com.travel.bean.User" alias="User" /> -->
+		<typeAlias type="com.travel.bean.Route" alias="Route" />
+		<typeAlias type="com.travel.bean.Ticket" alias="Ticket" />
+
+	</typeAliases>
+	<mappers>
+
+		<!-- <mapper resource="com/travel/bean/mapper/AccountMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/CollectionMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/CommentMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/ContactMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/CouponMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/DepartureDateMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/HelpMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/HotelMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/OrderMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/PictureMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/RouteHotelMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/TagMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/ThemeMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/TravelNoteMapper.xml" />
+		<mapper resource="com/travel/bean/mapper/UserMapper.xml" /> -->
+		<mapper resource="mapper/RouteMapper.xml" />
+		<mapper resource="mapper/TicketMapper.xml" />
+
+	</mappers>
+</configuration>

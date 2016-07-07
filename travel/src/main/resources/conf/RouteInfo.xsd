@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tydic.com/VOP/route" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tydic.com/VOP/route">
+    <element name="routeConfigs">
+    	<complexType>
+    		<sequence>
+    			<element name="routeConfig" minOccurs="0" maxOccurs="unbounded">
+    				<complexType>
+    					<sequence>
+    						<element name="url" type="string" minOccurs="1" maxOccurs="1"></element>
+    					</sequence>
+    					<attribute name="systemKey" type="string" use="required"></attribute>
+    				</complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>
