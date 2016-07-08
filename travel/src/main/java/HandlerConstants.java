@@ -1,8 +1,4 @@
-package com.flydreamer.util.web;
-
-import java.io.Serializable;
-
-public interface HandlerConstants 
+public interface HandlerConstants
 {
 	String S_OK = "1";
 	

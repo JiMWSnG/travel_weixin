@@ -1,18 +1,16 @@
 package com.travel.dao.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.log4j.PropertyConfigurator;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.travel.bean.Product;
 import com.travel.bean.ProductCalendar;
 import com.travel.dao.CalendarDao;
 import com.travel.dao.ProductDao;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,CalendarDao {
 	//{PropertyConfigurator.configure("src/main/resources/conf/log4j.properties");}
@@ -88,7 +86,8 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 	public List<Product> queryAll() {
 		logger.info("准备");
 		try{
-			return getSqlSession().selectList("com.travel.bean.Route.getRouteAllWithPage");
+			List<Product> routes = getSqlSession().selectList("com.travel.bean.Route.getRouteAllWithPage");
+			return routes;
 		}catch(Exception e){
 			logger.error("查询所有route失败");
 			return null;

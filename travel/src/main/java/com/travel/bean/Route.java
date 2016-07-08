@@ -8,6 +8,11 @@ public class Route extends Product {
 		Product route1 = route;
 		System.out.print(route1.getId());
 		System.out.println(route1.toString());
+
+//		Date date = new Date();
+//	System.out.print(	date.getTime());
+//		System.out.println(System.currentTimeMillis());
+//		System.out.print("helloworld");
 	}
 
 	@Override

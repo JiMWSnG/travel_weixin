@@ -1,9 +1,5 @@
-package com.flydreamer.util.web;
-
-
+import com.travel.util.Page;
 import org.apache.log4j.Logger;
-
-import com.flydreamer.page.Page;
 
 
 @SuppressWarnings("serial")
