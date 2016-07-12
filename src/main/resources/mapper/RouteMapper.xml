@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.bean.Route">
+
+	<insert id="addRoute" parameterType="Route" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into route ( 	
+		name,
+		type,
+		picture_path,
+		status,
+		description,
+		create_time,
+		update_time,
+		theme_id,
+		average_price,
+		location,
+		indexs
+		)
+		values
+		(#{name},#{type},#{picturePath},#{status},#{description},
+		#{createTime},#{updateTime},#{themeId},#{price},#{location},#{indexs}) 
+	</insert>
+	<select id="getRouteAllWithPage"  resultMap="RouteResultMap">
+		select * from route
+	</select>
+	<select id="getRouteById"  parameterType="int" resultMap="RouteResultMap">
+		select * from route r where r.id=#{id}
+	</select>
+	<select id="getRouteByName"  parameterType="String" resultMap="RouteResultMap">
+		select * from route r where r.name=#{name} 
+	</select>
+	
+	<select id="getRoutesByStatus"  parameterType="int" resultMap="RouteResultMap">
+		select * from route r where r.status = #{status} order by r.create_time desc 
+	</select>
+	<select id="getRoutesByCategory"  parameterType="String" resultMap="RouteResultMap">
+		select * from route r where r.category = #{category} order by r.create_time desc
+	</select>
+	<select id="searchRoutes" parameterType="String" resultMap="RouteResultMap">
+		select * from route r where r.name like  '%${name}%'  or r.placeTags like '%${name}%'  order by r.create_time desc
+	</select>
+	<select id="getRoutesWithPage"  parameterType="map" resultMap="RouteResultMap">
+		select * from route r
+		<where>
+			<if test="type!=null">r.type=#{type}</if>
+			<if test="location!=null">and r.location = #{location}</if>
+			<if test="indexs!=null">and r.indexs like  '%${indexs}%'</if>
+		</where> 
+		 order by r.create_time desc
+	</select>
+	<update id="updateRouteById" parameterType="Route">
+		update
+		route 
+		<set>
+			update_time = #{updateTime}
+			<if test="name!=null">and name = #{name}</if>
+			<if test="description!=null">and description = #{description}</if>
+			<if test="type!=null">and type=#{type}</if>
+			<if test="picturePath!=null">and picture_path =#{picturePath}</if>
+			<if test="price!=null">and average_price=#{price}</if>
+			<if test="status!=null">and status=#{status}</if>
+			<if test="location!=null">and location = #{location}</if>
+			<if test="indexs!=null">and indexs = #{indexs}</if>
+			<if test="themeId!=null">and theme_id = #{themeId}</if>
+		</set>
+		where  id =#{id}
+	</update>
+	<delete id="deleteRouteById" parameterType="int">
+		delete from route where id =#{id}
+	</delete>
+	
+	<!-- <insert id="addRouteItem" parameterType="RouteItem" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into route_item(
+		route_id,
+		total_price,
+		basic_price,
+		departure,
+		destination,
+		transport,
+		departure_point,
+		price_desc,
+		transport_desc,
+		hotel_desc,
+		book_desc,
+		refund_desc,
+		tip)
+		values(
+		#{routeId},
+		#{totalPrice},#{basicPrice},
+		#{departure},#{destination},#{transport},
+		#{departurePoint},#{priceDesc},#{transportDesc},#{hotelDesc},#{bookDesc},
+		#{refundDesc},#{tip})
+	</insert>
+	<select id="getRouteItemByRouteId"  parameterType="int" resultMap="RouteItemResultMap">
+		select * from route_item ri where ri.route_id=#{routeId}
+	</select>
+	<update id="updateRouteItemByRouteId" parameterType="RouteItem">
+		update
+		route_item 
+		<set>
+			update_time = sysdate()
+			<if test="transport!=null">and transport = #{transport}</if>
+			<if test="departure!=null">and departure=#{departure}</if>
+			<if test="destination!=null">and destination =#{destination}</if>
+			<if test="departurePoint!=null">and departure_point=#{departurePoint}</if>
+			<if test="priceDesc!=null">and price_desc=#{priceDesc}</if>
+			<if test="transportDesc!=null">and transport_desc = #{transportDesc}</if>
+			<if test="hotelDesc!=null">and hotel_desc = #{hotelDesc}</if>
+			<if test="bookDesc!=null">and book_desc = #{bookDesc}</if>
+			<if test="refundDesc!=null">and refund_desc = #{refundDesc}</if>
+			<if test="tip!=null">and tip =#{tip}</if>
+			<if test="totalPrice!=null">and totalPrice=#{totalPrice}</if>
+			<if test="basicPrice!=null">and basicPrice = #${basicPrice}</if>
+		</set>
+		where  route_id =#{routeId}
+	</update>
+	<delete id="deleteRouteItemByRouteId" parameterType="int">
+		delete from route_item where route_id =#{routeId}	
+	</delete>
+ -->
+	<resultMap id="RouteResultMap" type="Route">
+		<id property="id" column="id" />
+		<result property="name" column="name"/>
+		<result property="type" column="type"/>
+		<result property="picturePath" column="picture_path"/>
+		<result property="status" column="status"/>
+		<result property="description" column="description"/>
+		<result property="createTime" column="create_time"  />
+		<result property="updateTime" column="update_time"/>
+		<result property="themeId" column="theme_id"/>
+		<result property="price" column="average_price"/>
+		<result property="location" column="location"/>
+		<result property="indexs" column="indexs"/>
+	</resultMap>
+	<!-- <resultMap type="RouteItem" id="RouteItemResultMap">
+		<id property="id" column="id" />
+		<result property="totalPrice" column="total_price"/>
+		<result property="basicPrice" column="basic_price"/>
+		<result property="departure" column="departure"/>
+		<result property="destination" column="destination"/>
+		<result property="transport" column="transport"/>
+		<result property="departurePoint" column="departure_point"/>
+		<result property="priceDesc" column="price_desc"/>
+		<result property="transportDesc" column="transport_desc"/>
+		<result property="hotelDesc" column="hotel_desc"/>
+		<result property="bookDesc" column="book_desc"/>
+		<result property="refundDesc" column="refund_desc"/>
+		<result property="tip" column="tip"/>
+		<result property="routeId" column="route_id"/>
+	</resultMap> -->
+	
+</mapper>
