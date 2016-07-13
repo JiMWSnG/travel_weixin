@@ -25,7 +25,7 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 		
 		
 		try {
-			int ok = getSqlSession().insert("com.travel.bean.Route.addRoute",route);
+			int ok = getSqlSession().insert("com.travel.bean.Route.add",route);
 			if(ok==1){
 				logger.info("添加{}成功",route.toString());
 				return route.getId();
@@ -66,7 +66,7 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 	public Product queryById(Integer id) {
 		logger.info("准备通过id:{}查询route",id);
 		try{
-			Product route = getSqlSession().selectOne("com.travel.bean.Route.getRouteById", id);
+			Product route = getSqlSession().selectOne("com.travel.bean.Route.getById", id);
 			if(route!=null){
 				logger.info("通过id:{}查询route成功",id);
 				return route;

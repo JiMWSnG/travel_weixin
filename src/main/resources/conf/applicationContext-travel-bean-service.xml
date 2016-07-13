@@ -53,7 +53,7 @@
 	<bean id="PictureService" class="com.travel.service.impl.PictureServiceImpl">
 		<property name="PictureDao" ref="PictureDao"/>
 	</bean>
-	<bean id="RouteService" class="com.travel.service.impl.RouteServiceImpl">
+	<bean id="RouteService" class="com.travel.service.impl.ProductServiceImpl">
 		<property name="RouteDao" ref="RouteDao"/>
 		<property name="RouteHotelDao" ref="RouteHotelDao"/>
 	</bean>

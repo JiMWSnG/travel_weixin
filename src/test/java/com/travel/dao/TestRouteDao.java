@@ -41,7 +41,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 		newRoute.setStatus(1);
 		newRoute.setHoliday(true);
 		newRoute.setThemeId(1);
-		routeDao.addRoute(newRoute);
+		routeDao.add(newRoute);
 		id = newRoute.getId();
 		RouteItem newRouteItem = new RouteItem();
 		newRouteItem.setRouteId(newRoute.getId());
