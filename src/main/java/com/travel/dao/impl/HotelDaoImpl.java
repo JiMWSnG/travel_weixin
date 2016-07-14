@@ -61,11 +61,10 @@ public class HotelDaoImpl extends SqlSessionDaoSupport  implements ProductDao,Ca
 	public List<Product> query(String type, String location, String indexs) {
 		logger.info("准备查询hotel，查询条件type:{},location:{},indexs:{}",type,location,indexs);
 		Map<String,Object> params = new HashMap<>();
-		params.put("type", type);
 		params.put("location", location);
+		params.put("type", type);
 		params.put("indexs", indexs);
 		try{
-			
 			List<Product> hotels=getSqlSession().selectList("com.travel.bean.Hotel.getHotelsWithPage", params);
 			if(hotels!=null){
 				logger.info("查询hotel成功，查询条件type:{},location:{},indexs:{}",type,location,indexs);

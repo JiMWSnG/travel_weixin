@@ -16,6 +16,8 @@ public interface ProductService {
 
     PageResponse getRecommends();
 
+    PageResponse search(String type,String location,String indexs);
+
 
 
 }

@@ -42,7 +42,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="searchTickets" parameterType="String" resultMap="TicketResultMap">
 		select * from Ticket r where r.name like  '%${name}%'  or r.placeTags like '%${name}%'  order by r.create_time desc
 	</select>
-	<select id="getTickets"  parameterType="map" resultMap="TicketResultMap">
+	<select id="getTicketsWithPage"  parameterType="map" resultMap="TicketResultMap">
 		select * from ticket r
 		<where>
 			<if test="type!=null">r.type=#{type}</if>

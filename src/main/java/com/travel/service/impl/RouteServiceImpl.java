@@ -5,6 +5,7 @@ import com.travel.bean.Route;
 import com.travel.contants.Contants;
 import com.travel.dao.ProductDao;
 import com.travel.service.ProductService;
+import com.travel.util.PageContext;
 import com.travel.web.PageResponse;
 import com.travel.web.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,6 @@ import java.util.List;
 public class RouteServiceImpl implements ProductService {
 
 
-    @Resource
     private ProductDao routeDao;
 
     @Override
@@ -55,6 +55,21 @@ public class RouteServiceImpl implements ProductService {
         if(routes!=null){
             response.setSuccess(true);
             response.setData(routes);
+            response.setPage(PageContext.getContext());
+        }else {
+            response.setSuccess(false);
+        }
+        return response;
+    }
+
+    @Override
+    public PageResponse search(String type, String location, String indexs) {
+        PageResponse response = new PageResponse();
+        List<Product> routes = routeDao.query(type, location, indexs);
+        if(routes!=null){
+            response.setSuccess(true);
+            response.setData(routes);
+            response.setPage(PageContext.getContext());
         }else {
             response.setSuccess(false);
         }
@@ -64,5 +79,8 @@ public class RouteServiceImpl implements ProductService {
     @Override
     public int add(Route route) {
         return routeDao.add(route);
+    }
+
+    public void setRouteDao(ProductDao routeDao) {
     }
 }

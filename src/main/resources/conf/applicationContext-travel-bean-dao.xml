@@ -24,7 +24,7 @@
 		parent="abstractDao" /> -->
 	<!-- <bean id="PictureDao" class="com.travel.dao.impl.PictureDaoImpl"
 		parent="abstractDao" /> -->
-	<bean id="RouteDao" class="com.travel.dao.impl.RouteDaoImpl" 
+	<bean id="routeDao" class="com.travel.dao.impl.RouteDaoImpl"
 		parent="abstractDao" />
 	<!-- <bean id="RouteHotelDao" class="com.travel.dao.impl.RouteHotelDaoImpl"
 		parent="abstractDao" />

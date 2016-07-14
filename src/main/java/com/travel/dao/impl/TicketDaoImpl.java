@@ -65,7 +65,7 @@ public class TicketDaoImpl extends SqlSessionDaoSupport implements ProductDao {
 		params.put("indexs", indexs);
 		try{
 			
-			List<Product> tickets=getSqlSession().selectList("com.travel.bean.Ticket.getTickets", params);
+			List<Product> tickets=getSqlSession().selectList("com.travel.bean.Ticket.getTicketsWithPage", params);
 			if(tickets!=null){
 				logger.info("成功查询tickets，查询条件type:{},location:{},indexs:{}",type,location,indexs);
 				return tickets;

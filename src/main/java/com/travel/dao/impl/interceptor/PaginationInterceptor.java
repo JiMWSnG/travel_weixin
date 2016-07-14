@@ -11,8 +11,6 @@ import org.apache.ibatis.scripting.xmltags.ForEachSqlNode;
 import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.executor.ExecutorException;
-import org.apache.ibatis.logging.Log;
-import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
@@ -37,14 +35,16 @@ import com.travel.util.MySql5Dialect;
 import com.travel.util.Page;
 import com.travel.util.PageContext;
 import com.travel.util.ReflectHelper;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 //只拦截select部分
+//TODO:需要拦截的select加WithPage
 @Intercepts({@Signature(type=Executor.class,method="query",args={ MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class })})
 public class PaginationInterceptor implements Interceptor{
 	
-	private final static Log log = LogFactory.getLog(PaginationInterceptor.class);   
+	private final static Logger log = LoggerFactory.getLogger(PaginationInterceptor.class);
 	
 	Dialect dialect = new MySql5Dialect();
 	 

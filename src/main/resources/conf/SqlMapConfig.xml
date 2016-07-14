@@ -3,6 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
 	<typeAliases>
 		<!-- <typeAlias type="com.travel.bean.Account" alias="Account" />
 		<typeAlias type="com.travel.bean.Collection" alias="E_Collection" />
@@ -25,6 +26,12 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.Ticket" alias="Ticket" />
 
 	</typeAliases>
+
+	<plugins>
+		<plugin interceptor="com.travel.dao.impl.interceptor.PaginationInterceptor">
+		</plugin>
+	</plugins>
+
 	<mappers>
 
 		<!-- <mapper resource="com/travel/bean/mapper/AccountMapper.xml" />
