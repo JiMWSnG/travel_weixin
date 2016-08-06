@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.travel.bean.Account">
+
+	<insert id="addAccount" parameterType="Account" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into account (
+		username,
+		passwd,
+		phone,
+		valid_code,
+		authorization ,
+		create_time,
+		update_time,
+		user_id
+		)
+		values
+		(#{username},#{passwd},#{phone},#{validCode},#{authorization},#{createTime},#{updateTime},#{userId})
+	</insert>
+	<select id="getAccountByUsername" parameterType="String"
+		resultMap="AccountResultMap">
+		select * from account a where a.username = #{username}
+	</select>
+	<select id="getUserById" parameterType="int" resultMap="AccountResultMap">
+		select * from user u where u.id = #{userId}
+	</select>
+	<select id="getUserAllWithPage" resultMap="AccountResultMap">
+		select * from user 
+	</select>
+	<select id="getUserByAccountId" parameterType="int">
+		select * from user u where u.account_id = #{accountId}
+	</select>
+	<update id="updateUserById" parameterType="Route">
+		update
+		user 
+		<set>
+			update_time = #{updateTime}
+			<if test="name!=null">and name = #{name}</if>
+			<if test="level!=null">and level = #{level}</if>
+			<if test="grade!=null">and grade=#{grade}</if>
+			<if test="phone!=null">and phone_number =#{phone}</if>
+			<if test="email!=null">and email=#{email}</if>
+			<if test="avatar!=null">and avatar=#{avatar}</if>
+			<if test="lastVisit!=null">and last_visit = #{lastVisit}</if>
+			<if test="lastIp!=null">and last_ip = #{lastIp}</if>
+			<if test="deviceType!=null">and device_type = #{deviceType}</if>
+		</set>
+		where  id =#{id}
+	</update>
+	<delete id="deleteUserById" parameterType="int">
+		delete from user where id =#{id}
+	</delete>
+	<resultMap id="AccountResultMap" type="Account">
+		<id property="id" column="id" />
+		<result property="username" column="username" />
+		<result property="passwd" column="passwd" />
+		<result property="phone" column="phone" />
+		<result property="validCode" column="valid_code" />
+		<result property="authorization" column="authorization" />
+		<result property="userId" column="user_id" />
+		<result property="createTime" column="create_time" />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+</mapper>

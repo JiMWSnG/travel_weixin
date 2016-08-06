@@ -1,5 +1,7 @@
 package com.travel.web;
 
+import com.travel.contants.Contants;
+
 /**
  * Created by Administrator on 2016/7/8.
  */
@@ -8,6 +10,17 @@ public class Response {
     private int code;
     private String msg;
     private Object data;
+
+    public Response(Boolean success, Integer code, String msg, Object data) {
+        this.success = success;
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
+
+    public Response() {
+
+    }
 
     public Object getData() {
         return data;

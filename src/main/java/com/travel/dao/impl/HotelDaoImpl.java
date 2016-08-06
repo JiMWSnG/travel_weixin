@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.travel.bean.Hotel;
+import com.travel.dao.HotelDao;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +15,31 @@ import com.travel.bean.ProductCalendar;
 import com.travel.dao.CalendarDao;
 import com.travel.dao.ProductDao;
 
-public class HotelDaoImpl extends SqlSessionDaoSupport  implements ProductDao,CalendarDao{
+public class HotelDaoImpl extends SqlSessionDaoSupport  implements HotelDao,ProductDao,CalendarDao{
 	private static final Logger logger = LoggerFactory.getLogger(HotelDaoImpl.class);
+
+	@Override
+	public List<Hotel> queryHotel(String type, String location, String keyword, String level) {
+		logger.info("准备查询hotel，查询条件type:{},location:{},indexs:{},level:{}",type,location,keyword,level);
+		Map<String,Object> params = new HashMap<String,Object>();
+		params.put("location", location);
+		params.put("type", type);
+		params.put("indexs", keyword);
+		params.put("level", level);
+		try{
+			List<Hotel> hotels=getSqlSession().selectList("com.travel.bean.Hotel.getHotelsWithPage", params);
+			if(hotels!=null){
+				logger.info("查询hotel成功，查询条件type:{},location:{},indexs:{},level:{}",type,location,keyword,level);
+				return hotels;
+			}
+			logger.debug("查询hotel失败，查询条件type:{},location:{},indexs:{},level:{}",type,location,keyword,level);
+			return null;
+		}catch(Exception e){
+			logger.error("查询hotel失败，查询条件type:{},location:{},indexs:{},level:{}",type,location,keyword,level);
+			return null;
+		}
+	}
+
 	@Override
 	public int add(Product hotel) {
 		logger.info("数据库操作：int RouteDao.add(Product hotel)");
@@ -58,22 +83,22 @@ public class HotelDaoImpl extends SqlSessionDaoSupport  implements ProductDao,Ca
 	}
 
 	@Override
-	public List<Product> query(String type, String location, String indexs) {
-		logger.info("准备查询hotel，查询条件type:{},location:{},indexs:{}",type,location,indexs);
-		Map<String,Object> params = new HashMap<>();
+	public List<Product> query(String category, String location, String indexs) {
+		logger.info("准备查询hotel，查询条件type:{},location:{},indexs:{}", category,location,indexs);
+		Map<String,Object> params = new HashMap<String,Object>();
 		params.put("location", location);
-		params.put("type", type);
+		params.put("category", category);
 		params.put("indexs", indexs);
 		try{
 			List<Product> hotels=getSqlSession().selectList("com.travel.bean.Hotel.getHotelsWithPage", params);
 			if(hotels!=null){
-				logger.info("查询hotel成功，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+				logger.info("查询hotel成功，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 				return hotels;
 			}
-			logger.debug("查询hotel失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.debug("查询hotel失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}catch(Exception e){
-			logger.error("查询hotel失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.error("查询hotel失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}
 	}

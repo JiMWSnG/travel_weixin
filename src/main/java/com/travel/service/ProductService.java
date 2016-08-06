@@ -1,8 +1,8 @@
 package com.travel.service;
 
-import com.travel.bean.Route;
 import com.travel.web.PageResponse;
 import com.travel.web.Response;
+import com.travel.web.RouteRequest;
 
 /**
  * Created by Administrator on 2016/7/8.
@@ -12,7 +12,7 @@ public interface ProductService {
 
     Response getById(int id);
 
-    int add(Route route);
+    Response add(RouteRequest route);
 
     PageResponse getRecommends();
 

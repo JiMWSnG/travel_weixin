@@ -1,15 +1,14 @@
 package com.travel.service.impl;
 
 import com.travel.bean.Product;
-import com.travel.bean.Route;
 import com.travel.contants.Contants;
 import com.travel.dao.ProductDao;
 import com.travel.service.ProductService;
 import com.travel.util.PageContext;
 import com.travel.web.PageResponse;
 import com.travel.web.Response;
+import com.travel.web.RouteRequest;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,9 +16,13 @@ import java.util.List;
  * Created by jim wng on 2016/7/14.
  */
 public class TicketServiceImpl implements ProductService {
-    @Resource
+
+
     private ProductDao ticketDao;
 
+    public void setTicketDao(ProductDao ticketDao) {
+        this.ticketDao = ticketDao;
+    }
     @Override
     public PageResponse search(String type, String location, String indexs) {
         return null;
@@ -40,8 +43,8 @@ public class TicketServiceImpl implements ProductService {
     }
 
     @Override
-    public int add(Route route) {
-        return 0;
+    public Response add(RouteRequest route) {
+        return null;
     }
 
     @Override

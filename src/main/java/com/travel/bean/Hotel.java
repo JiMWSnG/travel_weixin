@@ -1,6 +1,15 @@
 package com.travel.bean;
 
 public class Hotel extends Product {
+	private int hotelMetaId;
+
+	public int getHotelMetaId() {
+		return hotelMetaId;
+	}
+
+	public void setHotelMetaId(int hotelMetaId) {
+		this.hotelMetaId = hotelMetaId;
+	}
 
 	@Override
 	public String toString() {

@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		name,
 		level,
 		grade,
-		phone_number,
+		phone,
 		email,
 		avatar,
 		create_time,
@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		last_ip,
 		device_type)
 		values
-		(#{name},#{level},#{grade},#{phoneNumber},#{email},#{avatar},sysdate(),sysdate(),
+		(#{name},#{level},#{grade},#{phone},#{email},#{avatar},#{createTime},#{updateTime},
 		#{lastVisit},#{lastIp},#{deviceType})
 	</insert>
 	<select id="getUserByPhoneNumber" parameterType="String"
@@ -60,7 +60,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="name" column="name" />
 		<result property="level" column="level" />
 		<result property="grade" column="grade" />
-		<result property="phoneNumber" column="phone_number" />
+		<result property="phone" column="phone" />
 		<result property="email" column="email" />
 		<result property="avatar" column="avatar" />
 		<result property="createTime" column="create_time" />

@@ -25,7 +25,7 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 		
 		
 		try {
-			int ok = getSqlSession().insert("com.travel.bean.Route.add",route);
+			int ok = getSqlSession().insert("com.travel.bean.Route.addRoute",route);
 			if(ok==1){
 				logger.info("添加{}成功",route.toString());
 				return route.getId();
@@ -40,24 +40,24 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 	}
 
 	@Override
-	public List<Product> query(String type,String location,String indexs) {
+	public List<Product> query(String category, String location, String indexs) {
 		//TODO: fenye chuli jiaru 
-		logger.info("准备查询route，查询条件type:{},location:{},indexs:{}",type,location,indexs);
-		Map<String,Object> params = new HashMap<>();
-		params.put("type", type);
+		logger.info("准备查询route，查询条件type:{},location:{},indexs:{}", category,location,indexs);
+		Map<String,Object> params = new HashMap<String,Object>();
+		params.put("type", category);
 		params.put("location", location);
 		params.put("indexs", indexs);
 		try{
 			
 			List<Product> routes=getSqlSession().selectList("com.travel.bean.Route.getRoutesWithPage", params);
 			if(routes!=null){
-				logger.info("查询route成功，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+				logger.info("查询route成功，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 				return routes;
 			}
-			logger.debug("查询route失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.debug("查询route失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}catch(Exception e){
-			logger.error("查询route失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.error("查询route失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}
 	}
@@ -66,7 +66,7 @@ public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,Cal
 	public Product queryById(Integer id) {
 		logger.info("准备通过id:{}查询route",id);
 		try{
-			Product route = getSqlSession().selectOne("com.travel.bean.Route.getById", id);
+			Product route = getSqlSession().selectOne("com.travel.bean.Route.getRouteById", id);
 			if(route!=null){
 				logger.info("通过id:{}查询route成功",id);
 				return route;

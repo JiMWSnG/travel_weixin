@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringModelInspection -->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
-       					http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       					http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 	<bean id="abstractDao" abstract="true">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
@@ -24,19 +25,32 @@
 		parent="abstractDao" /> -->
 	<!-- <bean id="PictureDao" class="com.travel.dao.impl.PictureDaoImpl"
 		parent="abstractDao" /> -->
-	<bean id="routeDao" class="com.travel.dao.impl.RouteDaoImpl"
+	<bean id="UserDao" class="com.travel.dao.impl.UserDaoImpl"
+		  parent="abstractDao" />
+	<bean id="AccountDao" class="com.travel.dao.impl.AccountDaoImpl"
+		  parent="abstractDao" />
+	<bean id="RouteDao" class="com.travel.dao.impl.RouteDaoImpl"
 		parent="abstractDao" />
-	<!-- <bean id="RouteHotelDao" class="com.travel.dao.impl.RouteHotelDaoImpl"
+	<bean id="HotelDao" class="com.travel.dao.impl.HotelDaoImpl"
+		  parent="abstractDao" />
+	<bean id="TicketDao" class="com.travel.dao.impl.TicketDaoImpl"
+		  parent="abstractDao" />
+	<!--<bean id="RouteCalendarDao" class="com.travel.dao.impl.RouteDaoImpl"-->
+		  <!--parent="abstractDao" />-->
+	<!--<bean id="HotelCalendarDao" class="com.travel.dao.impl.HotelDaoImpl"-->
+		  <!--parent="abstractDao" />-->
+	<bean id="SlideBoxDao" class="com.travel.dao.impl.SlideBoxDaoImpl"
+		  parent="abstractDao" />
+	<bean id="RouteOrderDao" class="com.travel.dao.impl.RouteOrderDaoImpl"
 		parent="abstractDao" />
-	<bean id="TagDao" class="com.travel.dao.impl.TagDaoImpl"
-		parent="abstractDao" />	 -->
+	<bean id="HotelOrderDao" class="com.travel.dao.impl.HotelOrderDaoImpl"
+		  parent="abstractDao" />
 	<!-- <bean id="ThemeDao" class="com.travel.dao.impl.ThemeDaoImpl"
 		parent="abstractDao" /> -->
 	<!-- <bean id="TouristDao" class="com.travel.dao.impl.TouristDaoImpl"
 		parent="abstractDao" />
 	<bean id="TravelNoteDao" class="com.travel.dao.impl.TravelNoteDaoImpl"
 		parent="abstractDao" /> -->
-	<!-- <bean id="UserDao" class="com.travel.dao.impl.UserDaoImpl"
-		parent="abstractDao" /> -->
+	<!--  -->
 		
 </beans>

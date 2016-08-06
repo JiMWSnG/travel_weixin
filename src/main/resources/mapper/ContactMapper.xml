@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.bean.Contact">
+    <insert id="addContact" parameterType="Contact" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into travel.contact(
+        name,order_id,IDcard,phone,)
+        values(
+        #{name},#{orderId},#{IdCard},#[phone])
+    </insert>
+
+    <resultMap id="ContactMap" type="Contact" >
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="IdCard" column="IDcard"/>
+        <result property="phone" column="phone"/>
+        <result property="orderId" column="order_id"/>
+    </resultMap>
+
+</mapper>

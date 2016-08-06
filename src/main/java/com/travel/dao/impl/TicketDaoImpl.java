@@ -57,23 +57,23 @@ public class TicketDaoImpl extends SqlSessionDaoSupport implements ProductDao {
 	}
 
 	@Override
-	public List<Product> query(String type, String location, String indexs) {
-		logger.info("准备查询ticket，查询条件type:{},location:{},indexs:{}",type,location,indexs);
-		Map<String,Object> params = new HashMap<>();
-		params.put("type", type);
+	public List<Product> query(String category, String location, String indexs) {
+		logger.info("准备查询ticket，查询条件type:{},location:{},indexs:{}", category,location,indexs);
+		Map<String,Object> params = new HashMap<String,Object>();
+		params.put("type", category);
 		params.put("location", location);
 		params.put("indexs", indexs);
 		try{
 			
 			List<Product> tickets=getSqlSession().selectList("com.travel.bean.Ticket.getTicketsWithPage", params);
 			if(tickets!=null){
-				logger.info("成功查询tickets，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+				logger.info("成功查询tickets，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 				return tickets;
 			}
-			logger.debug("查询tickets失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.debug("查询tickets失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}catch(Exception e){
-			logger.error("查询tickets失败，查询条件type:{},location:{},indexs:{}",type,location,indexs);
+			logger.error("查询tickets失败，查询条件type:{},location:{},indexs:{}", category,location,indexs);
 			return null;
 		}
 	}

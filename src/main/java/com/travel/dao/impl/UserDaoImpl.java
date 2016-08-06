@@ -1,25 +1,27 @@
 package com.travel.dao.impl;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.travel.bean.Account;
 import com.travel.bean.User;
-import com.travel.dao.AccountDao;
 import com.travel.dao.UserDao;
 
-public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao,AccountDao{
+public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 	private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
 	@Override
-	public int add(User user) throws SQLException {
+	public int add(User user) {
+		user.setCreateTime(new Date().getTime()/1000);
+		user.setUpdateTime(new Date().getTime()/1000);
 		try {
 			return getSqlSession().insert("com.travel.bean.User.addUser",user);
 		} catch (Exception e) {
-			throw new SQLException("添加用户时，发生异常",e);
+			e.printStackTrace();
+			return -1;
 		}
 	}
 
@@ -72,7 +74,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao,Account
 	}
 
 	@Override
-	public int remove(Integer id) throws SQLException {
+	public int remove(Integer id) {
 		try{
 			int ok = getSqlSession().delete("com.travel.bean.User.deleteUserById",id);
 			if(ok>0){
@@ -86,16 +88,6 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao,Account
 		}
 	}
 
-	@Override
-	public Account queryByUserId(Integer userId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public int updatePasswordByUserId(Integer userId, String password) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }

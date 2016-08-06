@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.DepartureDate" alias="DepartureDate" />
 		<typeAlias type="com.travel.bean.Help" alias="Help" />
 		<typeAlias type="com.travel.bean.Hotel" alias="Hotel" />
-		<typeAlias type="com.travel.bean.Order" alias="Order" />
+
 		<typeAlias type="com.travel.bean.OrderItem" alias="OrderItem" />
 		<typeAlias type="com.travel.bean.Picture" alias="Picture" />
 		<typeAlias type="com.travel.bean.RouteHotel" alias="RouteHotel" />
@@ -24,6 +24,18 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.User" alias="User" /> -->
 		<typeAlias type="com.travel.bean.Route" alias="Route" />
 		<typeAlias type="com.travel.bean.Ticket" alias="Ticket" />
+		<typeAlias type="com.travel.bean.SlideBox" alias="SlideBox" />
+		<typeAlias type="com.travel.bean.Order" alias="Order" />
+		<typeAlias type="com.travel.bean.Account" alias="Account" />
+		<typeAlias type="com.travel.bean.User" alias="User" />
+		<typeAlias type="com.travel.bean.Contact" alias="Contact" />
+		<typeAlias type="com.travel.bean.Hotel" alias="Hotel" />
+		<typeAlias type="com.travel.bean.HotelCalendar" alias="HotelCalendar" />
+		<typeAlias type="com.travel.bean.HotelOrder" alias="HotelOrder" />
+		<typeAlias type="com.travel.bean.RouteCalendar" alias="RouteCalendar" />
+		<typeAlias type="com.travel.bean.RouteOrder" alias="RouteOrder" />
+		<typeAlias type="com.travel.bean.Theme" alias="Theme" />
+		<typeAlias type="com.travel.bean.TicketOrder" alias="TicketOrder" />
 
 	</typeAliases>
 
@@ -51,6 +63,16 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="com/travel/bean/mapper/UserMapper.xml" /> -->
 		<mapper resource="mapper/RouteMapper.xml" />
 		<mapper resource="mapper/TicketMapper.xml" />
+		<mapper resource="mapper/SlideBoxMapper.xml" />
+		<mapper resource="mapper/AccountMapper.xml" />
+		<mapper resource="mapper/ContactMapper.xml" />
+		<mapper resource="mapper/HotelCalendarMapper.xml" />
+		<mapper resource="mapper/HotelMapper.xml" />
+		<mapper resource="mapper/HotelOrderMapper.xml" />
+		<mapper resource="mapper/OrderMapper.xml" />
+		<mapper resource="mapper/RouteCalendarMapper.xml" />
+		<mapper resource="mapper/RouteOrderMapper.xml" />
+		<mapper resource="mapper/UserMapper.xml" />
 
 	</mappers>
 </configuration>

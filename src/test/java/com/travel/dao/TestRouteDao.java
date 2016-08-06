@@ -18,16 +18,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.travel.bean.Product;
 import com.travel.bean.Route;
-import com.travel.dao.ProductDao;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:conf/applicationContext-travel-bean-dao.xml","classpath*:conf/applicationContext-travel-db-dbcp.xml",
+@ContextConfiguration(locations = {"classpath*:conf/applicationContext-travel-bean-dao.xml", "classpath*:conf/applicationContext-travel-db-dbcp.xml",
 })
 @Transactional
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)  
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)
 public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests {
 	@Resource(name="RouteDao")
 	private ProductDao routeDao;
-	
+
 	private int id;
 	private int  routeItem_id;
 	@Before
@@ -68,7 +68,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 		newRoute.setIndexs("nan ji");
 		newRoute.setPicturePath("asdad");
 		//newRoute.setThemeId(null);
-		
+
 		try{
 			//assertNotNull("id:"+newRoute.getId(), newRoute.getId());
 			int result = routeDao.add(newRoute);
@@ -79,7 +79,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 			e.printStackTrace();
 			fail("测试失败 ");
 		}
-		
+
 	}
 	/*@Test
 	public void testAddRouteItem(){
@@ -92,7 +92,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 			e.printStackTrace();
 			fail("测试失败 ");
 		}
-		
+
 	}*/
 	@Test
 	public void testQueryById() {
@@ -107,9 +107,9 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 		catch(Exception e){
 			fail("测试失败");
 		}
-		
+
 	}
-	
+
 
 	/*@Test
 	public void testGetRoutesByCategory() {
@@ -123,7 +123,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 		}
 		catch(Exception e){
 			fail("测试失败");
-		}	
+		}
 	}*/
 
 /*	@Test
@@ -134,7 +134,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 			System.out.println(d.toString());
 			System.out.println(d.getTime());
 			System.out.println(System.currentTimeMillis());
-			
+
 			 List<Route> routes = routeDao.getRoutesByStatus(1);
 			 System.out.println("testGetRoutesByStatus~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			 for (Route route : routes){
@@ -146,7 +146,7 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 			fail("测试失败");
 		}
 	}*/
-	
+
 	/*@Test
 	public void testGetRouteByName(){
 		try{
@@ -160,14 +160,14 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 				System.out.println("get nothing");
 
 			}
-			
+
 		}
 		catch(Exception e){
 			fail("测试失败");
 		}
-	
+
 	}*/
-	
+
 	@Test
 	public void testquery(){
 		try{
@@ -178,6 +178,9 @@ public class TestRouteDao extends AbstractTransactionalJUnit4SpringContextTests 
 //			 routes = routeDao.getRoutes( "new", null, null, null, null, null,null,null,null);
 			 routes = routeDao.query("1", "beiji", null);
 			 System.out.println("testGetRoutes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~测试用例1");
+			if(routes==null){
+				fail("测试失败，没有数据");
+			}
 			 for (Product route : routes){
 				 System.out.println(route.toString());
 //				 System.out.println(route.getRouteItem().toString());

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.bean.SlideBox">
+    <insert id="addSlideBox" useGeneratedKeys="true" keyProperty="id" parameterType="SlideBox">
+        insert into slide_box (
+        type,
+        product_id,
+        picture,
+        status,
+        place,
+        ct,
+        ut
+        )VALUE (
+        #{type},#{productId},#{picture},#{status},#{place},#{ct},#{ut}
+        )
+    </insert>
+    <select id="queryByPlace"  parameterType="map" resultMap="SlideBoxResultMap">
+        select * from slide_box sb
+        <where>
+            sb.place = #{place}
+            <if test="status!=null">and sb.status = #{status}</if>
+        </where>
+        order by sb.ct desc
+    </select>
+
+
+
+    <resultMap id="SlideBoxResultMap" type="SlideBox">
+        <id property="id" column="id" />
+        <result property="type" column="type"/>
+        <result property="picture" column="picture"/>
+        <result property="status" column="status"/>
+        <result property="place" column="place"/>
+        <result property="ct" column="ct"/>
+        <result property="ut" column="ut"/>
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.bean.HotelOrder">
+    <insert id="addHotelOrder" parameterType="map" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into travel.hotel_order_info(
+       day,order_id,room_type,check_man)
+        values(
+        #{day},#{orderId},#{roomType},#[checkMan])
+    </insert>
+
+    <resultMap id="HotelOrderMap" type="HotelOrder" extends="com.travel.bean.Order.OrderResultMap">
+        <result property="day" column="day"/>
+        <result property="roomType" column="room_type"/>
+        <result property="checkMan" column="check_man"/>
+    </resultMap>
+
+</mapper>

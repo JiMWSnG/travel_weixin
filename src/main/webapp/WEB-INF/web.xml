@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--suppress WebProperties, ServletWithoutMappingInspection -->
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
@@ -7,7 +8,7 @@
 		<description>配置spring读取的xml文件，param-name是spring规定，spring自动加载以下内容</description>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath*:applicationContext-travel-all.xml
+			classpath*:conf/applicationContext-travel-all.xml
 		</param-value>
 	</context-param>
 	<!-- <filter> <filter-name>LoginFilter</filter-name> <filter-class>com.travel.filter.LoginFilter</filter-class> 
@@ -29,15 +30,22 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	<!--<listener>-->
+		<!--<listener-class>com.travel.context.ContextHolderListener</listener-class>-->
+	<!--</listener>-->
 	<listener>
-		<listener-class>com.travel.context.ContextHolderListener</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 	<servlet>
 		<servlet-name>SpringMVC</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:applicationContext-travel-spring-mvc.xml</param-value>
+			<param-value>classpath*:conf/applicationContext-travel-spring-mvc.xml</param-value>
+			<!--<param-value>classpath*:conf/applicationContext-travel-all.xml</param-value>-->
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
