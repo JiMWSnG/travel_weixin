@@ -1,0 +1,471 @@
+    /* CSS Document */
+    
+    body,
+    div,
+    ol,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    form,
+    fieldset,
+    legend,
+    input,
+    button {
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+    
+    html {
+        width: 100%;
+        font-family: 'Heiti SC', 'Microsoft YaHei';
+        outline: 0;
+        -webkit-text-size-adjust: none;
+    }
+    
+    body {
+        width: 100%;
+        margin: 0;
+        -webkit-user-select: none;
+        background-color: #fff;
+    }
+    
+    li {
+        list-style-position: outside;
+        list-style-type: none;
+    }
+    
+    #ui-datepicker-div {
+        position: absolute!important;
+        top: 4.5rem!important;
+        left: 50%!important;
+        transform: translate(-42%, 0);
+        font-size: 0.56rem;
+        z-index: 4000!important;
+    }
+    
+    #div_select_city_sub_menu {
+        position: absolute!important;
+        top: 4.5rem!important;
+        left: 50%!important;
+        transform: translate(-50%, 0);
+        z-index: 4000;
+    }
+    
+     #mengban,#mengban2,#mengban3 {
+        position: fixed;
+        display: none;
+        z-index: 2000;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #myprice {
+        width: 100%;
+        height: 60%;
+        position: fixed;
+        bottom: 0;
+        background: #F5F5F5;
+        font-size: 0.3em;
+        z-index: 3000;
+        display: none;
+    }
+    
+    #myprice p {
+        color: #777777;
+    }
+    
+    #myprice .moneygroup {
+        width: 98%;
+        margin: 3% 1% 1% 2%;
+    }
+    
+    #myprice .moneygroup ul {
+        width: 100%;
+        margin: 1% 0;
+        float: left;
+    }
+    
+    .myli{
+        float: left;
+        padding: 0;
+        border: 2px solid #f1f1f1;
+        background-color: #fff;
+        height: 0.7rem;
+        margin: 1% 0;
+        width: 24%;
+        line-height: 0.7rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .myli2{
+        float: left;
+        padding: 0;
+        border: 3px solid #f1f1f1;
+        background-color: #fff;
+        height: 0.7rem;
+        margin: 1% 0;
+        width: 32%;
+        line-height: 0.7rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .active{
+        background-color: #3D97DE;
+        color: #fff;
+    }
+    .clear {
+        overflow: hidden;
+        clear: both;
+    }
+    
+    .divide {
+        background: #B0B0B0;
+        /*改变现代浏览器下线条色*/
+        color: #ddd;
+        /*改变ＩＥ浏览器下线条色，最好和Background-color设置一样的色*/
+        /*clear: both;!*可以用来清除浮动*!*/
+        /*float: none;!*取消浮动，可以不设置*!*/
+        width: 96%;
+        /*显式定义宽度*/
+        height: 1px;
+        /*改变部分浏览器下的默认高度*/
+        line-height: 1px;
+        /*保证ＩＥ下高度效果一致，不留白色空白区*/
+        font-size: 0;
+        /*设置为0，以确保IE6下不留空白区*/
+        border: none 0;
+        /*取消默认边框，以背景和高度代替边框效果*/
+        /*margin: 0 0 1.4em;*/
+    }
+    
+    .header {
+        height: 1.35rem;
+        width: 100%;
+        position: relative;
+        background-color: mediumaquamarine;
+    }
+    
+    .mid {
+        background: #F5F5F5;
+        position: relative;
+        width: 100%;
+    }
+    
+    .goback {
+        width: 7%;
+        height: 60%;
+        margin: 2% 0 2% 2%;
+        position: absolute;
+    }
+    
+    .goback a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    
+    .goback a i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-image: url("images/goback.png");
+        position: absolute;
+        background-size: 100% 100%;
+    }
+    
+    .logo {
+        width: 7%;
+        height: 60%;
+        margin: 2% 2% 2% 0;
+        position: absolute;
+        left: 92%;
+    }
+    
+    .logo a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    
+    .logo a i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-image: url("images/account2.png");
+        position: absolute;
+        background-size: 100% 100%;
+    }
+    
+    .title {
+        left: 9%;
+        width: 78%;
+        height: 60%;
+        margin: 2% 2% 2% 3%;
+        position: absolute;
+        /*border: solid thin gainsboro;*/
+        border-radius: 0.1rem;
+        background-color: mediumseagreen;
+        text-align: center;
+    }
+    
+    .title p {
+        line-height: 0.8rem;
+        color: #fff;
+        font-size: 0.4rem;
+    }
+    
+    #_contain {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .main_visual {
+        z-index: 100;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 0;
+    }
+    
+    .main_image {
+        height: 3rem;
+        top: 0;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .main_image ul {
+        width: 9999px;
+        height: 3rem;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .main_image li {
+        float: left;
+        width: 100%;
+        height: 3rem;
+    }
+    
+    .main_image li span {
+        display: block;
+        width: 100%;
+        height: 3rem;
+    }
+    
+    .main_image li a {
+        display: block;
+        width: 100%;
+        height: 3rem;
+    }
+    
+    .main_image li .img_1 {
+        background: url('images/index/img_main_1.jpg') center top no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .main_image li .img_2 {
+        background: url('images/index/banner.png') center top no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .main_image li .img_3 {
+        background: url('images/index/img_main_3.jpg') center top no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .main_image li .img_4 {
+        background: url('images/index/img_main_4.jpg') center top no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .main_image li .img_5 {
+        background: url('images/index/img_main_5.jpg') center top no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    div.flicking_con {
+        position: absolute;
+        top: 2.5rem;
+        left: 50%;
+        z-index: 99;
+        width: 120px;
+        height: 21px;
+        margin: 0 0 0 -50px;
+    }
+    
+    div.flicking_con a {
+        float: left;
+        width: 21px;
+        height: 21px;
+        margin: 0;
+        padding: 0;
+        background: url('images/index/btn_main_img.png') 0 0 no-repeat;
+        display: block;
+        text-indent: -1000px;
+    }
+    
+    div.flicking_con a.on {
+        background-position: 0 -21px;
+    }
+    
+    #btn_prev,
+    #btn_next {
+        z-index: 200;
+        position: absolute;
+        width: 0.73rem !important;
+        height: 0.74rem !important;
+        top: 50%;
+        margin-top: -20px;
+        display: none;
+    }
+    
+    #btn_prev {
+        background: url(images/index/hover_left.png) no-repeat left top;
+        background-size: cover;
+        left: 1rem;
+    }
+    
+    #btn_next {
+        background: url(images/index/hover_right.png) no-repeat right top;
+        background-size: cover;
+        right: 1rem;
+    }
+    
+    .group {
+        font-size: 0.4rem;
+        height: 1.35rem;
+        width: 100%;
+        line-height: 1.35rem;
+    }
+    
+    .group label {
+        display: inline-block;
+        margin-left: 1%;
+        min-width: 15%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .formsize {
+        font-size: 0.4rem;
+        height: 1.35rem;
+        height: 60%;
+        width: 80%;
+        margin-right: 1%;
+    }
+    
+    .btn1 {
+        font-size: 0.5rem;
+        display: block;
+        height: 1.35rem;
+        cursor: pointer;
+        margin: 2%;
+        border: 0.025rem solid transparent;
+        width: 96%;
+        border-radius: 0.1rem;
+    }
+   .btn2 {
+        font-size: 0.5rem;
+        display: block;
+        height: 15%;
+        cursor: pointer;
+        margin: 2%;
+        margin-top: 3%;
+        border: 0.025rem solid transparent;
+        width: 96%;
+        border-radius: 0.1rem;
+        float: left;
+    }
+    .footer {
+        height: 3.675rem;
+        background-color: #066637;
+    }
+    /*为底部增加样式*/
+    /*仿bootstrap*/
+    
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    
+    .btn-primary:focus,
+    .btn-primary.focus {
+        color: #fff;
+        background-color: #286090;
+        border-color: #122b40;
+    }
+    
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+    
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+    
+    .btn-primary:active:hover,
+    .btn-primary.active:hover,
+    .open > .dropdown-toggle.btn-primary:hover,
+    .btn-primary:active:focus,
+    .btn-primary.active:focus,
+    .open > .dropdown-toggle.btn-primary:focus,
+    .btn-primary:active.focus,
+    .btn-primary.active.focus,
+    .open > .dropdown-toggle.btn-primary.focus {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+    
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        background-image: none;
+    }
+    
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled.focus,
+    .btn-primary[disabled].focus,
+    fieldset[disabled] .btn-primary.focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    
+    .btn-primary .badge {
+        color: #337ab7;
+        background-color: #fff;
+    }

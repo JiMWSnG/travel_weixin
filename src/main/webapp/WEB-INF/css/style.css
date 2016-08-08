@@ -1,0 +1,321 @@
+/* CSS Document */
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, button {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+    width: 100%;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 100px;
+    outline: 0;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    position: relative;
+    background-color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+#_contain {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main_visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+}
+
+.main_image {
+    height: 6.6rem;
+    top: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_image ul {
+    width: 9999px;
+    height: 6.6rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main_image li {
+    float: left;
+    width: 100%;
+    height: 6.6rem;
+}
+
+.main_image li span {
+    display: block;
+    width: 100%;
+    height: 6.6rem;
+}
+
+.main_image li a {
+    display: block;
+    width: 100%;
+    height: 6.6rem;
+}
+
+.main_image li .img_1 {
+    background: url('../images/index/img_main_1.jpg') center top no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_image li .img_2 {
+    background: url('../images/index/banner.png') center top no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_image li .img_3 {
+    background: url('../images/index/img_main_3.jpg') center top no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_image li .img_4 {
+    background: url('../images/index/img_main_4.jpg') center top no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_image li .img_5 {
+    background: url('../images/index/img_main_5.jpg') center top no-repeat;
+    background-size: 100% 100%;
+}
+
+div.flicking_con {
+    position: absolute;
+    top: 5.8rem;
+    left: 50%;
+    z-index: 999;
+    width: 120px;
+    height: 21px;
+    margin: 0 0 0 -50px;
+}
+
+div.flicking_con a {
+    float: left;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    background: url('../images/index/btn_main_img.png') 0 0 no-repeat;
+    display: block;
+    text-indent: -1000px;
+}
+
+div.flicking_con a.on {
+    background-position: 0 -21px;
+}
+
+#btn_prev, #btn_next {
+    z-index: 11111;
+    position: absolute;
+    width: 0.73rem !important;
+    height: 0.74rem !important;
+    top: 50%;
+    margin-top: -20px;
+    display: none;
+}
+
+#btn_prev {
+    background: url(../images/index/hover_left.png) no-repeat left top;
+    background-size: cover;
+    left: 1rem;
+}
+
+#btn_next {
+    background: url(../images/index/hover_right.png) no-repeat right top;
+    background-size: cover;
+    right: 1rem;
+}
+
+
+
+a:hover, a:link, a:visited, a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none
+}
+
+i {
+    font-style: normal
+}
+
+header {
+    width: 100%;/*12.42rem;*/
+    height: 1.35rem;
+    background-color: #7BCFA6;
+}
+
+._header {
+    width: 100%;/*12.42rem;*/
+    height: 1.35rem;
+    background-color: #7BCFA6;
+}
+
+._header .logo {
+    float: left;
+    display: block;
+    width: 7%;
+    height: 60%;
+    margin: 1.6% 0 2% 2%;
+    /*background: url(../images/icon/logo.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+
+._header .logo_image {
+    width: 100%;
+    height: 100%;
+}
+
+._header .sch {
+    float: left;
+    width: 78%;
+    height: 60%;
+    margin: 2% 2% 2% 2%;
+    /*border: solid thin gainsboro;*/
+    border-radius: 0.1rem;
+    background-color: #BFE1D0;
+    text-align: center;
+}
+
+._header .sch p {
+    line-height: 0.8rem;
+    color: #fff;
+    font-size: 0.4rem;
+}
+
+._header .sch p img {
+    width: 0.45rem;
+    height: 0.44rem;
+    vertical-align: middle;
+}
+
+.account {
+    float: left;
+    display: block;
+    width: 7%;
+    height: 60%;
+    margin: 2% 2% 2% 0;
+    border-radius: 0.1rem;
+    /*background: url(../images/icon/account2.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*float: left;
+    display: block;
+    width: 0.85rem;
+    height: 0.8rem;
+    margin: 0.24rem 0 0.24rem 0.18rem;
+    background: url(../images/icon/logo.png) no-repeat;
+    background-size: 0.85rem 0.8rem;*/
+}
+
+.account_image {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.footer {
+    width: 12.42rem;
+    height: 1rem;
+    text-align: center;
+}
+
+.footer .divide {
+    width: 100%;
+}
+
+.footer .rights {
+    font-family: Arial, "Times New Roman", "Songti SC";
+    font-size: small;
+    color: gray;
+    margin-top: 0.2rem;
+}
+*/
+
+
+/*footer {
+    position: fixed;
+    bottom: 0;
+    width: 12.42rem;
+    height: 1.58rem;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+footer .foot {
+    float: left;
+    width: 1rem;
+    height: 1.2rem;
+    margin: 0.15rem 0 0.2rem 1.68rem;
+    text-align: center;
+    overflow: hidden;
+    color: #7ecef4;
+}
+
+footer .foot img {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0 auto;
+    display: block;
+}
+
+footer .foot p {
+    margin-top: 0.15rem;
+    font-size: 0.3rem;
+}
+
+footer .act {
+    color: #9c9c9c;
+}
+
+.logo-dbs {
+    height: 0.9rem;
+    overflow: hidden;
+}
+
+.logo-dbs .dbs-img {
+    float: left;
+    width: 1rem;
+    height: 0.8rem;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+
+.logo-dbs .dbs-img img {
+    width: 0.85rem;
+    height: 0.8rem;
+    display: block;
+}
+
+.logo-dbs p {
+    float: left;
+    margin-left: 0.15rem;
+    font-size: 0.35rem;
+    line-height: 0.8rem;
+    color: #fff;
+}
+
+.jg {
+    width: 12.42rem;
+    height: 1.58rem;
+}*/

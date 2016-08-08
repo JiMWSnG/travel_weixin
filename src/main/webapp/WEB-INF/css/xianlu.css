@@ -1,0 +1,97 @@
+/* CSS Document */
+.luxian_header {
+    width: 100%;/*12.42rem;*/
+    height: 1.35rem;
+    background-color: #7BCFA6;
+}
+
+.luxian_header .back {
+    float: left;
+    display: block;
+    width: 2%;
+    height: 30%;
+    margin: 3.5% 0 3% 3%;
+    background: url(../images/icon/back.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_title {
+    text-align: center;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: large;
+    color: white;
+    float: left;
+    height: 60%;
+    width: 70%;
+    margin-top: 3%;
+    padding-left: 10%;
+}
+
+.search_icon {
+    float: left;
+    display: block;
+    width: 4%;
+    height: 40%;
+    margin: 3.1% 2% 2% 0;
+    border-radius: 0.1rem;
+    background: url(../images/icon/sch.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.show_products {
+    width: 100%;
+    text-align: center;
+    margin: 0.1rem 0 0 0;
+}
+
+.options {
+    width: 100%;
+    height: 1rem;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 0.6rem;
+}
+
+#category_all {
+    width: 33%;
+    height: 100%;
+    padding: 0.1rem 0 0.3rem 0;
+    float: left;
+}
+
+#category_pop {
+    width: 33%;
+    height: 100%;
+    padding: 0.1rem 0 0.3rem 0;
+    float: left;
+}
+
+#category_new {
+    width: 33%;
+    height: 100%;
+    padding: 0.1rem 0 0.3rem 0;
+    float: left;
+}
+
+.active {
+    width: 33%;
+    height: 100%;
+    padding: 0.1rem 0 0.3rem 0;
+    float: left;
+    font-weight: bold;
+    color: #7BCFA6;
+    border-bottom: solid medium;
+}
+
+#products_all {
+    display: block;
+}
+
+#products_pop {
+    display: none;
+}
+
+#products_new {
+    display: none;
+}

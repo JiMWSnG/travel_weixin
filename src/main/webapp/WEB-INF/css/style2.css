@@ -1,0 +1,147 @@
+/* CSS Document */
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, button {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html{
+    width: 100%;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 50px;
+    outline: 0;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    background-color: #fff;
+}
+
+li{
+    list-style-type: none;
+}
+
+.header{
+    height:60px;
+    width: 100%;
+    top:0;
+    position:absolute;
+    background-color: #7BCFA6;
+}
+
+.top{
+    height:132px;
+    width: 100%;
+    top:60px;
+    position:absolute;
+    background-color: #35A66f;
+}
+
+.mid{
+    background: #BFE1D0;
+    position:absolute;
+    top:192px;
+    left: 0;    
+    width:100%; 
+}
+
+
+.goback a{
+    display: block;
+    width:5%; 
+    height:132px;   
+    position: absolute;
+    top:0;
+}
+
+.goback a i{
+    display: block;
+    height:42px;
+    width:20px;
+    background-image: url("images/goback.png");
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -21px;
+    margin-left:-10px;
+}
+
+.logo a{
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    width: 7%;
+    height: 132px;
+ }
+ 
+ .logo a i
+  {
+    display: block;
+    height:128px;
+    width:128px;
+    background-image: url("images/account2.png"); 
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top: -64px;
+    margin-left:-64px;
+}
+.title {
+    position:absolute;
+    color: #fff;
+    left:5%;
+    width:88%;
+    top:0;
+    font-size: 60px;
+    height: 132px;
+    line-height: 132px;
+    text-indent:41%;
+} 
+
+.group{
+    padding: 25px;
+    border-bottom: 4px solid #35A66f;
+    box-sizing: border-box;
+}
+.group label{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left:1%;
+    min-width: 15%;
+    font-size: 50px;
+}
+
+.formsize{
+    height: 100px;
+    box-sizing: border-box;
+    line-height: 100px;
+    font-size:50px;
+    width:80%;
+    margin-right:1%;
+}
+
+.btncontent{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    font-size: 50px;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.footer{
+    height: 147px;
+    background-color: #066637;
+}
+/*为底部增加样式*/
+
+
+

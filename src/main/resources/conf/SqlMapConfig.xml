@@ -30,6 +30,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.User" alias="User" />
 		<typeAlias type="com.travel.bean.Contact" alias="Contact" />
 		<typeAlias type="com.travel.bean.Hotel" alias="Hotel" />
+		<typeAlias type="com.travel.bean.HotelMeta" alias="HotelMeta" />
 		<typeAlias type="com.travel.bean.HotelCalendar" alias="HotelCalendar" />
 		<typeAlias type="com.travel.bean.HotelOrder" alias="HotelOrder" />
 		<typeAlias type="com.travel.bean.RouteCalendar" alias="RouteCalendar" />

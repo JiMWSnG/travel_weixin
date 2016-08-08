@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by Jim Wang on 2016/8/1.
  */
-public  class LoginRequest {
+public  class LoginRequest implements Request {
     private String username;
     private String passwd;
     private String CAPTCHA;

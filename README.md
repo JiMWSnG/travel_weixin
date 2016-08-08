@@ -1,5 +1,5 @@
 #travel_api
-/**route的api基本完善，hotel的还有些问题，ticket还没测
+/**route的api基本完善，hotel的还有些问题，ticket还没测**/
 slideBox place: index route
 插入数据库的时间单位为s，gettime()/1000
 
@@ -25,7 +25,7 @@ params:pageSize,currentPage
 return: success  {"success":true,"code":0,"msg":null,"data":[{"id":10,"picturePath":"iqweb","name":"bei'ji","type":"1","description":"a good route","createTime":131213131,"updateTime":1312123131,"price":100.0,"location":"beiji","status":"1","indexs":"beijidsa","themeId":null}],"page":{"pageSize":10,"currentPage":1,"totalPages":0,"totalRows":0,"pageStartRow":0,"pageEndRow":0,"pagination":false,"hasNextPage":false,"hasPreviousPage":false,"pagedView":null}}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
-/hotel/recommends                                                                                       ok
+/hotel/recommends                                                                                       ok没数据
 需要分页
 params:pageSize,currentPage
 return: success  {"success":true,"code":0,"msg":null,"data":[],"page":{"pageSize":10,"currentPage":1,"totalPages":0,"totalRows":0,"pageStartRow":0,"pageEndRow":0,"pagination":false,"hasNextPage":false,"hasPreviousPage":false,"pagedView":null}}
@@ -56,12 +56,12 @@ params:routeId
 return: success  {"success":true,"code":0,"msg":null,"data":{"route":{"id":24,"picturePath":"","name":"北京三日游","type":"2","description":"这是一个测试线路，啦啦啦啦啦啦啦啦啦","createTime":1470385140,"updateTime":1470385140,"price":100.0,"location":"北京市内","status":"0","indexs":"故宫，颐和园，长城","themeId":null},"routeCalendar":{"id":5,"productId":24,"calendar":"{2016:{may:{1:{price:1.00,totalMount:100,currentMount:99},2:{...}},june:{...}},2017:{...}}","createTime":1470385145,"updateTime":1470385145}}}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
-/hotel/search/{type}/{location}/{indexs}/{level}                                                ok
+/hotel/search/{type}/{location}/{indexs}/{level}     搜索酒店                                 ok type参数待定，需要确定是房型还是category
 params:location,type,indexs ,level,  pageSize,currentPage
 return: success  {"success":true,"code":0,"msg":null,"data":[],"page":{"pageSize":10,"currentPage":1,"totalPages":0,"totalRows":0,"pageStartRow":0,"pageEndRow":0,"pagination":false,"hasNextPage":false,"hasPreviousPage":false,"pagedView":null}}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
-/detail/{hotelId}
+/detail/{hotelId}               具体的房型信息                                                    ok但数据库没数据
 params:hotelId
 return: success  {"success":true,"code":0,"msg":null,"data":{"route":{"id":24,"picturePath":"","name":"北京三日游","type":"2","description":"这是一个测试线路，啦啦啦啦啦啦啦啦啦","createTime":1470385140,"updateTime":1470385140,"price":100.0,"location":"北京市内","status":"0","indexs":"故宫，颐和园，长城","themeId":null},"routeCalendar":{"id":5,"productId":24,"calendar":"{2016:{may:{1:{price:1.00,totalMount:100,currentMount:99},2:{...}},june:{...}},2017:{...}}","createTime":1470385145,"updateTime":1470385145}}}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
@@ -71,11 +71,19 @@ params:picturePath,name,type,description,price,location,status,indexs,themeId,ca
 return: success  {"success":true,"code":0,"msg":null,"data":routeId}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
-/backstage/slideBox/add                                                                               ok
+/backstage/slideBox/add        添加轮播窗                                                             ok
 params:picture,type,productId,place,status
 return: success  {"success":true,"code":0,"msg":null,"data":null}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
+/backstage/hotel/add     添加酒店房型信息     一个hotelMeta对应多个hotel房型                         ok
+params:picturePath,type,,status,name,price,description,hotelMetaId,calendar
+return: success  {"success":true,"code":0,"msg":null,"data":hotelId}
+           fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
+/backstage/hotel/addMeta   添加酒店信息                                                            ok
+params:picturePath,type,,status,name,price,description,hotelMetaId,calendar
+return: success  {"success":true,"code":0,"msg":null,"data":hotelMetaId}
+           fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
 《-----------------------------------------常量-------------------------------------------------------》
 public static  final int  INITIAL_CODE = 9999;

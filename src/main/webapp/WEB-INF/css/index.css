@@ -1,0 +1,437 @@
+/* CSS Document */
+.logo-dbs {
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+}
+
+/*.banner {
+    position: relative;
+    width: 12.42rem;
+    height: 6.6rem;
+    overflow: hidden;
+}*/
+
+.banner img {
+    width: 12.42rem;
+    height: 6.6rem;
+}
+
+/*.main_image {
+    width: 100%;
+    height: 6.6rem;
+}*/
+
+.banner {
+    width: 12.42rem;
+    height: 6.6rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu {
+    width: 10rem;
+    height: 3.03rem;
+    margin: auto;
+    /*border-bottom: 5px solid #d9d9d9;*/
+    background-color: inherit;
+    /*background-color: #e0e0e0;*/
+}
+
+.menu .nav {
+    float: left;
+    width: 33%;
+    height: 2.2rem;
+    margin: 0.6rem 0 0 0;
+    overflow: hidden;
+    font-size: 0.4rem;
+    text-align: center;
+}
+
+.menu .nav img {
+    width: 1.42rem;
+    height: 1.42rem;
+}
+
+.menu .nav p {
+    margin-top: 0.2rem;
+    font-size: 0.4rem;
+}
+
+.divide {
+    background: #ddd;/*改变现代浏览器下线条色*/
+    color: #ddd;/*改变ＩＥ浏览器下线条色，最好和Background-color设置一样的色*/
+    /*clear: both;!*可以用来清除浮动*!*/
+    /*float: none;!*取消浮动，可以不设置*!*/
+    width: 96%;/*显式定义宽度*/
+    height: 1px;/*改变部分浏览器下的默认高度*/
+    line-height: 1px;/*保证ＩＥ下高度效果一致，不留白色空白区*/
+    font-size: 0;/*设置为0，以确保IE6下不留空白区*/
+    border: none 0;/*取消默认边框，以背景和高度代替边框效果*/
+    /*margin: 0 0 1.4em;*/
+}
+
+.name {
+    width: 12.42rem;
+    height: 1.05rem;
+    text-align: center;
+    font-size: 0.8rem;/*标题字体大小*/
+    line-height: 1.3rem;
+    margin: 0.4rem 0 0 0;
+    /*border-bottom: 1px solid #e1e1e1;*/
+}
+
+.name .name_title {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.name .name_more {
+    float: right;
+    margin-right: 0.8rem;
+}
+
+.icon_more {
+    height: 0.4rem;
+    width: 0.3rem;
+}
+
+.contain {
+    width: 12.14rem;
+    height: 100%;
+    margin: 0 0.14rem;
+    overflow: hidden;
+}
+
+.ad {
+    width: 12.14rem;
+    height: 7.4rem;
+    margin-top: 0.3rem;
+}
+
+.ad-picture {
+    width: 12.14rem;
+    height: 5rem;
+    margin-top: 0.3rem;
+    background: url("../images/index/rcd_1.png") left top;
+    background-size: cover;
+}
+
+.ad-legend {
+    width: 25%;
+    height: 30%;
+    background-color: white;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 0.4rem;
+    float: right;
+    margin: 3.1rem 0.4rem 0.3rem 0;
+    filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.ad-price {
+    width: 100%;
+    height: 0.75rem;
+    line-height: 0.75rem;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+    background-color: #EF6D3B;
+    font-size: 0.5rem;
+    color: white;
+}
+
+.ad-price .qi {
+    font-size: 0.4rem;
+}
+
+.ad-surplus {
+    width: 100%;
+    height: 0.75rem;
+    line-height: 0.75rem;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    font-size: 0.45rem;
+    color: #EF6D3B;
+}
+
+.ad-title {
+    width: 90%;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    margin: 0.6rem 0.3rem 0.3rem 0.4rem;
+    font-size: 0.6rem;
+    text-align: left;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-description {
+    width: 90%;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    margin: 0.4rem 0.3rem 0.4rem 0.4rem;
+    font-size: 0.4rem;
+    text-align: left;
+    color: gray;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.more {
+    width: 12.42rem;
+    height: 1.37rem;
+    line-height: 1.37rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.more p {
+    font-size: 0.5rem;
+    color: #7BCFA6;
+}
+
+.more p img {
+    width: 0.2rem;
+    height: 0.33rem;
+    margin-left: 0.2rem;
+}
+
+
+.ad-hotel {
+    width: 12.14rem;
+    height: 4rem;
+    margin-top: 0.05rem;
+}
+
+.ad-hotel-picture {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0.05rem;
+    /*background: url("../images/index/hotel_1.jpg") left top;*/
+    /*background-size: 100% 100%;*/
+    float: left;
+}
+
+.hotel-picture {
+    width: 4rem;
+    height: 4rem;
+}
+
+.ad-hotel-description {
+    height: 4rem;
+    margin-top: 0.05rem;
+    overflow: hidden;
+}
+
+.ad-hotel-title {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.65rem;
+    margin: 0.3rem 0.4rem 0.4rem 0.4rem;
+    text-align: left;
+
+}
+
+.ad-hotel-notes {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.5rem;
+    color: gray;
+    margin: 0.1rem 0.5rem 0.2rem 0.4rem;
+    text-align: left;
+}
+
+.ad-hotel-price {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.7rem;
+    color: #EF6D3B;
+    margin: 1rem 0.7rem 0.2rem;
+    text-align: right;
+}
+
+.ad-hotel-discount {
+    font-size: 0.5rem;
+}
+
+.ad-hotel-cost {
+    font-weight: bold;
+}
+
+.ad-hotel-qi {
+    font-size: 0.5rem;
+    color: gray;
+}
+
+.ad-ticket {
+    width: 12.14rem;
+    height: 6.8rem;
+    margin-top: 0.3rem;
+}
+
+.ad-ticket-title {
+    width: 90%;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    margin: 0.4rem 0.3rem 0.1rem 0.3rem;
+    font-size: 0.6rem;
+    text-align: left;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-ticket-price {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.7rem;
+    color: #EF6D3B;
+    margin: -0.2rem 0.7rem 0.2rem;
+    text-align: right;
+}
+
+.ad-ticket-qi {
+    font-size: 0.5rem;
+    color: gray;
+}
+
+
+.is_visible {
+    visibility: visible;
+}
+
+.not_visible {
+    visibility: hidden;
+}
+
+.main_page {
+
+}
+
+.search_page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.cancel {
+    float: left;
+    display: block;
+    width: 2%;
+    height: 30%;
+    margin: 3.5% 0 3% 3%;
+    background: url(../images/icon/back.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.search { /*搜索图标,搜索框和搜索按钮*/
+    float: left;
+    display: block;
+    width: 89%;
+    height: 70%;
+    margin: 1.6% 0 0 3%;
+    border-radius: 0.1rem;
+    background-color: white;
+}
+
+.search .div_sch_icon {
+    float: left;
+    width: 9%;
+    height: 100%;
+}
+
+.div_sch_icon .sch_icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../images/icon/search.png") no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+}
+
+.search .div_sch_input { /*输入框和按钮*/
+    float: left;
+    width: 90%;
+    height: 100%;
+    border-radius: 0.1rem;
+}
+
+.div_sch_input .search_form { /*表单*/
+    width: 100%;
+    height: 100%;
+}
+
+.search_input { /*输入框*/
+    float: left;
+    width: 85%;
+    height: 100%;
+    display: table;
+    border: none;
+    background-color: white;
+    font-size: 0.5rem;
+}
+
+.button_search { /*搜索按钮*/
+    float: left;
+    width: 15%;
+    height: 100%;
+    display: table;
+    border: none;
+    border-left: solid thin lightgray;
+    background-color: inherit;
+    /*background-color: whitesmoke;*/
+    padding-left: 0.05rem;
+    font-size: 0.48rem;
+    color: #7BCFA6;
+}
+
+.recommend {
+    width: 100%;
+    text-align: center;
+}
+
+.rcm_title {
+    width: 100%;
+    height: 0.7rem;
+    text-align: left;
+}
+
+.rcm_title p {
+    margin: 0.4rem 0 0.1rem 0.4rem;
+    font-size: 0.45rem;
+    color: gray;
+}
+
+.rcm_content {
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+    color: dimgray;
+    padding:0 0 10rem 0.1rem;
+}
+
+.rcm_content li {
+    float: left;
+    width: 21%;
+    height: 1rem;
+    line-height: 1rem;
+    border-radius: 0.1rem;
+    margin: 0.4rem 0 0 0.3rem;
+    border: solid thin lightgray;
+}
+
+

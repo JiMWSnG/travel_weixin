@@ -1,16 +1,20 @@
 package com.travel.service.impl;
 
 import com.travel.bean.Hotel;
+import com.travel.bean.HotelCalendar;
+import com.travel.bean.HotelMeta;
 import com.travel.bean.Product;
 import com.travel.contants.Contants;
+import com.travel.dao.CalendarDao;
 import com.travel.dao.HotelDao;
 import com.travel.dao.ProductDao;
 import com.travel.service.HotelService;
 import com.travel.service.ProductService;
 import com.travel.util.PageContext;
+import com.travel.web.HotelRequest;
 import com.travel.web.PageResponse;
+import com.travel.web.Request;
 import com.travel.web.Response;
-import com.travel.web.RouteRequest;
 
 import java.util.List;
 
@@ -20,6 +24,12 @@ import java.util.List;
 public class HotelServiceImpl implements HotelService,ProductService {
     private HotelDao  hotelDaoSpecial;
     private ProductDao hotelDao;
+
+    private CalendarDao hotelCalendarDao;
+
+    public void setHotelCalendarDao(CalendarDao hotelCalendarDao) {
+        this.hotelCalendarDao = hotelCalendarDao;
+    }
     @Override
     public PageResponse searchHotels(String type, String location, String keyword, String level) {
         PageResponse response = new PageResponse();
@@ -65,8 +75,28 @@ public class HotelServiceImpl implements HotelService,ProductService {
     }
 
     @Override
-    public Response add(RouteRequest route) {
-        return null;
+    public Response add(Request request) {
+        Response response =new Response();
+        HotelRequest hotelRequest =(HotelRequest)request;
+        Hotel hotel = hotelRequest;
+        int hotelId = hotelDao.add(hotel);
+        if(hotelId<0){
+            response.setSuccess(false);
+            response.setCode(Contants.DB_ERROR_CODE);
+            return response;
+        }
+        HotelCalendar hotelCalendar = new HotelCalendar();
+        hotelCalendar.setProductId(hotelId);
+        hotelCalendar.setCalendar(hotelRequest.getCalendar());
+        if(hotelCalendarDao.addCalendar(hotelCalendar)<0){
+            hotelDao.remove(hotelId);
+            response.setSuccess(false);
+            response.setCode(Contants.DB_ERROR_CODE);
+            return response;
+        }
+        response.setSuccess(true);
+        response.setData(hotelId);
+        return response;
     }
 
     @Override
@@ -86,6 +116,26 @@ public class HotelServiceImpl implements HotelService,ProductService {
             response.setSuccess(false);
             response.setCode(Contants.DB_ERROR_CODE);
         }
+        return response;
+    }
+
+    @Override
+    public Response addHotelMeta(HotelRequest hotelRequest) {
+        Response response = new Response();
+        HotelMeta hotelMeta = new HotelMeta();
+        hotelMeta.setCategory(hotelRequest.getCategory());
+        hotelMeta.setLevel(hotelRequest.getLevel());
+        hotelMeta.setName(hotelRequest.getName());
+        hotelMeta.setLocation(hotelRequest.getLocation());
+        hotelMeta.setIndexs(hotelRequest.getIndexs());
+        int hotelMetaId = hotelDaoSpecial.addHotelMeta(hotelMeta);
+        if(hotelMetaId<0){
+            response.setSuccess(false);
+            response.setCode(Contants.DB_ERROR_CODE);
+            return response;
+        }
+        response.setSuccess(true);
+        response.setData(hotelMetaId);
         return response;
     }
 }

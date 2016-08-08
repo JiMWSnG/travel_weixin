@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>畅游</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--允许iphone设备全屏浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> -->
+    <!--允许用户将网页创建快捷方式到桌面-->
+    <title>酒店定制</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" rev="stylesheet" href="css/jock-citypicker-2.0.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="js/mainSlider.js"></script>
+    <script type="text/javascript" src="js/jock-citypicker-2.0.min.js"></script>
+    <script type="text/javascript" src="js/price.js"></script>
+    <script type="text/javascript" src="js/citypick.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li class="goback"><a href="" class="revert"><i class="icon icon-left"></i></a></li>
+            <li class="title">
+                <p>酒店预订
+                    <P>
+            </li>
+            <li class="logo"><a href="" class="account"><i class="icon icon-right"></i></a></li>
+            </li>
+        </ul>
+    </div>
+    <div id="_contain">
+        <div class="main_visual">
+            <div class="flicking_con">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+            <div class="main_image">
+                <ul>
+                    <li><span class="img_1"><a href="#"></a></span></li>
+                    <li><span class="img_2"><a href="#"></a></span></li>
+                    <li><span class="img_3"><a href="#"></a></span></li>
+                    <li><span class="img_4"><a href="#"></a></span></li>
+                    <li><span class="img_5"><a href="#"></a></span></li>
+                </ul>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+            <!--<img src="images/index/banner.png">-->
+            <!--<div class="logo-dbs">
+        <div class="dbs-img">
+            <img src="images/icon/logo.png">
+        </div>
+        <p>全球低价游，满足你世界梦！</p>-->
+        </div>
+        <div class="mid">
+            <form id="submitform">
+                <p class="group">
+                    <label>目的地</label>
+                    <input type="text" id="destination" class="formsize destination" name="destination" placeholder="请输入您的目的地">
+                    <br>
+                </p>
+                <hr class="divide">
+                <p class="group">
+                    <label>入住时间</label>
+                    <input type="text" id="datepicker1" class="formsize" name="datepicker1" placeholder="请选择您的入住时间">
+                    <br>
+                </p>
+                <hr class="divide">
+                <p class="group">
+                    <label >离店时间</label>
+                    <input type="text" id="datepicker2" class="formsize" name="datepicker2" placeholder="请选择您的离店时间">
+                    <br>
+                </p>
+                <hr class="divide">
+                <p class="group">
+                    <label >关键词</label>
+                    <input type="text" id="keywords" class="formsize" name="text" placeholder="关键字">
+                    <br>
+                </p>
+                <hr class="divide">
+                <p class="group">
+                    <label>酒店级别</label>
+                    <input type="text" id="level" class="formsize" name="text" placeholder="价格/星级">
+                    <br>
+                </p>
+                <hr class="divide">
+                <button class="btn1 btn-primary" type="button">搜&nbsp;&nbsp;索</button>
+            </form>
+        </div>
+    </div>
+    <div id="mengban"></div>
+    <div id="mengban2"></div>
+    <div id="mengban3"></div>
+    <div id="myprice">
+        <div class="moneygroup">
+            <p>价格</p>
+            <ul id="price">
+                <li class="active myli">不限</li>
+                <li class="myli">￥150以下</li>
+                <li class="myli">￥150-300</li>
+                <li class="myli">￥301-405</li>
+                <li class="myli">￥451-600</li>
+                <li class="myli">￥601-1000</li>
+                <li class="myli">￥1000以上</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="moneygroup">
+            <p>星级</p>
+            <ul id="price">
+                <li class="active myli2">不限</li>
+                <li class="myli2">快捷连锁</li>
+                <li class="myli2">二星及以下/经济</li>
+                <li class="myli2">三星/舒适</li>
+                <li class="myli2">四星/高档</li>
+                <li class="myli2">五星/豪华</li>
+            </ul>
+        </div>
+        <button class="btn2 btn-primary" id="price_btn" type="button">确&nbsp;&nbsp;定</button>
+    </div>
+</body>
+
+</html>

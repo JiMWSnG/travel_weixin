@@ -1,10 +1,12 @@
 package com.travel.dao.impl;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.travel.bean.Hotel;
+import com.travel.bean.HotelMeta;
 import com.travel.dao.HotelDao;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.slf4j.Logger;
@@ -17,6 +19,37 @@ import com.travel.dao.ProductDao;
 
 public class HotelDaoImpl extends SqlSessionDaoSupport  implements HotelDao,ProductDao,CalendarDao{
 	private static final Logger logger = LoggerFactory.getLogger(HotelDaoImpl.class);
+
+	@Override
+	public int removeHotelMeta(int hotelMetaId) {
+		try{
+
+			int ok = getSqlSession().delete("com.travel.bean.Hotel.deleteHotelMetaById",hotelMetaId);
+			if(ok>0){
+				return hotelMetaId;
+			}
+			return -1;
+		}catch (Exception e){
+			return -1;
+		}
+	}
+
+	@Override
+	public int addHotelMeta(HotelMeta hotelMeta) {
+		long currentTime = new Date().getTime()/1000;
+		hotelMeta.setCt(currentTime);
+		hotelMeta.setUt(currentTime);
+		try {
+			int ok = getSqlSession().insert("com.travel.bean.Hotel.addHotelMeta",hotelMeta);
+			if(ok<=0){
+                return -1;
+            }
+			return hotelMeta.getId();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
 
 	@Override
 	public List<Hotel> queryHotel(String type, String location, String keyword, String level) {

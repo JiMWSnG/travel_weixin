@@ -5,7 +5,7 @@ import com.travel.bean.Route;
 /**
  * Created by Jim Wang on 2016/8/5.
  */
-public class RouteRequest extends Route{
+public class RouteRequest extends Route implements Request{
     protected String calendar;
 
     public String getCalendar() {

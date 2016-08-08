@@ -9,6 +9,7 @@ import com.travel.dao.ProductDao;
 import com.travel.service.ProductService;
 import com.travel.util.PageContext;
 import com.travel.web.PageResponse;
+import com.travel.web.Request;
 import com.travel.web.Response;
 import com.travel.web.RouteRequest;
 
@@ -99,15 +100,16 @@ public class RouteServiceImpl implements ProductService {
     }
 
     @Override
-    public Response add(RouteRequest route) {
+    public Response add(Request request) {
         Response response = new Response();
-        if(route==null){
+        RouteRequest routeRequest= (RouteRequest) request;
+        if(routeRequest ==null){
             response.setSuccess(false);
             response.setCode(Contants.PARAM_ERROR_CODE);
             response.setMsg("参数为空");
             return response;
         }
-        int routeId = routeDao.add(route);
+        int routeId = routeDao.add(routeRequest);
         if(routeId<0){
             response.setSuccess(false);
             response.setCode(Contants.DB_ERROR_CODE);
@@ -115,7 +117,7 @@ public class RouteServiceImpl implements ProductService {
             return response;
         }
         RouteCalendar routeCalendar = new RouteCalendar();
-        routeCalendar.setCalendar(route.getCalendar());
+        routeCalendar.setCalendar(routeRequest.getCalendar());
         routeCalendar.setProductId(routeId);
         if(routeCalendarDao.addCalendar(routeCalendar)<0){
             routeDao.remove(routeId);

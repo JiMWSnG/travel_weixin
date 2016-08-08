@@ -1,21 +1,21 @@
 package com.travel.bean;
 
 public  abstract class Order {
-	int id;
-	String type;
-	String name;
-	String description;
-	double discount;
-	double price;
-	int productId;
-	int couponId;//for extend
-	String status;
-	String statusMsg;
-	int userId;
-	int num;
-	long createTime;
-	long updateTime;
-	String orderFrom;
+	private int id;
+	private String type;
+	private String name;
+	private String description;
+	private double discount;
+	private double price;
+	private int productId;
+	private int couponId;//for extend
+	private String status;
+	private String statusMsg;
+	private int userId;
+	private int num;
+	private long createTime;
+	private long updateTime;
+	private String orderFrom;
 
 	public Order(Order order) {
 		this.id = order.getId();

@@ -1,0 +1,107 @@
+html,body{
+	height:100%
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0;
+	vertical-align:baseline
+}
+.mod_list_city a{
+	color:#325E7F
+}
+.mod_list_city a:link,.mod_list_city a:visited{
+	text-decoration:none
+}
+.mod_list_city a:hover,.mod_list_city a:active{
+	text-decoration:underline
+}
+.mod_list_city{
+	margin:0;
+	padding:0;
+	font-family:Microsoft YaHei,Verdana,arial0;
+	font-size:0.3rem;
+	padding:0.2rem 0.5rem 0.2rem 0.2rem;
+	position:absolute;
+	width:10rem;
+	background-color:#FFFFFF;
+	border:0.0125rem solid #9E9E9E;
+	display:none;
+	z-index:400;
+}
+.mod_list_city .city_top{
+	border-bottom:0.0125rem solid #CCCCCC;
+	height:0.3125rem;
+	line-height:0.3125rem
+}
+.mod_list_city .city_top strong{
+	display:inline-block;
+	text-align:left;
+	width:20%;
+}
+.mod_list_city .city_top p{
+	display:inline;
+	float:right;
+	text-align:right;
+	width:80%;
+}
+.mod_list_city a{
+	color:#325E7F;
+	margin-right:0.0375rem;
+	padding:0.05rem
+}
+.mod_list_city .city_top a{
+	margin-right:0.0375rem;
+	padding:0.025rem
+}
+.mod_list_city .hot{
+	margin-top: 0.1rem;
+	height:0.4rem;
+	line-height:0.4rem
+}
+.mod_list_city .hot a{
+	margin-left:0.1em;
+}
+.mod_list_city .hot strong{
+	display:inline-block; 
+	width:5em;
+}
+.mod_list_city .list_wrap h4{
+	font-size:0.3rem;
+	height:0.3125rem;
+	line-height:0.3125rem;
+	margin-top:0.0625rem
+}
+.mod_list_city .list_wrap{		/*可以改高度和导航条位置*/
+	height:6rem;
+	overflow:auto;
+	width:10rem
+}
+.mod_list_city .list_wrap .city_cont{  /*可以改文字空间*/
+	height:4.875rem;
+	margin-top: 0.1rem;
+	width:9.5rem
+}
+.mod_list_city .list_wrap .mod_city_list a{		/*改正文字体大小*/
+	padding:0.1rem;
+	display:inline-block;
+	font-size:0.3rem
+}
+.mod_list_city .list_wrap .mod_city_list .col1{/*全部城市左侧*/
+	width:0.5rem;
+	font-size:0.15rem
+}
+.mod_list_city .list_wrap .mod_city_list .col2{/*全部城市右侧*/
+	width:10.5rem;
+	font-size:0.15rem
+}
+.mod_list_city .list_wrap .mod_city_list th{
+	text-align:left
+}
+.mod_list_city .list_wrap .mod_city_list th span{
+	background-color:#DDDDDD;
+	font-weight:normal;
+	padding:0 0.0375rem;
+	display:inline-block;
+	width:0.15rem;
+	text-align:center
+}

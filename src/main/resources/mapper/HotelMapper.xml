@@ -15,14 +15,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		create_time,
 		update_time,
 		theme_id,
-		price,
+		average_price,
 		location,
 		indexs,
 		hotel_meta_id
 		)
 		values
 		(#{name},#{type},#{picturePath},#{status},#{description},
-		#{createTime},#{updateTime},#{themeId},#{price},#{location},#{indexs},#{hotel_meta_id})
+		#{createTime},#{updateTime},#{themeId},#{price},#{location},#{indexs},#{hotelMetaId})
+	</insert>
+	<insert id="addHotelMeta" parameterType="HotelMeta" useGeneratedKeys="true"
+			keyProperty="id">
+		insert into hotel_meta (
+		name,
+		level,
+		category,
+		ct,
+		ut,
+		location,
+		indexs
+		)VALUES (
+		#{name},#{level},#{category},#{ct},#{ut},#{location},#{indexs}
+		)
+
 	</insert>
 	<select id="getHotelAllWithPage"  resultMap="HotelResultMap">
 		select * from hotel
@@ -48,8 +63,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 		<where>
 			<if test="category!=null">hm.category=#{category}</if>
-			<if test="location!=null">and r.location = #{location}</if>
-			<if test="indexs!=null">and r.indexs like  '%${indexs}%'</if>
+			<if test="location!=null">and hm.location = #{location}</if>
+			<if test="indexs!=null">and hm.indexs like  '%${indexs}%'</if>
 			<if test="level!=null">and hm.level = #{level}</if>
 		</where> 
 		 order by r.create_time desc
@@ -73,6 +88,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	<delete id="deleteHotelById" parameterType="int">
 		delete from hotel where id =#{id}
+	</delete>
+	<delete id="deleteHotelMetaById" parameterType="int">
+		delete from hotel_meta where id =#{id}
 	</delete>
 	
 	

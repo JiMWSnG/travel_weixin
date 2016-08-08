@@ -6,8 +6,8 @@ import com.travel.dao.ProductDao;
 import com.travel.service.ProductService;
 import com.travel.util.PageContext;
 import com.travel.web.PageResponse;
+import com.travel.web.Request;
 import com.travel.web.Response;
-import com.travel.web.RouteRequest;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class TicketServiceImpl implements ProductService {
     }
 
     @Override
-    public Response add(RouteRequest route) {
+    public Response add(Request request) {
         return null;
     }
 

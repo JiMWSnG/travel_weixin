@@ -9,6 +9,9 @@
 	<bean id="HotelService" class="com.travel.service.impl.HotelServiceImpl">
 		<property name="hotelDao" ref="HotelDao"/>
 		<property name="hotelDaoSpecial" ref="HotelDao"/>
+		<property name="hotelCalendarDao" ref="HotelDao"/>
+
+
 	</bean>
 
 	<bean id="RouteService" class="com.travel.service.impl.RouteServiceImpl">
