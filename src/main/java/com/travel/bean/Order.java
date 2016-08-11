@@ -16,7 +16,9 @@ public  abstract class Order {
 	private long createTime;
 	private long updateTime;
 	private String orderFrom;
+	public Order(){
 
+	}
 	public Order(Order order) {
 		this.id = order.getId();
 		this.type = order.getType();

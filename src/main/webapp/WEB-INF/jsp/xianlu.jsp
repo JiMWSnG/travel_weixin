@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%><!-- jsp文件保存的编码方式 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +11,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes"> <!--允许iphone设备全屏浏览-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --> <!--允许用户将网页创建快捷方式到桌面-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/xianlu.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/xianlu.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
 
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <!--<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>-->
-    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-    <script type="text/javascript" src="js/mainSlider.js"></script>
-    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="../js/mainSlider.js"></script>
+    <script type="text/javascript" src="../js/Adaptive.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <div class="search_icon"></div>
         <div class="account">
             <a href="#">
-                <img alt="account" src="images/icon/account2.png" class="account_image">
+                <img alt="account" src="../images/icon/account2.png" class="account_image">
             </a>
         </div>
     </div>
@@ -132,7 +133,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
         </div>
         <!--end of products_all-->
@@ -199,7 +200,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
         </div>
         <!--end of products_popular-->
@@ -266,7 +267,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
         </div>
         <!--end of products_new-->

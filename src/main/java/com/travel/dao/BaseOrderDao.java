@@ -9,4 +9,5 @@ public interface BaseOrderDao {
      * @return 返回order的id
      */
     int addOrder(Order order);
+    int removeOrder(Order order);
 }

@@ -149,4 +149,21 @@ public class Contants {
 	public  static final String SLIDEBOX_TYPE_HOTEL = "hotel";
 	public  static final String SLIDEBOX_TYPE_TICKET = "ticket";
 
+	/**
+	 * order status
+	 *
+     */
+	public static final String ORDER_STATUS_TOVERIFY = "toVerify";
+	public static final String ORDER_STATUS_TOPAY = "toPay";
+	public static final String ORDER_STATUS_PAYED = "payed";
+	public static final String ORDER_STATUS_CONSIGNED = "consigned";
+	public static final String ORDER_STATUS_FINISHED = "finished";
+	public static final String ORDER_STATUS_CANCEL = "cancel";
+
+	/**
+	 * contact idcard
+	 */
+	public static final String CONTACT_IDTYPE_SHENFENZHENG = "0";
+	public static final String CONTACT_IDTYPE_HUZHAO = "1";
+	public static final String CONTACT_IDTYPE_HUKOUBEN = "2";
 }

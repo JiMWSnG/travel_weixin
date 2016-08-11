@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.travel.bean.RouteOrder">
     <insert id="addRouteOrder" parameterType="map" useGeneratedKeys="true"
-            keyProperty="id">
-        insert into travel.route_order_info(
-        insured,order_id)
-        values(
-        #{insured},#{orderId})
+                                      keyProperty="id">
+    insert into travel.route_order_info(
+    insured,order_id)
+    values(
+    #{insured},#{orderId})
     </insert>
 
     <resultMap id="RouteOrderMap" type="RouteOrder" extends="com.travel.bean.Order.OrderResultMap">

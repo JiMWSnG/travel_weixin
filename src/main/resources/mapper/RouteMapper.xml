@@ -30,7 +30,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from route r where r.id=#{id}
 	</select>
 	<select id="getRouteByName"  parameterType="String" resultMap="RouteResultMap">
-		select * from route r where r.name=#{name} 
+		select * from route r where r.name=#{name}
 	</select>
 	
 	<select id="getRoutesByStatus"  parameterType="int" resultMap="RouteResultMap">

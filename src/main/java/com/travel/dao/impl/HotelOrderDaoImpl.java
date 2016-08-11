@@ -38,4 +38,8 @@ public class HotelOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrder
         return -1;
     }
 
+    @Override
+    public int removeOrder(Order order) {
+        return 0;
+    }
 }

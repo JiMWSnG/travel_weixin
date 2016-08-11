@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		coupon_id,
 		description,
 		status,
-		state_msg,
+		status_msg,
 		discount,
 		price,
 		num,
@@ -21,8 +21,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update_time,
 		name)
 		values(
-		#{type},#{userId},#{productId},#{couponId},#{description},#{status},#{stateMsg},#{discount},#{price},#{num},#{orderFrom},
-		sysdate(),sysdate(),#{name})
+		#{type},#{userId},#{productId},#{couponId},#{description},#{status},#{statusMsg},#{discount},#{price},#{num},#{orderFrom},
+		#{createTime},#{updateTime},#{name})
 	</insert>
 
 	<select id="getOrderById" parameterType="int" resultMap="OrderResultMap">
@@ -71,7 +71,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="couponId" column="coupon_id" />
 		<result property="description" column="description" />
 		<result property="status" column="status" />
-		<result property="stateMsg" column="state_msg" />
+		<result property="statusMsg" column="status_msg" />
 		<result property="discount" column="discount" />
 		<result property="price" column="price" />
 		<result property="num" column="num"/>

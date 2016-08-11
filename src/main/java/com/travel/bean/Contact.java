@@ -5,10 +5,19 @@ package com.travel.bean;
  */
 public class Contact {
     private Integer id;
-    private String name;
+    private String cname;
+    private String IdType;
     private String IdCard;
     private String phone;
     private Integer orderId;
+
+    public String getIdType() {
+        return IdType;
+    }
+
+    public void setIdType(String idType) {
+        IdType = idType;
+    }
 
     public Integer getId() {
         return id;
@@ -18,12 +27,12 @@ public class Contact {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCname() {
+        return cname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCname(String cname) {
+        this.cname = cname;
     }
 
     public String getIdCard() {

@@ -14,6 +14,9 @@ public class RouteOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrder
         Map<String, Object> params = new HashedMap();
         if (order instanceof RouteOrder) {
             RouteOrder routeOrder = (RouteOrder) order;
+            long currentTime = System.currentTimeMillis()/1000;
+            routeOrder.setCreateTime(currentTime);
+            routeOrder.setUpdateTime(currentTime);
             params.put("insured", routeOrder.getInsured());
 
         }else{
@@ -23,6 +26,7 @@ public class RouteOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrder
             if (!params.isEmpty()) {
                 getSqlSession().insert("com.travel.bean.Order.addOrder", order);
                 params.put("orderId", order.getId());
+                //route_info的id會自動添加到params裏面
                 getSqlSession().insert("com.travel.bean.RouteOrder.addRouteOrder", params);
 
                 return order.getId();
@@ -34,4 +38,8 @@ public class RouteOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrder
         return -1;
     }
 
+    @Override
+    public int removeOrder(Order order) {
+        return 0;
+    }
 }

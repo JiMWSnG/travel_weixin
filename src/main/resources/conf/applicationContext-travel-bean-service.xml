@@ -25,6 +25,7 @@
 
 	<bean id="RouteOrderService" class="com.travel.service.impl.RouteOrderServiceImpl">
 		<property name="routeOrderDao" ref="RouteOrderDao"/>
+		<property name="contactDao" ref="ContactDao"/>
 	</bean>
 	<bean id="HotelOrderService" class="com.travel.service.impl.HotelOrderServiceImpl">
 		<property name="hotelOrderDao" ref="HotelOrderDao"/>

@@ -30,7 +30,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from ticket r where r.id=#{id}
 	</select>
 	<select id="getTicketByName"  parameterType="String" resultMap="TicketResultMap">
-		select * from Ticket r where r.name=#{name} 
+		select * from Ticket r where r.name=#{name}
 	</select>
 	
 	<select id="getTicketsByStatus"  parameterType="int" resultMap="TicketResultMap">

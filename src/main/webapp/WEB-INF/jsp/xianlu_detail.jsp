@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%><!-- jsp文件保存的编码方式 --><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes"> <!--允许iphone设备全屏浏览-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --> <!--允许用户将网页创建快捷方式到桌面-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/detail.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <!--<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>-->
-    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-    <script type="text/javascript" src="js/mainSlider.js"></script>
-    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="../js/mainSlider.js"></script>
+    <script type="text/javascript" src="../js/Adaptive.js"></script>
 </head>
 
 <body>

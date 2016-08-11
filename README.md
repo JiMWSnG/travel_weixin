@@ -65,6 +65,25 @@ return: success  {"success":true,"code":0,"msg":null,"data":[],"page":{"pageSize
 params:hotelId
 return: success  {"success":true,"code":0,"msg":null,"data":{"route":{"id":24,"picturePath":"","name":"北京三日游","type":"2","description":"这是一个测试线路，啦啦啦啦啦啦啦啦啦","createTime":1470385140,"updateTime":1470385140,"price":100.0,"location":"北京市内","status":"0","indexs":"故宫，颐和园，长城","themeId":null},"routeCalendar":{"id":5,"productId":24,"calendar":"{2016:{may:{1:{price:1.00,totalMount:100,currentMount:99},2:{...}},june:{...}},2017:{...}}","createTime":1470385145,"updateTime":1470385145}}}
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
+
+
+ /order/add  添加order                                                                            ok
+params:type:产品类型
+       name:产品的名字
+       description:描述可有可无
+       discount:折扣暂定默认为1；以后添加折扣规则后更改
+       price:价格，congestion产品的calendar中取
+       productId:
+       num:数量
+       cname:联系人姓名
+       IdType:证件类型
+       IdCard:证件号码
+       phone:电话
+       manInfo:入住人信息或投保人信息，格式一样;门票订单不需要[{name:wangji,ID:330481199212195231,phone:18810528262},{```}]
+       roomType:房型，只有酒店订单需要
+       day:入住天数，只有酒店订单需要
+return: success  {"success":true,"code":0,"msg":null,"data":orderId}
+           fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 《-----------------------------------------后台api-------------------------------------------------------》
 /backstage/route/add     添加线路                                                                      ok
 params:picturePath,name,type,description,price,location,status,indexs,themeId,calendar
@@ -87,42 +106,35 @@ return: success  {"success":true,"code":0,"msg":null,"data":hotelMetaId}
 
 《-----------------------------------------常量-------------------------------------------------------》
 public static  final int  INITIAL_CODE = 9999;
-	/**
-	 *  error
-     */
+	/** *  error
+
 	public  static final int USERNAME_ERROR_CODE = -1;
 	public  static final int PASSWD_ERROR_CODE = -2;
 	public  static final int AUTHORIZATION_ERROR_CODE = -4;
-	/**
-	 * TOKEN
-     */
+	/** * TOKEN
+
 	public  static  final String TRAVEL_TOKEN ="QAZWSXEDCRFVBGTYHNMJUIKL";  //token全局用一个
 
 	/** error
-	 *
-     */
+
 	public static final int PARAM_ERROR_CODE = -101;
 	public static final int DB_ERROR_CODE =    -109;
 	public static final int TOKEN_ERROR_CODE = -110;
 
-	/**
-	 * route的type
-	 */
+	/**route的type
+
 	public static final String ROUTE_TYPE_RECOMMEND = "1";
 	public static final String ROUTE_TYPE_NORMAL  = "0";
 	public static final String ROUTE_TYPE_HOT = "2";
 	public static final String ROUTE_TYPE_NEW = "3";
 	public static final String ROUTE_TYPE_DEFAULT = "-1";
 
-	/**
-	 * hotel   category
-	 */
+	/** hotel   category
+
 	public static final String HOTEL_CATEGORY_RECOMMEND = "recommend";
 	public static final String HOTEL_CATEGORY_NORMAL  = "normal";
 	public static final String HOTEL_CATEGORY_HOT = "hot";
-	/**
-	 * HOTEL TYPE 房型
-     */
+	/** * HOTEL TYPE 房型*/
 	public static final String HOTEL_TYPE_SINGLE = "1";
 	public static final String HOTEL_TYPE_DOUBLE = "2";
 	public static final String HOTEL_TYPE_TRIPLE = "3";
@@ -200,9 +212,8 @@ public static  final int  INITIAL_CODE = 9999;
 　　DD-Deluxe  Ded     豪华大床房
 　　SS-Standard Single 标准单人间
 　　DS-Deluxe Suite    豪华套房*/
-	/**
-	 * ticket   type
-	 */
-	public static final String TICKET_TYPE_RECOMMEND = "recommend";
+
+	/** ticket   type **/
+    public static final String TICKET_TYPE_RECOMMEND = "recommend";
 	public static final String TICKET_TYPE_NORMAL  = "normal";
 	public static final String TICKET_TYPE_HOT = "hot";

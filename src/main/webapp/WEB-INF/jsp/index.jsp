@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%><!-- jsp文件保存的编码方式 -->
 <!doctype html>
 <html>
 <head>
@@ -10,13 +11,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes"> <!--允许iphone设备全屏浏览-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --> <!--允许用户将网页创建快捷方式到桌面-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <!--<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>-->
-    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-    <script type="text/javascript" src="js/mainSlider.js"></script>
-    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="../js/mainSlider.js"></script>
+    <script type="text/javascript" src="../js/Adaptive.js"></script>
 </head>
 
 <body>
@@ -26,14 +27,14 @@
     <header>
         <div class="_header">
             <div class="logo">
-                <a href="#"><img src="images/icon/logo.png" alt="Logo" class="logo_image"></a>
+                <a href="#"><img src="../images/icon/logo.png" alt="Logo" class="logo_image"></a>
             </div>
             <div id="sch" class="sch">
-                <p><img src="images/icon/sch.png">搜索目的地、帖子、景点</p>
+                <p><img src="../images/icon/sch.png">搜索目的地、帖子、景点</p>
             </div>
             <div class="account">
                 <a href="#">
-                    <img alt="account" src="images/icon/account2.png" class="account_image">
+                    <img alt="account" src="../images/icon/account2.png" class="account_image">
                 </a>
             </div>
         </div>
@@ -74,20 +75,20 @@
 
         <div class="menu">
             <div class="nav">
-                <a href="xianlu.html">
-                    <img src="images/menu/icon_luxian.png">
+                <a href="xianlu.jsp">
+                    <img src="../images/menu/icon_luxian.png">
                     <p>线路</p>
                 </a>
             </div>
             <div class="nav">
-                <a href="jiudian.html">
-                    <img src="images/menu/icon_jiudian.png">
+                <a href="jiudian.jsp">
+                    <img src="../images/menu/icon_jiudian.png">
                     <p>酒店</p>
                 </a>
             </div>
             <div class="nav">
                 <a href="menpiao">
-                    <img src="images/menu/icon_menpiao.png">
+                    <img src="../images/menu/icon_menpiao.png">
                     <p>门票</p>
                 </a>
             </div>
@@ -97,10 +98,10 @@
         <hr class="divide">
 
         <div class="name">
-            <a href="xianlu.html">
+            <a href="xianlu.jsp">
                 <div class="name_title">线路推荐</div>
                 <div class="name_more">
-                    <img class="icon_more" alt="more" src="images/index/more.png">
+                    <img class="icon_more" alt="more" src="../images/index/more.png">
                 </div>
             </a>
         </div>
@@ -164,7 +165,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
 
         </div>
@@ -173,10 +174,10 @@
         <hr class="divide">
 
         <div class="name">
-            <a href="jiudian.html">
+            <a href="jiudian.jsp">
                 <div class="name_title">酒店推荐</div>
                 <div class="name_more">
-                    <img class="icon_more" alt="more" src="images/index/more.png">
+                    <img class="icon_more" alt="more" src="../images/index/more.png">
                 </div>
             </a>
         </div>
@@ -184,7 +185,7 @@
         <div class="contain">
             <div class="ad-hotel">
                 <div class="ad-hotel-picture">
-                    <img src="images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
+                    <img src="../images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
                 </div>
                 <div class="ad-hotel-description">
                     <div class="ad-hotel-title">
@@ -207,7 +208,7 @@
 
             <div class="ad-hotel">
                 <div class="ad-hotel-picture">
-                    <img src="images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
+                    <img src="../images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
                 </div>
                 <div class="ad-hotel-description">
                     <div class="ad-hotel-title">
@@ -230,7 +231,7 @@
 
             <div class="ad-hotel">
                 <div class="ad-hotel-picture">
-                    <img src="images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
+                    <img src="../images/index/hotel_1.jpg" alt="hotel picture" class="hotel-picture">
                 </div>
                 <div class="ad-hotel-description">
                     <div class="ad-hotel-title">
@@ -250,7 +251,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
 
         </div>
@@ -262,7 +263,7 @@
             <a href="menpiao.html">
                 <div class="name_title">门票推荐</div>
                 <div class="name_more">
-                    <img class="icon_more" alt="more" src="images/index/more.png">
+                    <img class="icon_more" alt="more" src="../images/index/more.png">
                 </div>
             </a>
         </div>
@@ -308,7 +309,7 @@
             </div>
 
             <div class="more">
-                <p>查看更多<img src="images/icon/arr-right.png"></p>
+                <p>查看更多<img src="../images/icon/arr-right.png"></p>
             </div>
 
         </div>
@@ -327,7 +328,7 @@
                     <i class="sch_icon"></i>
                 </div>
                 <div class="div_sch_input">
-                    <form action="index.html" method="get" class="search_form">
+                    <form action="index.jsp" method="get" class="search_form">
                         <input type="text" name="keywords" class="search_input" placeholder="北京" />
                         <input type="submit" name="search" value="搜索" class="button_search"/>
                     </form>
@@ -345,22 +346,22 @@
 
         <div class="rcm_content">
             <ul>
-                <li><a href="index.html">北京</a></li>
-                <li><a href="index.html">上海</a></li>
-                <li><a href="index.html">广州</a></li>
-                <li><a href="index.html">日本</a></li>
-                <li><a href="index.html">泰国</a></li>
-                <li><a href="index.html">开封</a></li>
-                <li><a href="index.html">普宁</a></li>
-                <li><a href="index.html">九寨沟</a></li>
-                <li><a href="index.html">古北水镇</a></li>
-                <li><a href="index.html">布达拉宫</a></li>
-                <li><a href="index.html">厦门</a></li>
-                <li><a href="index.html">云南</a></li>
-                <li><a href="index.html">巴厘岛</a></li>
-                <li><a href="index.html">马尔代夫</a></li>
-                <li><a href="index.html">泰山</a></li>
-                <li><a href="index.html">济州岛</a></li>
+                <li><a href="index.jsp">北京</a></li>
+                <li><a href="index.jsp">上海</a></li>
+                <li><a href="index.jsp">广州</a></li>
+                <li><a href="index.jsp">日本</a></li>
+                <li><a href="index.jsp">泰国</a></li>
+                <li><a href="index.jsp">开封</a></li>
+                <li><a href="index.jsp">普宁</a></li>
+                <li><a href="index.jsp">九寨沟</a></li>
+                <li><a href="index.jsp">古北水镇</a></li>
+                <li><a href="index.jsp">布达拉宫</a></li>
+                <li><a href="index.jsp">厦门</a></li>
+                <li><a href="index.jsp">云南</a></li>
+                <li><a href="index.jsp">巴厘岛</a></li>
+                <li><a href="index.jsp">马尔代夫</a></li>
+                <li><a href="index.jsp">泰山</a></li>
+                <li><a href="index.jsp">济州岛</a></li>
             </ul>
         </div>
     </div>
@@ -389,20 +390,20 @@
     	<img src="images/foot/ft_3.png">
         <p>帖子</p>
     </div>
-	<a href="person/person.html"><div class="foot">
+	<a href="person/person.jsp"><div class="foot">
     	<img src="images/foot/ft_4.png">
         <p>我的</p>
     </div></a>
 </footer>-->
 
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
     //to view more
     $(".more").click(function () {
         for (i = 0; i < 4; i++) {
             $(".favorable").append('<div class="fb">'
                     + '<div class="fb-lt">'
-                    + '<img src="' + 'images/scenics/scenic_5.png' + '"/>'
+                    + '' + '<img src="../images/scenics/scenic_5.png"/>' + ''
                     + '<p class="fb-name">体验全球最长的过山车15天超爽旅游</p>'
                     + '<p class="price">' + '<span class="discount">2.8折</span>'
                     + '<span class="num"><big>2889</big>元起</span>'

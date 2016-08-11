@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%><!-- jsp文件保存的编码方式 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,16 +16,16 @@
     <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> -->
     <!--允许用户将网页创建快捷方式到桌面-->
     <title>酒店定制</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-    <link rel="stylesheet" rev="stylesheet" href="css/jock-citypicker-2.0.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/dingzhi_style.css">
-    <script type="text/javascript" src="js/Adaptive.js"></script>
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/picker.js"></script>
-    <script type="text/javascript" src="js/jock-citypicker-2.0.min.js"></script>
-    <script type="text/javascript" src="js/citypick.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" rev="stylesheet" href="../css/jock-citypicker-2.0.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/dingzhi_style.css">
+    <script type="text/javascript" src="../js/Adaptive.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/picker.js"></script>
+    <script type="text/javascript" src="../js/jock-citypicker-2.0.min.js"></script>
+    <script type="text/javascript" src="../js/citypick.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 
 <body>

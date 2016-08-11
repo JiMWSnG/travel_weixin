@@ -46,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from hotel r where r.id=#{id}
 	</select>
 	<select id="getHotelByName"  parameterType="String" resultMap="HotelResultMap">
-		select * from Hotel r where r.name=#{name} 
+		select * from Hotel r where r.name=#{name}
 	</select>
 	
 	<select id="getHotelsByStatus"  parameterType="int" resultMap="HotelResultMap">
