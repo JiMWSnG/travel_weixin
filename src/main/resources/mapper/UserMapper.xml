@@ -17,10 +17,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update_time,
 		last_visit,
 		last_ip,
-		device_type)
+		device_type,
+		open_id,
+		sex,
+		city,
+		country,
+		province,
+		sub_time,
+		subscribe)
 		values
 		(#{name},#{level},#{grade},#{phone},#{email},#{avatar},#{createTime},#{updateTime},
-		#{lastVisit},#{lastIp},#{deviceType})
+		#{lastVisit},#{lastIp},#{deviceType},#{openId},#{sex},#{city},#{country},#{province},#{subTime},#{subscribe})
 	</insert>
 	<select id="getUserByPhoneNumber" parameterType="String"
 		resultMap="UserResultMap">
@@ -29,16 +36,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getUserById" parameterType="int" resultMap="UserResultMap">
 		select * from user u where u.id = #{userId}
 	</select>
+	<select id="getUserByOpenId" parameterType="String" resultMap="UserResultMap">
+		select * from user u where u.open_id = #{openId}
+	</select>
 	<select id="getUserAllWithPage" resultMap="UserResultMap">
 		select * from user 
 	</select>
 	<select id="getUserByAccountId" parameterType="int">
 		select * from user u where u.account_id = #{accountId}
 	</select>
-	<update id="updateUserById" parameterType="Route">
+	<update id="updateUserById" parameterType="User">
 		update
-		user 
-		<set>
+        user
+        <set>
 			update_time = #{updateTime}
 			<if test="name!=null">and name = #{name}</if>
 			<if test="level!=null">and level = #{level}</if>
@@ -49,8 +59,38 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="lastVisit!=null">and last_visit = #{lastVisit}</if>
 			<if test="lastIp!=null">and last_ip = #{lastIp}</if>
 			<if test="deviceType!=null">and device_type = #{deviceType}</if>
+			<if test="openId!=null">and open_id = #{openId}</if>
+			<if test="sex!=null">and sex = #{sex}</if>
+			<if test="city!=null">and city = #{city}</if>
+			<if test="country!=null">and country = #{country}</if>
+			<if test="province!=null">and province = #{province}</if>
+			<if test="subTime!=null">and sub_time = #{subTime}</if>
+			<if test="subscribe!=null">and subscribe = #{subscribe}</if>
 		</set>
 		where  id =#{id}
+	</update>
+    <update id="updateUserByOpenId" parameterType="User">
+		update
+        user
+        <set>
+			update_time = #{updateTime}
+			<if test="name!=null">and name = #{name}</if>
+			<if test="level!=null">and level = #{level}</if>
+			<if test="grade!=null">and grade=#{grade}</if>
+			<if test="phone!=null">and phone_number =#{phone}</if>
+			<if test="email!=null">and email=#{email}</if>
+			<if test="avatar!=null">and avatar=#{avatar}</if>
+			<if test="lastVisit!=null">and last_visit = #{lastVisit}</if>
+			<if test="lastIp!=null">and last_ip = #{lastIp}</if>
+			<if test="deviceType!=null">and device_type = #{deviceType}</if>
+			<if test="sex!=null">and sex = #{sex}</if>
+			<if test="city!=null">and city = #{city}</if>
+			<if test="country!=null">and country = #{country}</if>
+			<if test="province!=null">and province = #{province}</if>
+			<if test="subTime!=null">and sub_time = #{subTime}</if>
+			<if test="subscribe!=null">and subscribe = #{subscribe}</if>
+		</set>
+		where  open_id=#{openId}
 	</update>
 	<delete id="deleteUserById" parameterType="int">
 		delete from user where id =#{id}
@@ -68,5 +108,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="lastIP" column="last_ip" />
 		<result property="lastVisit" column="last_visit" />
 		<result property="deviceType" column="device_type" />
+		<result property="openId" column="open_id" />
+		<result property="sex" column="sex" />
+		<result property="city" column="city" />
+		<result property="country" column="country" />
+		<result property="province" column="province" />
+		<result property="subTime" column="sub_time" />
+		<result property="subscribe" column="subscribe" />
 	</resultMap>
 </mapper>

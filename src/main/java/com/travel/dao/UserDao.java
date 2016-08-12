@@ -12,6 +12,8 @@ public interface UserDao {
 
 	public User queryById(Integer id) throws SQLException;
 
+	public User queryByOpenId(String openId) throws SQLException;
+
 	public List<User> queryAll() throws SQLException;
 
 	public int update(User user) throws SQLException;

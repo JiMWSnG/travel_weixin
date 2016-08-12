@@ -44,6 +44,7 @@ public class LoginController {
     @ResponseBody
     @RequestMapping(value = "register",method = RequestMethod.POST)
     public Response register(RegisterRequest registerRequest){
+        //TODO:注册完直接登录
        return  userService.register(registerRequest);
 
     }

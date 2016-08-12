@@ -44,7 +44,15 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 			throw new SQLException("添加用户时，发生异常",e);
 		}
 	}
-
+	@Override
+	public User queryByOpenId(String openId) throws SQLException {
+		try {
+			User user = getSqlSession().selectOne("com.travel.bean.User.getUserByOpenId",openId);
+			return user;
+		} catch (Exception e) {
+			throw new SQLException("添加用户时，发生异常",e);
+		}
+	}
 	@Override
 	public List<User> queryAll() throws SQLException {
 		logger.info("准备");
@@ -60,7 +68,13 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 	public int update(User user) throws SQLException {
 		user.setUpdateTime(System.currentTimeMillis()/1000);
 		try{
-			int ok=getSqlSession().update("com.travel.bean.User.updateUserById", user);
+			int ok=0;
+			if(user.getOpenId()!=null&&!"".equals(user.getOpenId())){
+				ok=getSqlSession().update("com.travel.bean.User.updateUserByOpenId", user);
+			} else if(user.getId()!=0){
+				ok=getSqlSession().update("com.travel.bean.User.updateUserById", user);
+			}
+
 			if(ok>0){
 				return user.getId();
 			}

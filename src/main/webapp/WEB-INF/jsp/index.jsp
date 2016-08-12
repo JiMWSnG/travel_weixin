@@ -75,19 +75,19 @@
 
         <div class="menu">
             <div class="nav">
-                <a href="xianlu.jsp">
+                <a href="<%=request.getContextPath()%>/xianlu">
                     <img src="../images/menu/icon_luxian.png">
                     <p>线路</p>
                 </a>
             </div>
             <div class="nav">
-                <a href="jiudian.jsp">
+                <a href="<%=request.getContextPath()%>/jiudian">
                     <img src="../images/menu/icon_jiudian.png">
                     <p>酒店</p>
                 </a>
             </div>
             <div class="nav">
-                <a href="menpiao">
+                <a href="<%=request.getContextPath()%>/menpiao">
                     <img src="../images/menu/icon_menpiao.png">
                     <p>门票</p>
                 </a>
@@ -98,7 +98,7 @@
         <hr class="divide">
 
         <div class="name">
-            <a href="xianlu.jsp">
+            <a href="<%=request.getContextPath()%>/xianlu">
                 <div class="name_title">线路推荐</div>
                 <div class="name_more">
                     <img class="icon_more" alt="more" src="../images/index/more.png">
@@ -260,7 +260,7 @@
         <hr class="divide">
 
         <div class="name">
-            <a href="menpiao.html">
+            <a href="<%=request.getContextPath()%>/menpiao">
                 <div class="name_title">门票推荐</div>
                 <div class="name_more">
                     <img class="icon_more" alt="more" src="../images/index/more.png">

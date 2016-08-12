@@ -2,8 +2,8 @@
 <!--suppress WebProperties, ServletWithoutMappingInspection -->
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	version="2.5">
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
 	<context-param>
 		<description>配置spring读取的xml文件，param-name是spring规定，spring自动加载以下内容</description>
 		<param-name>contextConfigLocation</param-name>

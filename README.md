@@ -19,7 +19,7 @@ params:username,passwd,phone,token,email,lastIp,deviceType
 return: success {"success":true,"code":0,"msg":null,"data":userId}
           fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
-/route/recommends                                                                                      ok
+/route/recommends                                                                             ok
 需要分页
 params:pageSize,currentPage
 return: success  {"success":true,"code":0,"msg":null,"data":[{"id":10,"picturePath":"iqweb","name":"bei'ji","type":"1","description":"a good route","createTime":131213131,"updateTime":1312123131,"price":100.0,"location":"beiji","status":"1","indexs":"beijidsa","themeId":null}],"page":{"pageSize":10,"currentPage":1,"totalPages":0,"totalRows":0,"pageStartRow":0,"pageEndRow":0,"pagination":false,"hasNextPage":false,"hasPreviousPage":false,"pagedView":null}}

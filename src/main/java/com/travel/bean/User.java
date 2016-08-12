@@ -13,6 +13,69 @@ public class User {
     private String deviceType;
     private long createTime;
     private long updateTime;
+    private String openId;
+    private String sex;
+    private String city;
+    private String country;
+    private String province;
+    private Long subTime;
+    private String subscribe;
+
+    public String  getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public Long getSubTime() {
+        return subTime;
+    }
+
+    public void setSubTime(Long subTime) {
+        this.subTime = subTime;
+    }
+
+    public String getSubscribe() {
+        return subscribe;
+    }
+
+    public void setSubscribe(String subscribe) {
+        this.subscribe = subscribe;
+    }
 
     public User(int id, String name, int level, int grade, String phone, String email, String avatar, Long lastVisit, String lastIp, String deviceType, long createTime, long updateTime) {
         this.id = id;
@@ -27,6 +90,9 @@ public class User {
         this.deviceType = deviceType;
         this.createTime = createTime;
         this.updateTime = updateTime;
+    }
+
+    public User() {
     }
 
     public int getId() {
