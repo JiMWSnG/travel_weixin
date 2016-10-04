@@ -14,7 +14,7 @@ public class RandomStringUtil {
         Random random=new Random();
         StringBuffer sb=new StringBuffer();
         for(int i=0;i<length;i++){
-            int number=random.nextInt(62);
+            int number=random.nextInt(52);
             sb.append(str.charAt(number));
         }
         return sb.toString();

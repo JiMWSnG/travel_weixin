@@ -1,0 +1,324 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background: #f5f5f5;
+}
+
+.luxian_header {
+    width: 100%; /*12.42rem;*/
+    height: 1.35rem;
+    background-color: #7BCFA6;
+}
+
+.luxian_header .back {
+    float: left;
+    display: block;
+    width: 2%;
+    height: 30%;
+    margin: 3.5% 0 3% 3%;
+    background: url(../images/icon/back.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.main_title {
+    text-align: center;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 0.6rem;
+    color: white;
+    float: left;
+    height: 60%;
+    width: 74%;
+    margin-top: 1.5%;
+    padding-left: 10%;
+}
+
+.main_visual .xianlu_title {
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#position {
+    float: left;
+    width: 25%;
+    text-align: right;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 1%;
+    color: white;
+    font-size: 0.6rem;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+}
+
+.clear {
+    clear: both;
+}
+
+.divide {
+    background: #7bcfa6;
+    /*改变现代浏览器下线条色*/
+    color: #7bcfa6;
+    /*改变ＩＥ浏览器下线条色，最好和Background-color设置一样的色*/
+    /*clear: both;!*可以用来清除浮动*!*/
+    /*float: none;!*取消浮动，可以不设置*!*/
+    width: 76%;
+    /*显式定义宽度*/
+    height: 1px;
+    /*改变部分浏览器下的默认高度*/
+    line-height: 1px;
+    /*保证ＩＥ下高度效果一致，不留白色空白区*/
+    font-size: 0;
+    /*设置为0，以确保IE6下不留空白区*/
+    border: none 0;
+    /*取消默认边框，以背景和高度代替边框效果*/
+    /*margin: 0 0 1.4em;*/
+    float: right;
+}
+
+.group {
+    font-size: 0.55rem;
+    height: 1.6rem;
+    width: 100%;
+}
+
+.group label {
+    display: inline-block;
+    text-align: right;
+    margin-top: 0.6rem;
+    width: 18%;
+    font-size: 0.45rem;
+    margin-right: 5.5%;
+}
+
+.formsize {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-size: 0.55rem;
+    height: 50%;
+    width: 76%;
+    border: none;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+#ui-datepicker-div {
+    position: absolute !important;
+    top: 2rem !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-49%, 0);
+    font-size: 0.65rem;
+    z-index: 4000 !important;
+}
+
+#div_select_city_sub_menu {
+    position: absolute !important;
+    top: 2rem !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    z-index: 4000;
+}
+
+#mengban,
+#mengban2,
+#mengban3 {
+    position: fixed;
+    display: none;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+s
+.group2 {
+    margin-bottom: 0.25rem;
+}
+
+.childgroup {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.55rem;
+    height: 50%;
+    width: 72%;
+    text-align: right;
+    height: 1.2rem;
+}
+
+.message {
+    width: 97%;
+    letter-spacing: 0.06rem;
+    font-size: 0.55rem;
+    color: #35A670;
+    margin: 0.5rem 0 0.5rem 2.5%;
+}
+
+.message #insur_icon,
+.message .insurman_icon {
+    margin-right: 0.5rem;
+    float: right;
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 0.35rem;
+    text-align: center;
+    line-height: 0.65rem;
+    background-color: #35A670;
+    color: #fff;
+}
+
+.message2 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+}
+
+#insurance {
+    display: none;
+}
+
+.name {
+    height: 1.4rem;
+}
+
+.name1 {
+    margin-top: 0.1rem;
+}
+
+.idum {
+    margin-bottom: 0;
+}
+
+.idnumber {
+    margin-bottom: 0.4rem;
+}
+
+.btn1 {
+    font-size: 0.5rem;
+    display: block;
+    height: 1.35rem;
+    cursor: pointer;
+    margin: 2%;
+    border: 0.025rem solid transparent;
+    width: 96%;
+    border-radius: 0.1rem;
+}
+
+.info_describe {
+    margin: 0rem 0.5rem 0rem 0.8rem;
+    min-height: 2rem;
+}
+
+.include {
+    min-height: 2rem;
+}
+
+.includetitle {
+    float: left;
+    height: 1rem;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 0.5rem;
+    color: #363434;
+    margin: 0.1rem 0rem 0.3rem 0rem;
+    text-align: left;
+}
+
+.includedetail {
+    float: right;
+    font-family: 'Heiti SC', 'Microsoft YaHei';
+    font-size: 0.5rem;
+    min-height: 0.76rem;
+    color: #7bcfa6;
+    margin: 0.1rem 0rem 0.1rem 0rem;
+    text-align: right;
+}
+
+#feeinfo {
+    display: block;
+}
+
+.btn1 {
+    font-size: 0.6rem;
+    display: block;
+    height: 1.2rem;
+    cursor: pointer;
+    margin: 2%;
+    border: 0.025rem solid transparent;
+    width: 96%;
+    border-radius: 0.1rem;
+}
+
+/*为底部增加样式*/
+/*仿bootstrap*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #ef6d3b;
+    border-color: #ef6d3b;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #ee603b;
+    border-color: #ff6f3b;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ee603b;
+    border-color: #fe603b;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #ee603b;
+    border-color: #fe603b;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #fe603b;
+    border-color: #ff6f3b;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+    background-color: #ef6d3b;
+    border-color: #ef6d3b;
+}
+
+.btn-primary .badge {
+    color: #ef6d3b;
+    background-color: #fff;
+}
+
+/* CSS Document */
+

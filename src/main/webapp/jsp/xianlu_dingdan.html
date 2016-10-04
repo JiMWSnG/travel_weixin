@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>畅游——线路订单</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--允许iphone设备全屏浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> -->
+    <!--允许用户将网页创建快捷方式到桌面-->
+    <title>线路订单</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" rev="stylesheet" href="css/jock-citypicker-2.0.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/xianlu_dingdan.css">
+    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/jock-citypicker-2.0.min.js"></script>
+    <script type="text/javascript" src="js/citypick.js"></script>
+    <script type="text/javascript" src="js/xianlu_dingdan.js"></script>
+    <script type="text/javascript" src="js/searchwode.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul class="ul1">
+                <li class="goback">
+                <a href="#" onClick="javascript :history.back(-1);" class="revert"><i class="icon icon-left"></i></a></li>
+                <li class="title">
+                    <p>线路订单填写</p>
+                </li>
+                <li class="logo"><a href="" id="account" class="account"><i class="icon icon-right"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="clear"></div>
+    <div id="mid">
+        <form id="submitform">
+          <div class="xianlutitle">
+                <p id="xianlu_name">[夜游古北水镇] 北京星空下的古北水镇一日游（晚出发 北京）</p>
+            </div>
+            <div class="group group2">
+            <p class="group">
+                <label>出发日期</label>
+                <input type="text" id="datepicker1" class="formsize" name="datepicker1" placeholder="请核实您的出发日期" readonly>
+                <br>
+            </p>
+            <hr class="divide">
+            </div>
+            <div class="group group2">
+                <label>出游人数</label>
+                <p class="childgroup">
+                    <span class="sp sp1">-</span>
+                    <input type="text" id="personnumber" class="pnum" name="pnum" value="1" readonly>
+                    <span class="sp sp2">+</span>
+                </p>
+                <br>
+            </div>
+            <div class="group group2">
+                <label>优惠券</label>
+                <div class="youhuiquan"><p>-&yen50</p></div>
+                <a href="disco.html">
+           		 <div class="btn-right"></div>  
+                 </a>
+                <br>
+            </div>
+            <div class="group group2">
+                <label>商品金额</label>
+                <p class="childgroup">
+				<input type="text" class="bookprice" name="rprice" value="200" readonly>
+                </p>
+                <br>
+            </div>
+            <div class="group group2">
+                <label>优惠</label>
+				<p class="childgroup">
+                <input type="text" class="youhuiprice" name="youhui" value="0" readonly>
+                </p>
+
+                <br>
+            </div>
+            <div class="group group2">
+                <label>实付款</label>
+                <p class="childgroup">
+                 <input type="text" class="realprice" name="realprice" value="200" readonly>
+                </p>
+                <br>
+            </div>
+            <p class="message">预定人信息</p>
+            <p class="group name">
+                <label>姓名</label>
+                <input type="text" id="name" class="formsize name1" name="reserve_name" placeholder="必填">
+                <br>
+            </p>
+            <hr class="divide">
+            <p class="group">
+                <label>手机号</label>
+                <input type="text" class="phonenum formsize" name="phonenum" placeholder="请输入11位手机号">
+                <br>
+            </p>
+            <hr class="divide">
+            <p class="danger">号码位数不正确，请重新输入！</p>
+            <p class="message">投保人信息<span id="insur_icon">+</span></p>
+            <ul id="insurance">
+                <li class="applicant">
+                    <p class="message message2">投保人<span class="insurman_icon">-</span></p>
+                    <div class="insurance_info">
+                        <p class="group name">
+                            <label>姓名</label>
+                            <input type="text" id="name" class="formsize name1" name="name" placeholder="必填">
+                            <br>
+                        </p>
+                        <hr class="divide">
+                        <p class="group">
+                            <label>手机号</label>
+                            <input type="text" class="phonenum formsize" name="phonenum" placeholder="请输入11位手机号">
+                            <br>
+                        </p>
+                        <hr class="divide">
+                        <p class="danger">号码位数不正确，请重新输入！</p>
+                        <p class="group">
+                            <label>身份证号</label>
+                            <input type="text" class="formsize idnum" name="idnum" placeholder="请输入18位身份证号">
+                            <br>
+                        </p>
+                        <hr class="divide idnumber">
+                        <p class="danger">身份证号码位数不正确，请重新输入！</p>
+                    </div>
+                </li>
+                <div id="add">+</div>
+            </ul>
+
+        </form>
+        <button class="btn1 btn-primary" type="button">提&nbsp;&nbsp;交</button>
+    </div>
+    <div id="mengban"></div>
+    <div id="mengban2"></div>
+    <div id="mengban3"></div>
+    <!------------------- 我的界面 ------------------->
+<div id="account_page" class="account_page">
+    <div id="account_blank" class="account_blank"></div>
+    <div id="account_blank1" class="account_blank1"></div>
+    <div id="account_content" class="account_content">
+        <!--"我的"右侧上方头像和用户名-->
+        <div class="account_banner">
+            <div class="account_avatar">
+                <span class="setMiddle"></span> <!--辅助设置img为垂直居中-->
+                <img src="images/icon/account1.png" alt="头像" class="account_avatar_image">
+            </div>
+            <div class="account_username">
+                <p id="account_username_text" class="account_username_text">张鸣晓</p>
+            </div>
+        </div>
+
+        <!--"我的"右侧下方信息列表-->
+        <div class="account_list">
+            <ul>
+            <a href="order.html">
+                <li class="account_list_li">
+                    <div class="account_list_left account_list_order"></div>
+                    
+                    <div class="account_list_right"><span>我的订单</span></div>
+                    <hr class="account_content_divider2">
+                </li>
+                </a>
+                <a href="disco.html">
+                <li class="account_list_li">
+                    <div class="account_list_left account_list_coupon"></div>
+                    <div class="account_list_right"><span>优惠券</span></div>
+                    <hr class="account_content_divider2">
+                </li>
+                </a>
+
+                <a href="chkinf.html">
+                <li class="account_list_li">
+                    <div class="account_list_left account_list_setup"></div>
+                    <div class="account_list_right"><span>用户信息设置</span></div>
+                    <hr class="account_content_divider2">
+                </li>
+                </a>
+            </ul>
+
+            <div class="version">畅游 V0.0.1</div>
+        </div>
+    </div>
+          <div id="account_blank2" class="account_blank2"></div>
+</div>
+</body>
+
+</html>

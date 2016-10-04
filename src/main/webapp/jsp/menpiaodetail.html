@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门票详情页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!--允许iphone设备全屏浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --> <!--允许用户将网页创建快捷方式到桌面-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menpiaodetail.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="js/mainSlider.js"></script>
+    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script>
+        $(function(){
+            $(".btn-up:eq(0)").click(function() {
+                $("#feeinfo").toggle();
+                $(this).toggleClass("btn-down1");
+            });
+
+            $(".btn-down:eq(0)").click(function() {
+                $("#jingdianinfo").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(1)").click(function() {
+                $("#transportinfo").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(2)").click(function() {
+                $("#bookinfo").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(3)").click(function() {
+                $("#commentinfo").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(4)").click(function() {
+                $("#ask_answer").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+        });
+</script>
+</head>
+
+<body>
+
+<header>
+    <div class="menpiao_header">
+        <a href="#" onClick="javascript :history.back(-1);"><div class="back"></div></a>
+        <div class="main_title">
+            门票详情页
+        </div>
+        <div class="account"></div>
+    </div>
+</header>
+<div class="clear"></div>
+<div id="_contain">
+ <!--轮播窗 -->
+    <div class="main_visual">
+        <div class="main_image">
+            <ul>
+                <li><span class="img_1"><a href="#"></a></span></li>
+                <li><span class="img_2"><a href="#"></a></span></li>
+                <li><span class="img_3"><a href="#"></a></span></li>
+                <li><span class="img_4"><a href="#"></a></span></li>
+                <li><span class="img_5"><a href="#"></a></span></li>
+            </ul>
+            <a href="javascript:;" id="btn_prev"></a>
+            <a href="javascript:;" id="btn_next"></a>
+        </div>
+        <div class="menpiao_title">
+            <div id="position">[北京周边]</div>
+            <div id="menpiao_name">北京野生动物园</div>
+            <div id="sales">123</div>
+            <div id="sale">已售</div>
+        </div>
+    </div>
+    <!--路线信息-->
+    <div class="book">
+        <div class="menpiao_detail">
+            <p id="menpiao_detail">孤山寨+漂流+竹筏+烧烤3日2晚跟团游仅需345元</p>
+        </div>
+        <div class="menpiao_price">
+            <p>&yen;</p><p id="menpiao_price">125-250</p><p>元 / 人</p>
+        </div>
+        <div class="booknote">
+            <div class="bookimgdiv"><i class="bookimg"></i></div>
+            <div class="booknotep"><p id="booknote">提前3天预订</p></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+     <!--费用说明 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>专项费用说明</p></div>
+            <div class="btn-up"></div>
+        </div>
+		<div id="feeinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="include"><p class="includetitle">成人单门票</p>
+                    <div class="menpiao_price1">
+                        <p>&yen;</p><p id="menpiao_price1">250</p><p>元 / 人</p>
+                    </div>
+                 </div>
+                <hr color="#000000" style="border:0; height:1px"/>
+                <div class="include"><p class="includetitle">儿童单门票</p>
+                    <div class="menpiao_price1">
+                        <p>&yen;</p><p id="menpiao_price2">125</p><p>元 / 人</p>
+                    </div>
+                 </div>
+            </div>
+    	</div>
+ 	 </div>
+    <!--交通信息 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>景点特色介绍</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="jingdianinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>★南线游览区 景点顺序：金丝猴馆----珍稀动物馆----木径鸟语----狮狒馆----狐猴岛----狮虎馆----动物表演场----餐饮中心----野鸭湖----散放区乘车广场 </p></div>
+<div class="infodescribe"><p>★北线游览区 景点顺序：儿童动物园----夜行动物馆---斗鸡表演场---珍稀鸟馆----北方鸟林----热带鸟馆----水禽湖----散放区下车站----散放区乘车广场</p></div>
+<div class="infodescribe"><p> ★中线游览区景点顺序：和平鸽主题广场----孔雀园----鳄鱼表演场----袋鼠园----鸣禽长廊----鸟类表演场----鹦鹉广场----散放区乘车广场</p></div>
+            </div>
+    	</div>
+ 	 </div>
+    <!--酒店信息 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>周边交通信息</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="transportinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>由玉泉营走京开高速公路至北京段出口前行5000米即到。驱车沿京开高速公路至此需30分钟。</p></div>
+            </div>
+    	</div>
+ 	 </div>
+      <!--预定流程 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>预订流程须知</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="bookinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>★景区开放时间：9:30-17:30 
+</p></div>
+<div class="infodescribe"><p>
+★提前预订时间：1天及以上时间
+</p></div>
+<div class="infodescribe"><p>
+★驴妈妈门票使用说明：产品说明为准
+</p></div>
+            </div>
+    	</div>
+ 	 </div>
+      <!--退款说明 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>点评</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="commentinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>景色很优美</p></div>
+            </div>
+    	</div>
+ 	 </div>
+     <!--出行提示 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>问与答</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="ask_answer">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>夜间山间较冷，请注意自身保暖。</p></div>
+            </div>
+    	</div>
+ 	 </div>
+     <!--点击购买 -->
+     <a href="menpiao_dingdan.html">
+     <button class="buybtn btn-primary" type="button">点击购买产品</button>
+     </a>
+</div>
+
+
+
+
+</body>
+</html>

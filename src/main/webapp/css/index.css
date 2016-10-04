@@ -310,15 +310,22 @@
 .is_visible {
     visibility: visible;
 }
-
 .not_visible {
     visibility: hidden;
+}
+
+.is_display {
+    display: block;
+}
+.not_display {
+    display: none;
 }
 
 .main_page {
 
 }
 
+/*首页中的搜索页面*/
 .search_page {
     width: 100%;
     height: 100%;
@@ -432,6 +439,199 @@
     border-radius: 0.1rem;
     margin: 0.4rem 0 0 0.3rem;
     border: solid thin lightgray;
+}
+
+/*首页中的账户页面*/
+.account_page {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+/*    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;*/
+    z-index: 1200;
+}
+
+/*左侧的空白*/
+.account_blank {
+	width: 63%;
+	height: 100%;
+	float: left;
+	background-color: black;
+	opacity: 0.2;
+	filter: alpha(opacity=50);
+}
+
+.account_blank1 {
+    width: 37%;
+    height: 6%;
+    float: right;
+    background-color: black;
+    opacity:0.2;
+    filter:alpha(opacity=50);
+}
+
+.account_blank2 {
+    width: 37%;
+    height: 57%;
+    float: right;
+    background-color: black;
+    opacity:0.2;
+    filter:alpha(opacity=50);
+}
+
+/*右侧的"我的"内容*/
+.account_content {
+	width: 37%;
+	height: 37%;
+	float: left;
+	background-color: white;
+}
+
+/*右侧上方的头像和用户名*/
+.account_banner {
+	width: 100%;
+	height: 23%;
+	background-color: #CCCCCC;
+}
+
+.account_avatar {
+    float: left;
+    width: 35%;
+    height: 100%;
+    text-align: center;
+}
+
+.setMiddle {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.account_avatar_image {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    /*margin-top: 32%;*/
+    /*margin-left: 30%;*/
+}
+
+.account_username {
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: table;
+    text-align: center;
+}
+
+.account_username_text {
+    font-weight: 350;
+    font-size: 0.5rem;
+    color: white;
+    padding-left: 0.2rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*右侧下方的信息列表*/
+.account_list {
+    width: 100%;
+    height: 76%;
+    margin-top: 0rem;
+}
+
+.account_list_li {
+    width: 100%;
+    height: 1.66rem;
+}
+
+.account_list_left {
+    width: 37%;
+    height: 100%;
+/*    margin: auto 0.2rem auto 0.2rem;*/
+    float: left;
+}
+
+.account_list_order {
+    background: url("../images/foot/order.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_coupon {
+    background: url("../images/foot/disco.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_message {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_profile {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_help {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_setup {
+    background: url("../images/foot/infor.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_aboutUs {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+
+.account_list_right {
+    width: 63%;
+    height: 100%;
+    display: table;
+    float: right;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.35rem;
+    color:black;
+}
+
+.account_list_right span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.account_content_divider{
+	margin-top:0.05rem;
+	margin-bottom:0.2rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.account_content_divider1{
+	margin-top:0.5rem;
+	margin-bottom:0.05rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.account_content_divider2{
+	margin-top:0.05rem;
+	margin-bottom:0.05rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.version {
+	margin-top:0.35rem;
+    width: 100%;
+    height: 0.35rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+    color: gray;
 }
 
 

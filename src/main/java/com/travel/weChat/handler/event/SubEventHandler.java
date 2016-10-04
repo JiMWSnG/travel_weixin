@@ -18,8 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by admin on 2015/11/24.
- * 关注事件
+ *
  */
 @Service
 public class SubEventHandler implements EventHandle<BaseEvent> {
@@ -96,11 +95,11 @@ public class SubEventHandler implements EventHandle<BaseEvent> {
     }
 
     public boolean beforeHandle(BaseEvent event) {
-        String e = event.getEvent();
-        logger.info("beforeHandle getEvent--->"+event.toString());
-        if(EventType.SUBSCRIBE.equals(e)){
-            return true;
-        }
-        return false;
+    String e = event.getEvent();
+    logger.info("beforeHandle getEvent--->"+event.toString());
+    if(EventType.SUBSCRIBE.equals(e)){
+        return true;
     }
+    return false;
+}
 }

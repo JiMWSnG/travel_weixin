@@ -9,10 +9,10 @@ import java.util.Random;
  */
 public class WeChatContants {
 
-    public static final String WECHAT_APPID = "wxfd62c71a2391558b";
+    public static final String WECHAT_APPID = "";
     public static final String WECHAT_NAME = "";
     public static final String WECHAT_APPSECRET = "";
-    public static final String WECHAT_TOKEN = "";
+    public static final String WECHAT_TOKEN = "151DG3126bBLPArUBkFRAl7UcmO5YZJnD";
     public static final String WECHAT_AESKEY = "";
     public static final String WECHAT_ = "";
 

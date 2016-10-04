@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店详情页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!--允许iphone设备全屏浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --> <!--允许用户将网页创建快捷方式到桌面-->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jiudiandetail.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="js/mainSlider.js"></script>
+    <script>
+        $(function(){
+            $(".btn-up:eq(0)").click(function() {
+                $("#fangxinginfo").toggle();
+                $(this).toggleClass("btn-down1");
+            });
+            $(".btn-down:eq(0)").click(function() {
+                $("#book_info").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(1)").click(function() {
+                $("#jianjie_info").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(2)").click(function() {
+                $("#zhengce_info").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(3)").click(function() {
+                $("#sheshi_info").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(4)").click(function() {
+                $("#zhoubian_info").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+            $(".btn-down:eq(5)").click(function() {
+                $("#commentinfo").toggle();
+                $ (this).toggleClass ("btn-up");
+            });
+        });
+
+</script>
+</head>
+
+<body>
+
+<header>
+    <div class="jiudian_header"> <a href="#" onClick="javascript :history.back(-1);">
+        <div class="back"></div>
+    </a>
+        <div class="main_title">酒店详情 </div>
+    </div>
+</header>
+<div class="clear"></div>
+<div id="_contain">
+    <!--轮播窗 -->
+    <div class="main_visual">
+        <div class="main_image">
+            <ul>
+                <li><span class="img_1"><a href="#"></a></span></li>
+                <li><span class="img_2"><a href="#"></a></span></li>
+                <li><span class="img_3"><a href="#"></a></span></li>
+                <li><span class="img_4"><a href="#"></a></span></li>
+                <li><span class="img_5"><a href="#"></a></span></li>
+            </ul>
+            <a href="javascript:;" id="btn_prev"></a> <a href="javascript:;" id="btn_next"></a> </div>
+        <div class="jiudian_title">
+            <div id="position">[北京]</div>
+            <div id="jiudian_name">小凤仙旅馆国际青年旅社</div>
+            <div id="sales">123</div>
+            <div id="sale">已售</div>
+        </div>
+    </div>
+    <!--路线信息-->
+    <div class="book">
+        <div class="jiudian_detail">
+            <p id="jiudian_detail">小凤仙旅馆国际青年旅社仅需300元</p>
+        </div>
+        <div class="jiudian_price">
+            <p>&yen;</p><p id="jiudian_price">300</p><p>元 / 人</p>
+        </div>
+        <div class="booknote">
+            <div class="bookimgdiv"><i class="bookimg"></i></div>
+            <div class="booknotep"><p id="booknote">提前3天预订</p></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+     <!--费用说明 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>房型</p></div>
+            <div class="btn-up"></div>
+        </div>
+		<div id="fangxinginfo">
+        	<hr/>
+            <div class="info_describe">
+            <p class="group">
+                <label>入住日期</label>
+                <input type="text" id="datepicker1" class="formsize" name="datepicker1" placeholder="请选择您的入住日期" readonly>
+                <br>
+            </p>
+            <p class="group1">
+                <label>离店日期</label>
+                <input type="text" id="datepicker2" class="formsize" name="datepicker2" placeholder="请选择您的离店日期" readonly>
+                <br>
+            </p>
+            </div>
+            <div class="info_describe">
+            <hr color="#000000" style="border:0; height:1px"/>
+                <div class="include"><p class="includetitle">标准间</p>
+                <div class="jiudian_price1">
+            <p>&yen;</p><p id="jiudian_price1">300</p><p>元 / 人</p>
+        </div>
+        </div>
+                <hr color="#000000" style="border:0; height:1px"/>
+                <div class="include"><p class="includetitle">家庭房</p>
+                <div class="jiudian_price1">
+            <p>&yen;</p><p id="jiudian_price2">300</p><p>元 / 人</p>
+        </div>
+        </div>
+            </div>
+    	</div>
+ 	 </div>
+    <!--预订须知 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>房型预订须知</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="book_info">
+        	<hr/>
+            <div class="info_describe">
+            <div class="infodescribe"><p>标准间：内宾 双床 双早 免费无线网 预定不可取消</p></div>
+<div class="infodescribe"><p>家庭间：内宾 双床 双早 免费无线网 预定不可取消</p></div>
+            </div>
+    	</div>
+ 	 </div>
+    <!--简介-->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>简介</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="jianjie_info">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>北京东方君悦大酒店位于北京东长安街，地处东方广场正中央，毗邻历史悠久的王府井步行商业街，从酒店出发步行数分钟即可达天安门广场和故宫。</p></div>
+            </div>
+    	</div>
+ 	 </div>
+      <!--政策 -->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>政策</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="zhengce_info">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>★入住和离店： 入住时间：14:00以后 离店时间：12:00以前
+</p></div>
+<div class="infodescribe"><p>
+★取消政策： 不同类型的客房附带不同的取消预订和预先付费政策 选择上述客房时，请参阅“客房政策”
+</p></div>
+<div class="infodescribe"><p>
+★入住手续： 入住时需要出示政府核发的身份证件(带照片)。请携带信用卡和现金用以支付押金或额外费用。
+</p></div>
+<div class="infodescribe"><p>
+★携带宠物： 不可携带宠物。
+</p></div>
+<div class="infodescribe"><p>
+★信用卡：万事达
+</p></div>
+            </div>
+    	</div>
+ 	 </div>
+      <!--设施-->
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>设施</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="sheshi_info">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>夜间山间较冷，请注意自身保暖。</p></div>
+            </div>
+    	</div>
+ 	 </div>
+     
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>周边</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="zhoubian_info">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>夜间山间较冷，请注意自身保暖。</p></div>
+            </div>
+    	</div>
+ 	 </div>
+     
+    <div class="info">
+    	<div class="info_detail">
+        	<div class="infoimgdiv"><i class="infoimg"></i></div>
+        	<div class="info_title"><p>点评</p></div>
+            <div class="btn-down"></div>            
+        </div>
+		<div id="commentinfo">
+        	<hr/>
+            <div class="info_describe">
+                <div class="infodescribe"><p>景色很优美</p></div>
+            </div>
+    	</div>
+ 	 </div>
+     <!--出行提示 -->
+     <!--点击购买 -->
+     <a href="jiudian_dingdan.html">
+     <button class="buybtn btn-primary" type="button">点击购买产品</button>
+     </a>
+    </div>
+<div id="mengban"></div>
+<div id="mengban2"></div>
+<div id="mengban3"></div>
+</body>
+</html>

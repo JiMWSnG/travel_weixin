@@ -1,0 +1,651 @@
+    /* CSS Document */
+    
+    body,
+    div,
+    ol,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    form,
+    fieldset,
+    legend,
+    input,
+    button {
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+    
+    html {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Heiti SC', 'Microsoft YaHei';
+        outline: 0;
+        -webkit-text-size-adjust: none;
+    }
+    
+    body {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        -webkit-user-select: none;
+        background-color: #fff;
+    }
+	
+    
+    li {
+        list-style-position: outside;
+        list-style-type: none;
+    }
+    
+    .header {
+        height: 1.35rem;
+        width: 100%;
+        position: relative;
+        background-color: mediumaquamarine;
+    }
+    
+    #mid {
+        background: #F5F5F5;
+        position: relative;
+        width: 100%;
+    }
+    
+    .goback {
+        float: left;
+        display: block;
+        width: 7%;
+        height: 60%;
+        margin: 2% 0 2% 2%;
+    }
+    
+    .goback a {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .goback a i {
+        display: block;
+        margin-top: 4%;
+        width: 40%;
+        height: 80%;
+        background-image: url("images/goback.png");
+        background-size: 100% 100%;
+    }
+    
+    .ul1 {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .logo {
+        float: left;
+        display: block;
+        width: 7%;
+        height: 60%;
+        margin: 2% 2% 2% 0;
+    }
+    
+    .logo a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .logo a i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("images/account2.png");
+        background-size: 100% 100%;
+    }
+    
+    .title {
+        float: left;
+        width: 78%;
+        height: 60%;
+        margin: 2% 2% 2% 2%;
+        /*border: solid thin gainsboro;*/
+        border-radius: 0.1rem;
+        text-align: center;
+    }
+    
+    .title p {
+        line-height: 0.8rem;
+        color: #fff;
+        font-size: 0.5rem;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .divide {
+        background: #B0B0B0;
+        /*改变现代浏览器下线条色*/
+        color: #ddd;
+        /*改变ＩＥ浏览器下线条色，最好和Background-color设置一样的色*/
+        /*clear: both;!*可以用来清除浮动*!*/
+        /*float: none;!*取消浮动，可以不设置*!*/
+        width: 98%;
+        /*显式定义宽度*/
+        height: 1px;
+        /*改变部分浏览器下的默认高度*/
+        line-height: 1px;
+        /*保证ＩＥ下高度效果一致，不留白色空白区*/
+        font-size: 0;
+        /*设置为0，以确保IE6下不留空白区*/
+        border: none 0;
+        /*取消默认边框，以背景和高度代替边框效果*/
+        /*margin: 0 0 1.4em;*/
+    }
+    .xianlutitle {
+		font-size: 0.55rem;
+		font-weight:500;
+        min-height: 0.5rem;
+        margin-left:2%;
+		margin-right:2%;
+        width: 96%;
+    }
+    #xianlu_name{
+		width:96%;
+		height:100%;
+		text-align:center;
+		padding-top:5%;
+		font-family: 'Heiti SC', 'Microsoft YaHei';
+		letter-spacing: 0.06rem;
+		color: #ef6d3b;
+		margin: 0 0 0 2.5%;
+	} 
+	#datepicker1{		
+		text-align:right}
+    .group {
+        font-size: 0.55rem;
+        height: 1.5rem;
+		margin-top: 0.6rem;
+		margin-left:2%;
+		margin-right:2%;
+        width: 96%;
+    }
+    
+    .group label {
+        display: inline-block;
+        text-align: right;
+		float:left;
+        margin-top: 0.6rem;
+        width: 18%;
+        font-size: 0.45rem;
+        margin-right: 5.5%;
+    }
+    .youhuiquan {
+        display: inline-block;
+		float:left;
+        margin-top: 0.6rem;
+        font-size: 0.45rem;
+        height: 50%;
+        width: 62%;
+        text-align: right;
+        height: 1.2rem;
+    }
+    .btn-right{
+ 	float:left;
+    display: block;
+    width: 3%;
+    height: 25%;
+	margin-top:0.6rem;
+	margin-left:5%;
+	margin-right:5%;
+    background: url(../images/icon/btn_next.png) no-repeat right;
+    background-size: 100% 100%;
+	
+	}
+    .formsize {
+        display: inline-block;
+        margin-top: 0.7rem;
+        font-size: 0.55rem;
+        height: 50%;
+        width: 74%;
+        border: none;
+        padding: 0;
+        background-color: #F5F5F5;
+    }
+	
+    #ui-datepicker-div {
+        position: absolute!important;
+        top: 2rem!important;
+        left: 50%!important;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-49%, 0);
+        font-size: 0.65rem;
+        z-index: 4000!important;
+    }
+    
+    #div_select_city_sub_menu {
+        position: absolute!important;
+        top: 2rem!important;
+        left: 50%!important;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        z-index: 4000;
+    }
+    
+    #mengban,
+    #mengban2,
+    #mengban3 {
+        position: fixed;
+        display: none;
+        z-index: 2000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .group2 {
+        margin-bottom: 0.25rem;
+    }
+    
+    .childgroup {
+        display: inline-block;
+        margin-top: 0.3rem;
+        font-size: 0.55rem;
+        height: 50%;
+        width: 72%;
+        text-align: right;
+        height: 1.2rem;
+    }
+    
+    .sp {
+        font-size: 0.7rem;
+        display: inline-block;
+        text-align: center;
+        font-weight: lighter;
+        height: 100%;
+        width: 10%;
+        border: 1px solid black;
+        border-radius: 0.2rem;
+        vertical-align: top;
+        line-height: 1.2rem;
+    }
+    
+    .rnum,
+    .pnum {
+        font-size: 0.6rem;
+        font-weight: lighter;
+        text-align: center;
+        height: 100%;
+        width: 25%;
+        display: inline-block;
+        padding: 0;
+        border: 1px solid black;
+        border-radius: 0.25rem;
+        background-color: inherit;
+    }
+    
+    .bookprice, .youhuiprice, .realprice{
+        margin-right: 12%;
+        font-size: 0.6rem;
+        font-weight: lighter;
+        text-align: right;
+        height: 80%;
+        width: 50%;
+        display: inline-block;
+        padding: 0;
+        border: none;
+		color:#ef6d3b;
+        background-color: inherit;
+    }
+    
+    .message {
+        width: 97%;
+        letter-spacing: 0.06rem;
+        font-size: 0.55rem;
+        color: #35A670;
+        margin: 0.5rem 0 0.5rem 2.5%;
+    }
+    
+    .message #insur_icon,
+    .message .insurman_icon {
+        margin-right: 0.5rem;
+        float: right;
+        height: 0.7rem;
+        width: 0.7rem;
+        border-radius: 0.35rem;
+        text-align: center;
+        line-height: 0.65rem;
+        background-color: #35A670;
+        color: #fff;
+    }
+    
+    .message2 {
+        margin-top: 0;
+        margin-bottom: 0.3rem;
+    }
+    
+    #insurance {
+        display: none;
+    }
+    
+    .name {
+        height: 1.4rem;
+    }
+    
+    .name1 {
+        margin-top: 0.1rem;
+    }
+    
+    .danger{
+        font-size: 0.5rem;
+        color: red;
+        text-align: left;
+        text-indent: 3rem;
+        display: none;
+        }
+    .idum{
+        margin-bottom: 0;
+    }
+
+    #add{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        background-color: #35A670;
+        left:50%;
+        -webkit-transform:translate(-50%,0);
+        -o-transform:translate(-50%,0);
+        -ms-transform:translate(-50%,0);
+        -moz-transform:translate(-50%,0);
+        transform:translate(-50%,0);
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        line-height: 0.95rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .idnumber{
+        margin-bottom: 0.4rem;
+    }
+
+   .btn1 {
+        font-size: 0.5rem;
+        display: block;
+        height: 1.35rem;
+        cursor: pointer;
+		margin: 5% 1%;
+		width: 98%;
+        border: 0.025rem solid transparent;
+        border-radius: 0.1rem;
+    }
+	
+/*为底部增加样式*/
+    /*仿bootstrap*/
+    
+    .btn-primary {
+        color: #fff;
+     background-color: #ef6d3b;
+     border-color: #ef6d3b;
+    }
+    
+    .btn-primary:focus,
+    .btn-primary.focus {
+        color: #fff;
+        background-color: #ee603b;
+        border-color: #ff6f3b;
+    }
+    
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #ee603b;
+        border-color: #fe603b;
+    }
+    
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: #ee603b;
+        border-color: #fe603b;
+    }
+    
+    .btn-primary:active:hover,
+    .btn-primary.active:hover,
+    .open > .dropdown-toggle.btn-primary:hover,
+    .btn-primary:active:focus,
+    .btn-primary.active:focus,
+    .open > .dropdown-toggle.btn-primary:focus,
+    .btn-primary:active.focus,
+    .btn-primary.active.focus,
+    .open > .dropdown-toggle.btn-primary.focus {
+        color: #fff;
+        background-color: #fe603b;
+        border-color: #ff6f3b;
+    }
+    
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        background-image: none;
+    }
+    
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled.focus,
+    .btn-primary[disabled].focus,
+    fieldset[disabled] .btn-primary.focus {
+        background-color: #ef6d3b;
+        border-color: #ef6d3b;
+    }
+    
+    .btn-primary .badge {
+        color: #ef6d3b;
+        background-color: #fff;
+    }
+/*首页中的账户页面*/
+.account_page {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+/*    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;*/
+    z-index: 1200;
+}
+
+/*左侧的空白*/
+.account_blank {
+	width: 63%;
+	height: 100%;
+	float: left;
+	background-color: black;
+	opacity: 0.2;
+	filter: alpha(opacity=50);
+}
+
+.account_blank1 {
+    width: 37%;
+    height: 6%;
+    float: right;
+    background-color: black;
+    opacity:0.2;
+    filter:alpha(opacity=50);
+}
+
+.account_blank2 {
+    width: 37%;
+    height: 57%;
+    float: right;
+    background-color: black;
+    opacity:0.2;
+    filter:alpha(opacity=50);
+}
+
+/*右侧的"我的"内容*/
+.account_content {
+	width: 37%;
+	height: 37%;
+	float: left;
+	background-color: white;
+}
+
+/*右侧上方的头像和用户名*/
+.account_banner {
+	width: 100%;
+	height: 23%;
+	background-color: #CCCCCC;
+}
+
+.account_avatar {
+    float: left;
+    width: 35%;
+    height: 100%;
+    text-align: center;
+}
+
+.setMiddle {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.account_avatar_image {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    /*margin-top: 32%;*/
+    /*margin-left: 30%;*/
+}
+
+.account_username {
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: table;
+    text-align: center;
+}
+
+.account_username_text {
+    font-weight: 350;
+    font-size: 0.5rem;
+    color: white;
+    padding-left: 0.2rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*右侧下方的信息列表*/
+.account_list {
+    width: 100%;
+    height: 76%;
+    margin-top: 0rem;
+}
+
+.account_list_li {
+    width: 100%;
+    height: 1.66rem;
+}
+
+.account_list_left {
+    width: 37%;
+    height: 100%;
+/*    margin: auto 0.2rem auto 0.2rem;*/
+    float: left;
+}
+
+.account_list_order {
+    background: url("../images/foot/order.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_coupon {
+    background: url("../images/foot/disco.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_message {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_profile {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_help {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+.account_list_setup {
+    background: url("../images/foot/infor.png") no-repeat center;
+    background-size: 50% 50%;
+}
+.account_list_aboutUs {
+    background: url("../images/foot/ft_3_3.png") no-repeat center;
+    background-size: 60% 60%;
+}
+
+.account_list_right {
+    width: 63%;
+    height: 100%;
+    display: table;
+    float: right;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.35rem;
+    color:black;
+}
+
+.account_list_right span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.account_content_divider{
+	margin-top:0.05rem;
+	margin-bottom:0.2rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.account_content_divider1{
+	margin-top:0.5rem;
+	margin-bottom:0.05rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.account_content_divider2{
+	margin-top:0.05rem;
+	margin-bottom:0.05rem;
+    width: 95%;
+    border: inset 0.02rem white;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.version {
+	margin-top:0.35rem;
+    width: 100%;
+    height: 0.35rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+    color: gray;
+}

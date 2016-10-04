@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>线路详情</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--允许iphone设备全屏浏览-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> --><!--允许用户将网页创建快捷方式到桌面-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/detail.css">
+<link rel="stylesheet" type="text/css" href="css/v_timeline.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="js/mainSlider.js"></script>
+<script type="text/javascript" src="js/Adaptive.js"></script>
+</head>
+<script>
+$(function(){
+	$(".btn-up:eq(0)").click(function() {
+		$("#xingchenginfo").toggle();
+		$(this).toggleClass("btn-down1");
+		});	
+	$(".btn-down:eq(0)").click(function() {
+		$("#feeinfo").toggle();
+		$ (this).toggleClass ("btn-up");
+		});	
+	$(".btn-down:eq(1)").click(function() {
+		$("#transportinfo").toggle();
+		$ (this).toggleClass ("btn-up");
+		});	
+	$(".btn-down:eq(2)").click(function() {
+		$("#hotelinfo").toggle();
+		$ (this).toggleClass ("btn-up");
+	});	
+	$(".btn-down:eq(3)").click(function() {
+		$("#bookinfo").toggle();
+		$ (this).toggleClass ("btn-up");
+	});	
+	$(".btn-down:eq(4)").click(function() {
+		$("#refundinfo").toggle();
+		$ (this).toggleClass ("btn-up");
+	});	
+	$(".btn-down:eq(5)").click(function() {
+		$("#outtip").toggle();
+		$ (this).toggleClass ("btn-up");
+	});	
+	});
+
+</script>
+<body>
+<header>
+  <div class="luxian_header"> <a href="#" onClick="javascript :history.back(-1);">
+    <div class="back"></div>
+    </a>
+    <div class="main_title"> 线路详情 </div>
+    <div class="account"></div>
+  </div>
+</header>
+<div class="clear"></div>
+<div id="_contain"> 
+  <!--轮播窗 -->
+  <div class="main_visual">
+    <div class="main_image">
+      <ul>
+        <li><span class="img_1"><a href="#"></a></span></li>
+        <li><span class="img_2"><a href="#"></a></span></li>
+        <li><span class="img_3"><a href="#"></a></span></li>
+        <li><span class="img_4"><a href="#"></a></span></li>
+        <li><span class="img_5"><a href="#"></a></span></li>
+      </ul>
+      <a href="javascript:;" id="btn_prev"></a> <a href="javascript:;" id="btn_next"></a> </div>
+    <div class="xianlu_title">
+      <div id="position">[北京周边]</div>
+      <div id="xianlu_name">十渡</div>
+      <div id="sales">123</div>
+      <div id="sale">已售</div>
+    </div>
+  </div>
+  <!--路线信息-->
+  <div class="book">
+    <div class="xianlu_detail">
+      <p id="xianlu_detail">孤山寨+漂流+竹筏+烧烤2日1晚跟团游仅需345元</p>
+    </div>
+    <div class="xianlu_price">
+      <p>&yen;</p>
+      <p id="xianlu_price">345</p>
+      <p>元 / 人</p>
+    </div>
+    <div class="booknote">
+      <div class="bookimgdiv"><i class="bookimg"></i></div>
+      <div class="booknotep">
+        <p id="booknote">提前3天预订</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--费用说明 -->
+  <div class="info">
+    <div class="info_detail" id="xingchengdiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>行程说明</p>
+      </div>
+      <div class="btn-up"></div>
+    </div>
+    <div id="xingchenginfo">
+      <hr/>
+      <section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_day">D1</span></div>
+          <div class="cd-timeline-content">
+            <h6>第一天</h6>
+          </div>
+        </div>
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span><p class="xingchengtime">06:50</p></div>
+          <div class="cd-timeline-content">
+            <p>指定地点集合登车；早上万寿路，鑫宇宾馆门口集合出发认导游旗（公交：728、 373、 609、337，万寿路口西下车向西150米即是）（地铁1号线万寿路站A口出，向西150米）</p>
+          </div>
+        </div>
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">07:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>乘车前往十渡、野三坡</p>
+          </div>
+        </div>
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">09:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>乘旅游车前往美丽的旅游小镇——十渡，沿路可听导游的讲解，了解十渡的人土风情、生活习惯、也可欣赏车窗外北方小桂林独特的风景线；</p>
+          </div>
+        </div>
+          <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">09:50</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>前往十渡漂流，撒欢玩水，寻找童年戏水的感觉。</p>
+          </div>
+        </div>
+          <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">11:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>漂流结束后前往宾馆，办理入住手续，稍事休息。</p>
+          </div>
+        </div>
+          <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">12:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>宾馆餐厅用午餐（10人一桌、12菜一汤、含两条虹鳟鱼）</p>
+          </div>
+        </div>
+              <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">13:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>赴五A级景区“太行宠儿”—【百里峡】参观游览，呼吸新鲜空气，亲近大自然。乘车前往野三坡最美丽的景区、国家5A级风景区、世界地质公园——百里峡风景区（门票已含，如遇不可抗力因素导致景区无法游览或赠送门票活动临时取消等突发状况所产生的费用旅行社不负责承担，游览时间约4小时）；</p>
+          </div>
+        </div> 
+                <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">17:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>集合，乘车返回宾馆。</p>
+          </div>
+        </div> 
+                <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">17:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>用晚餐，（10人一桌、12菜一汤、含两条虹鳟鱼）。</p>
+          </div>
+        </div> 
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_day">D2</span> </div>
+          <div class="cd-timeline-content">
+            <h6>第二天</h6>
+          </div>
+        </div>
+             <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">06:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>叫早起床</p>
+          </div>
+        </div>
+          
+               <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">7:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>宾馆餐厅用早餐</p>
+          </div>
+        </div>
+          
+               <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">8:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>赴【十渡拒马乐园】（景区无门票，可自由参观，如参加娱乐项目需单独付费，请参看自费价目表）自由活动。十渡拒马乐园：位于北京西南房山区十渡风景名胜区内，这里河宽水清，山势险峻，步步皆景，四季如画，以“幽、古、秀、谜、惊、险、奇、特”的美景享誉中华，是一处闻名遐迩的旅游胜地。</p>
+          </div>
+        </div>
+          
+               <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">13:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>十渡拒马乐园内参观游览（午餐自理）</p>
+          </div>
+        </div>
+          
+               <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">14:00</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>乘车前往孤山寨风景区。孤山寨风景区位于十渡风景名胜区七渡村南，因三座孤立的山峰而得名。是十渡风景名胜区内最著名的一条大峡谷，深约10公里。步入峡谷，两侧山峰林立，怪石嶙峋，越向里走，山势越险峻，峡谷越窄，最窄处仅为5米；越向里走，植被越丰茂，景致越幽美。孤山寨内步步皆景，四季如画。包括一线天、小孤山、观音
+                    庙、犬守天门、二尺瀑等景点。</p>
+          </div>
+        </div>
+         
+               <div class="cd-timeline-block">
+          <div class="cd-timeline-time"> <span class="tripIcon tripIcon_time"></span>
+          <p class="xingchengtime">16:30</p>
+          </div>
+          <div class="cd-timeline-content">
+            <p>乘车返回北京城区结束为期两天的野三坡、十渡快乐之旅</p>
+          </div>
+        </div> 
+      </section>
+    </div>
+  </div>
+  <!--费用说明 -->
+  <div class="info">
+    <div class="info_detail" id="feediv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>费用说明</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="feeinfo">
+      <hr/>
+      <div class="info_describe">
+        <div class="include">
+          <p class="includetitle">费用包括:</p>
+          <p class="includedetail">1.车费；2.烧烤，漂流，竹筏；3.住宿费（农家院）</p>
+        </div>
+        <hr color="#000000" style="border:0; height:1px"/>
+        <div class="notinclude_list">
+          <p class="notincludetitle">费用不包括:</p>
+          <p class="notincludedetail">1.保险；2.滑梯；</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--交通信息 -->
+  <div class="info">
+    <div class="info_detail" id="transportdiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>交通信息</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="transportinfo">
+      <hr/>
+      <div class="info_describe">
+        <div class="infodescribe">
+          <p>在西门集合，坐大巴车去火车站，乘坐火车到达十渡，下车后有车专门接送。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--酒店信息 -->
+  <div class="info">
+    <div class="info_detail" id="hoteldiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>酒店信息</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="hotelinfo">
+      <hr/>
+      <div class="info_describe">
+        <div class="infodescribe">
+          <p>景区内农家院，有免费wifi，提供24小时热水，棋牌室，台球桌免费提供</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--预定流程 -->
+  <div class="info">
+    <div class="info_detail" id="bookdiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>预定流程</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="bookinfo">
+      <hr/>
+      <div class="info_describe">
+        <div class="infodescribe">
+          <p>点击购买产品，填写出行日期，出游人数、身份信息及联系方式，填写完成确认无误后，支付购买</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--退款说明 -->
+  <div class="info">
+    <div class="info_detail" id="refunddiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>退款说明</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="refundinfo">
+      <hr/>
+      <div class="info_describe">
+        <div class="infodescribe">
+          <p>支持出行前48小时无条件退款，48小时至24小时退还95%，24小时内退还90%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--出行提示 -->
+  <div class="info">
+    <div class="info_detail" id="outtipdiv">
+      <div class="infoimgdiv"><i class="infoimg"></i></div>
+      <div class="info_title">
+        <p>出行提示</p>
+      </div>
+      <div class="btn-down"></div>
+    </div>
+    <div id="outtip">
+      <hr/>
+      <div class="info_describe">
+        <div class="infodescribe">
+          <p>夜间山间较冷，请注意携带衣物保暖。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--点击购买 --> 
+  <a href="xianlu_dingdan.html">
+  <button class="buybtn btn-primary" type="button">点击购买产品</button>
+  </a> </div>
+</body>
+</html>

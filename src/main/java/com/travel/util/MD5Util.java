@@ -2,10 +2,7 @@ package com.travel.util;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.math.BigInteger;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
@@ -114,12 +111,75 @@ public class MD5Util {
         return value;
     }
 
+    public static long atoi(String str) throws Exception {
 
+        boolean negative = false;
+        long value = 0;
 
+        if (str == null || str.equals("")) {
+            throw new Exception("null string or the string has no character!");
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0 && (str.charAt(0) == '-' || str.charAt(0) == '+')) {
+                if (str.charAt(0) == '-') {
+                    negative = true;
+                }
+            } else {
+                if (str.charAt(i) >= '0' && '9' >= str.charAt(i)) {
+                    value = value * 10 + (str.charAt(i) - '0');
+                    if (value > Integer.MAX_VALUE) {
+                        throw new Exception("OUT OF INTEGER RANGE");
+                    }
+                } else {
+                    throw new NumberFormatException("not an integer");
+                }
+            }
+        }
+        return negative == true ? value * -1 : value;
+    }
+    /**
+     * 功能：Java读取txt文件的内容
+     * 步骤：1：先获得文件句柄
+     * 2：获得文件句柄当做是输入一个字节码流，需要对这个输入流进行读取
+     * 3：读取到输入流后，需要读取生成字节流
+     * 4：一行一行的输出。readline()。
+     * 备注：需要考虑的是异常情况
+     * @param filePath
+     */
+    public static void readTxtFile(String filePath) {
+        try {
+            String encoding = "GBK";
+            File file = new File(filePath);
+            if (file.isFile() && file.exists()) { //判断文件是否存在
+                InputStreamReader read = new InputStreamReader(
+                        new FileInputStream(file), encoding);//考虑到编码格式
+                BufferedReader bufferedReader = new BufferedReader(read);
+                String lineTxt = null;
+                int i = 0;
+                int num = 0;
+
+                while ((lineTxt = bufferedReader.readLine()) != null) {
+                   // System.out.println(lineTxt);
+                    num +=Integer.parseInt(lineTxt);
+                    i++;
+                }
+                read.close();
+                System.out.println(num/i);
+            } else {
+                System.out.println("找不到指定的文件");
+            }
+        } catch (Exception e) {
+            System.out.println("读取文件内容出错");
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) throws Exception {
-
-        String md5String = getMD5String("111111"+"");
-        System.out.println(md5String);
+        //System.out.println(atoi("sink"));
+        String filePath = "C:\\Users\\Administrator\\Desktop\\数据-hyy\\商场-监控-5.9-1.2.txt";
+        readTxtFile(filePath);
+//        String md5String = getMD5String("111111"+"");
+//        System.out.println(md5String);
         // 96e79218965eb72c92a549dd5a330112   2d1a16e0b26a285fd8cc84c46e2cd363 2d1a16e0b26a285fd8cc84c46e2cd363
     }
 
