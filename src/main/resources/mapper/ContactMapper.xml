@@ -6,9 +6,9 @@
     <insert id="addContact" parameterType="Contact" useGeneratedKeys="true"
             keyProperty="id">
         insert into travel.contact(
-        name,order_id,IDcard,phone,IDtype)
+        name,order_id,IDcard,phone,IDtype,user_id)
         values(
-        #{cname},#{orderId},#{IdCard},#{phone},#{IdType})
+        #{cname},#{orderId},#{IdCard},#{phone},#{IdType},#{userId})
     </insert>
 
     <resultMap id="ContactMap" type="Contact" >
@@ -18,6 +18,8 @@
         <result property="IdType" column="IDtype"/>
         <result property="phone" column="phone"/>
         <result property="orderId" column="order_id"/>
+        <result property="userId" column="user_id"/>
+
     </resultMap>
 
 </mapper>

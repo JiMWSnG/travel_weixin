@@ -11,11 +11,13 @@ import com.travel.util.RandomStringUtil;
 import com.travel.web.LoginRequest;
 import com.travel.web.RegisterRequest;
 import com.travel.web.Response;
+import com.travel.web.UserRequest;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -195,4 +197,41 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public Response getUserInfo(Integer id) {
+        Response response = new Response();
+        try {
+            User user = userDao.queryById(id);
+            if (user !=null){
+                response.setData(user);
+                response.setSuccess(true);
+                return  response;
+            }
+            response.setMsg("用户信息为空");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.setMsg("连接数据库失败");
+        }
+        response.setCode(Contants.DB_ERROR_CODE);
+        response.setSuccess(false);
+        return response;
+
+    }
+
+    public Response updateUserInfo(UserRequest userRequest) {
+        Response response = new Response();
+        User user = userRequest;
+        try {
+           int userId =  userDao.update(userRequest);
+            if(userId > 0){
+                response.setSuccess(true);
+                response.setData(userId);
+                return response;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        response.setSuccess(false);
+        response.setCode(Contants.DB_ERROR_CODE);
+        return response;
+    }
 }

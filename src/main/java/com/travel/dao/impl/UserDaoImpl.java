@@ -41,7 +41,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 			User user = getSqlSession().selectOne("com.travel.bean.User.getUserById",userId);
 			return user;
 		} catch (Exception e) {
-			throw new SQLException("添加用户时，发生异常",e);
+			throw new SQLException("查询用户时，发生异常",e);
 		}
 	}
 	@Override

@@ -20,7 +20,6 @@ public class User {
     private String province;
     private Long subTime;
     private String subscribe;
-
     public String  getOpenId() {
         return openId;
     }

@@ -11,6 +11,15 @@ public class Contact {
     private String phone;
     private Integer orderId;
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    private Integer userId;
     public String getIdType() {
         return IdType;
     }

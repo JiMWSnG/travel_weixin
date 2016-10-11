@@ -1,0 +1,122 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: DJC
+  Date: 2016/10/9
+  Time: 21:04
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>用户信息查看</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--允许iphone设备全屏浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png"> -->
+    <!--允许用户将网页创建快捷方式到桌面
+    -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" rev="stylesheet" href="css/jock-citypicker-2.0.css" type="text/css"/>
+    <!--    <link rel="stylesheet" type="text/css" href="css/dingzhi_style.css">-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/chkinf.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/Adaptive.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/jock-citypicker-2.0.min.js"></script>
+    <script type="text/javascript" src="js/citypick.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="js/mainSlider.js"></script>
+</head>
+<body>
+<header>
+    <div class="luxian_header">
+        <!--<a href="#" onClick="javascript :history.back(-1);">-->
+        <a onClick="javascript :history.back(-1);">
+            <div class="back"></div>
+        </a>
+        <div class="main_title">
+            用户基本信息
+        </div>
+        <div class="account"></div>
+    </div>
+</header>
+<div class="clear"></div>
+<!--<div id="mid">-->
+<!-- <div class="info">-->
+<br>
+<div id="feeinfo">
+    <div class="info_describe">
+        <div class="include">
+            <p class="includetitle">姓名</p>
+            <p id="user_name" class="includedetail">畅游测试号</p>
+            <hr class="divide">
+        </div>
+        <div class="include">
+            <p class="includetitle">手机</p>
+            <p id="user_teleNum" class="includedetail">12345678912</p>
+            <hr class="divide">
+        </div>
+        <!--                <hr color="#000000" style="border:0; height:1px"/>-->
+        <div class="include">
+            <p class="includetitle">身份证</p>
+            <p id="user_ID" class="includedetail">123456789789123456</p>
+            <hr class="divide">
+        </div>
+    </div>
+</div>
+<!-- 	 </div>-->
+<br>
+<a href="altinf.html">
+    <button class="btn1 btn-primary" type="button">修&nbsp;&nbsp;改</button>
+</a>
+
+<div id="mengban"></div>
+<div id="mengban2"></div>
+<div id="mengban3"></div>
+</body>
+
+<script type="application/javascript">
+    $(function () {
+        var user = {
+//            "username": $("#user_name")[0].innerHTML
+            //"id": ${sessionScope.userid}
+            "id": 11
+            //"username": ${sessionScope.username}
+        };
+
+        $.ajax({
+            url: "http://localhost:8010/user/userInfo",//改成接收json的servlet地址
+            type: "POST",
+            //contentType: "application/json; charset=utf-8",
+            dataType: "json",
+//            dataType: "jsonp",  //json不支持跨域请求,只能使用jsonp
+            data: user
+            ,
+//            jsonp: "callback",  //默认为callback
+//            success: function () {
+//                alert("请求成功!");
+//            },
+            success: function (data) {
+                $("#user_name")[0].innerHTML = data.user_name;
+                $("#user_teleNum")[0].innerHTML = data.user_teleNum;
+                $("#user_ID")[0].innerHTML = data.user_ID;
+            },
+            error: function (data) {
+                alert("请求超时错误!");
+            }
+        })
+    });
+</script>
+
+</html>
