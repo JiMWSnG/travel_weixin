@@ -39,9 +39,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</delete>
 	<resultMap type="RouteDescription" id="RouteDescriptionMapper">
 		<id column="id" property="id"/>
-		<result column="route_id" property="routeId"/>
+		<result column="route_id" property="routeId "/>
 		<result column="arrange_info" property="arrangeInfo"/>
-		<result column="create_time" property="createTime"/>
-		<result column="update_time" property="updateTime"/>
+		<result column="price_info" property="priceInfo"/>
+		<result column="transport_info" property="transportInfo"/>
+		<result column="book_info" property="bookInfo"/>
+		<result column="hotel_info" property="hotelInfo"/>
+		<result column="refund_info" property="refundInfo"/>
+		<result column="tip" property="tip"/>
 	</resultMap>
 </mapper>

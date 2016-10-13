@@ -17,6 +17,8 @@
 	<bean id="RouteService" class="com.travel.service.impl.RouteServiceImpl">
 		<property name="routeDao" ref= "RouteDao"/>
 		<property name="routeCalendarDao" ref= "RouteDao"/>
+		<property name="routeDescriptionDao" ref="routeDescriptionDao"/>
+
 	</bean>
 
 	<bean id="TicketService" class="com.travel.service.impl.TicketServiceImpl">
@@ -38,6 +40,8 @@
 		<property name="accountDao" ref="AccountDao"/>
 		<property name="userDao" ref="UserDao"/>
 	</bean>
-
+	<bean id="routeDescriptionService" class="com.travel.service.impl.RouteDescriptionServiceImpl">
+		<!--<property name="routeDescription" ref="routeDescription"/>-->
+	</bean>
 	
 </beans>

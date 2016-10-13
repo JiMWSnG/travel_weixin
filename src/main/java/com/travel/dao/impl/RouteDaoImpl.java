@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 
 public class RouteDaoImpl extends SqlSessionDaoSupport implements ProductDao,CalendarDao {
+
+
+
 	//{PropertyConfigurator.configure("src/main/resources/conf/log4j.properties");}
 	private static final Logger logger = LoggerFactory.getLogger(RouteDaoImpl.class);
 	//TODO:需要写详细的日志，能明确表示数据库操作的开始和结束，以及操作结果。在完成功能;;;查询的要做分页

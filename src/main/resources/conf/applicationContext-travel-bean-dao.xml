@@ -35,8 +35,8 @@
 		  parent="abstractDao" />
 	<bean id="TicketDao" class="com.travel.dao.impl.TicketDaoImpl"
 		  parent="abstractDao" />
-	<!--<bean id="RouteCalendarDao" class="com.travel.dao.impl.RouteDaoImpl"-->
-		  <!--parent="abstractDao" />-->
+	<bean id="routeDescriptionDao" class="com.travel.dao.impl.RouteDescriptionDaoImpl"
+		  parent="abstractDao" />
 	<!--<bean id="HotelCalendarDao" class="com.travel.dao.impl.HotelDaoImpl"-->
 		  <!--parent="abstractDao" />-->
 	<bean id="SlideBoxDao" class="com.travel.dao.impl.SlideBoxDaoImpl"

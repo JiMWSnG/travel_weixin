@@ -37,6 +37,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.RouteOrder" alias="RouteOrder" />
 		<typeAlias type="com.travel.bean.Theme" alias="Theme" />
 		<typeAlias type="com.travel.bean.TicketOrder" alias="TicketOrder" />
+		<typeAlias type="com.travel.bean.RouteDescription" alias="RouteDescription" />
 
 	</typeAliases>
 
@@ -74,6 +75,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="mapper/RouteCalendarMapper.xml" />
 		<mapper resource="mapper/RouteOrderMapper.xml" />
 		<mapper resource="mapper/UserMapper.xml" />
+		<mapper resource="mapper/RouteDescriptionMapper.xml" />
 
 	</mappers>
 </configuration>

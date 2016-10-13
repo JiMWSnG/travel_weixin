@@ -3,9 +3,12 @@ package com.travel.service.impl;
 import com.travel.bean.Product;
 import com.travel.bean.Route;
 import com.travel.bean.RouteCalendar;
+import com.travel.bean.RouteDescription;
 import com.travel.contants.Contants;
 import com.travel.dao.CalendarDao;
+import com.travel.dao.DescriptionDao;
 import com.travel.dao.ProductDao;
+import com.travel.entity.Description;
 import com.travel.service.ProductService;
 import com.travel.util.PageContext;
 import com.travel.web.PageResponse;
@@ -24,6 +27,7 @@ public class RouteServiceImpl implements ProductService {
 
     private ProductDao routeDao;
     private CalendarDao routeCalendarDao;
+    private DescriptionDao routeDescriptionDao;
 
     @Override
     public PageResponse getAll() {
@@ -43,14 +47,16 @@ public class RouteServiceImpl implements ProductService {
         Response response = new Response();
         Route route;
         RouteCalendar routeCalendar;
+        Description routeDescription;
         route = (Route) routeDao.queryById(id);
         routeCalendar = (RouteCalendar) routeCalendarDao.queryCalendar(id);
-        if(route==null||routeCalendar==null) {
-            response.setSuccess(false);
-            response.setMsg("数据库故障");
-            response.setCode(Contants.DB_ERROR_CODE);
-            return response;
-        }
+        routeDescription = routeDescriptionDao.queryDescriptionByProductId(id);
+//        if(route==null||routeCalendar==null ||routeDescription ==null) {
+//            response.setSuccess(false);
+//            response.setMsg("数据库故障");
+//            response.setCode(Contants.DB_ERROR_CODE);
+//            return response;
+//        }
 
         Map<String, Object> routeDetail = new HashMap<String, Object>();
         //if(route!=null){
@@ -59,6 +65,7 @@ public class RouteServiceImpl implements ProductService {
 
        // if(routeCalendar!=null){
         routeDetail.put("routeCalendar",routeCalendar);
+        routeDetail.put("routeDescription",routeDescription);
         //}
         if(routeDetail!=null){
             response.setSuccess(true);
@@ -140,6 +147,9 @@ public class RouteServiceImpl implements ProductService {
 
     public void setRouteCalendarDao(CalendarDao routeCalendarDao) {
         this.routeCalendarDao = routeCalendarDao;
+    }
+    public void setRouteDescriptionDao(DescriptionDao routeDescriptionDao) {
+        this.routeDescriptionDao = routeDescriptionDao;
     }
 
 }
