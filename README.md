@@ -67,7 +67,14 @@ return: success  {"success":true,"code":0,"msg":null,"data":{"route":{"id":24,"p
            fail  {"success":false,"code":error_code,"msg":error_msg,"data":null}
 
 
- /order/add  添加order                                                                            ok
+/order/showlist/{type}/{status}                                                                 OK
+type 订单的类型：route/hotel/ticket  暂时只有route/hotel的
+status 订单的状态：all、toVerify、toPay、payed、consigned、toComment、finished 、cancel
+ 用户userId在session中获取，需要登录后才能获取；暂时在后台写死userId = 11；
+
+
+  /order/add  添加order                                                                            ok
+  ps： userId 暂时在后台歇斯，为11；需要登录后从session获取；
 params:type:产品类型
        name:产品的名字
        description:描述可有可无

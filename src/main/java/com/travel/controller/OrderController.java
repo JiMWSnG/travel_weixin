@@ -9,6 +9,7 @@ import com.travel.service.OrderService;
 import com.travel.web.OrderRequest;
 import com.travel.web.Response;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -58,6 +59,18 @@ public class OrderController {
 
 
     }
+    @ResponseBody
+    @RequestMapping(value = "/showlist/{type}/{status}",method = RequestMethod.GET)
+    public Response getOrderList(@PathVariable String type,@PathVariable String status) throws Exception{
+        //TODO:通过session得到userId
+        int userId = 11;
 
+
+            return routeOrderService.showOrderList(type, status, userId);
+
+
+    }
 
 }
+
+

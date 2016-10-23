@@ -1,6 +1,6 @@
 package com.travel.bean;
 
-public  abstract class Order {
+public   class Order {
 	private int id;
 	private String type;
 	private String name;

@@ -12,17 +12,22 @@ import com.travel.web.Response;
 import org.apache.commons.collections.map.HashedMap;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by Jim Wang on 2016/8/1.
  */
 public class HotelOrderServiceImpl implements OrderService {
-
+    private  BaseOrderDao orderDao;
 
     private BaseOrderDao hotelOrderDao;
 
     private ContactDao contactDao;
+
+    public void setOrderDao(BaseOrderDao orderDao) {
+        this.orderDao = orderDao;
+    }
 
     public void setHotelOrderDao(BaseOrderDao orderDao) {
         this.hotelOrderDao = orderDao;
@@ -51,5 +56,30 @@ public class HotelOrderServiceImpl implements OrderService {
         response.setSuccess(false);
         response.setCode(Contants.DB_ERROR_CODE);
         return response;
+    }
+
+    @Override
+    public Response showOrderList(String type, String status, Integer userId) {
+        Response response= new Response();
+        List<Order> orders =
+                orderDao.getOrders(status,userId,type);
+        if(orders!=null){
+            response.setSuccess(true);
+            response.setData(orders);
+        }else{
+            response.setSuccess(false);
+            response.setCode(Contants.DB_ERROR_CODE);
+        }
+        return response;
+    }
+
+    @Override
+    public Response showOrderDetail(int orderId) {
+        return null;
+    }
+
+    @Override
+    public Response deleteOrder(int orderId) {
+        return null;
     }
 }

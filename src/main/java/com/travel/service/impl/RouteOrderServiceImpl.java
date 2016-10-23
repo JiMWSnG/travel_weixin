@@ -1,24 +1,30 @@
 package com.travel.service.impl;
 
-import com.sun.crypto.provider.RSACipher;
-import com.travel.bean.Contact;
-import com.travel.bean.Order;
-import com.travel.bean.Route;
-import com.travel.bean.RouteOrder;
+import com.travel.bean.*;
 import com.travel.contants.Contants;
 import com.travel.dao.BaseOrderDao;
 import com.travel.dao.ContactDao;
+import com.travel.dao.impl.OrderDaoImpl;
 import com.travel.service.OrderService;
 import com.travel.web.Response;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jim Wang on 2016/7/28.
  */
 public class RouteOrderServiceImpl implements OrderService {
-
-
+    private BaseOrderDao orderDao;
     private BaseOrderDao routeOrderDao;
     private ContactDao contactDao;
+
+
+    public void setOrderDao(BaseOrderDao orderDao) {
+        this.orderDao = orderDao;
+    }
 
     public void setContactDao(ContactDao contactDao) {
         this.contactDao = contactDao;
@@ -57,5 +63,30 @@ public class RouteOrderServiceImpl implements OrderService {
         response.setSuccess(false);
         response.setCode(Contants.DB_ERROR_CODE);
         return response;
+    }
+
+    @Override
+    public Response showOrderList(String type, String status, Integer userId) {
+        Response response= new Response();
+        List<Order> orders =
+                 orderDao.getOrders(status,userId,type);
+        if(orders!=null){
+            response.setData(orders);
+            response.setSuccess(true);
+        }else{
+            response.setSuccess(false);
+            response.setCode(Contants.DB_ERROR_CODE);
+        }
+        return response;
+    }
+
+    @Override
+    public Response showOrderDetail(int orderId) {
+        return null;
+    }
+
+    @Override
+    public Response deleteOrder(int orderId) {
+        return null;
     }
 }

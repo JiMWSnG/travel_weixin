@@ -1,5 +1,6 @@
 package com.travel.util;
 
+import com.sun.javafx.tk.TKClipboard;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.io.*;
@@ -8,8 +9,7 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-
+import java.util.*;
 
 
 /**
@@ -175,10 +175,10 @@ public class MD5Util {
         }
     }
     public static void main(String[] args) throws Exception {
-        //System.out.println(atoi("sink"));
-        String filePath = "C:\\Users\\Administrator\\Desktop\\数据-hyy\\商场-监控-5.9-1.2.txt";
-        readTxtFile(filePath);
-//        String md5String = getMD5String("111111"+"");
+        //Vector<Point> lineVector = new Vectr<Point>();
+           // List<double> a  = new ArrayList<double>();
+     //   a.toString()
+        //        String md5String = getMD5String("111111"+"");
 //        System.out.println(md5String);
         // 96e79218965eb72c92a549dd5a330112   2d1a16e0b26a285fd8cc84c46e2cd363 2d1a16e0b26a285fd8cc84c46e2cd363
     }

@@ -45,6 +45,8 @@
 		parent="abstractDao" />
 	<bean id="HotelOrderDao" class="com.travel.dao.impl.HotelOrderDaoImpl"
 		  parent="abstractDao" />
+	<bean id="OrderDao" class="com.travel.dao.impl.OrderDaoImpl"
+		  parent="abstractDao" />
 	 <bean id="ContactDao" class="com.travel.dao.impl.ContactDaoImpl"
 		parent="abstractDao" />
 	<!-- <bean id="TouristDao" class="com.travel.dao.impl.TouristDaoImpl"

@@ -6,6 +6,7 @@ import com.travel.dao.BaseOrderDao;
 import org.apache.commons.collections.map.HashedMap;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
+import java.util.List;
 import java.util.Map;
 
 public class RouteOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrderDao {
@@ -41,5 +42,11 @@ public class RouteOrderDaoImpl extends SqlSessionDaoSupport implements BaseOrder
     @Override
     public int removeOrder(Order order) {
         return 0;
+    }
+
+    @Override
+    public List<Order> getOrders(String status, int userId, String type) {
+
+        return null;
     }
 }

@@ -16,6 +16,12 @@ public interface UserDao {
 
 	public List<User> queryAll() throws SQLException;
 
+	/**
+	 * 优先通过openId更新,需要openId或id
+	 * @param user
+	 * @return userId>0/-1
+	 * @throws SQLException
+     */
 	public int update(User user) throws SQLException;
 
 	public int remove(Integer id);

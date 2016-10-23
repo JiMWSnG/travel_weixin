@@ -28,9 +28,12 @@
 	<bean id="RouteOrderService" class="com.travel.service.impl.RouteOrderServiceImpl">
 		<property name="routeOrderDao" ref="RouteOrderDao"/>
 		<property name="contactDao" ref="ContactDao"/>
+		<property name="orderDao" ref="OrderDao"/>
 	</bean>
 	<bean id="HotelOrderService" class="com.travel.service.impl.HotelOrderServiceImpl">
 		<property name="hotelOrderDao" ref="HotelOrderDao"/>
+		<property name="orderDao" ref="OrderDao"/>
+
 	</bean>
 
 	<bean id="SlideBoxService" class="com.travel.service.impl.SlideBoxServiceImpl">

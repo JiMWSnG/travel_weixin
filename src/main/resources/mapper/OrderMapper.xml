@@ -35,7 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<select id="getOrdersByUserIdAndStatus" parameterType="map"
 		resultMap="OrderResultMap">
-		select * from university_travel.order o where o.user_id = #{userId} and
+		select * from travel.order o where o.user_id = #{userId} and o.type = #{type} and
 		o.status = #{status} order by o.update_time desc
 	</select>
 	<update id="updateOrderStatus" parameterType="map">

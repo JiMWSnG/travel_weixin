@@ -9,5 +9,8 @@ import com.travel.web.Response;
  */
 public interface OrderService {
     Response addOrder(Order order, Contact contact);
+    Response showOrderList(String type,String status,Integer userId);
+    Response showOrderDetail(int orderId);
+    Response deleteOrder(int orderId);
 
 }

@@ -23,12 +23,17 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/userInfo")
     public Response getUserInfo(@RequestParam(value="id") int  id ) throws Exception{
-      //  String  idStr = request.getParameter("id");
-       // Integer id =11;
-      //  Integer id = null;
+        //  String  idStr = request.getParameter("id");
+        // Integer id =11;
+        //  Integer id = null;
 
         return userService.getUserInfo(id);
 
 
+    }
+    @ResponseBody
+    @RequestMapping("/userInfo/update")
+    public Response updateuserInfo(UserRequest userRequest) throws  Exception{
+        return userService.updateUserInfo(userRequest);
     }
 }

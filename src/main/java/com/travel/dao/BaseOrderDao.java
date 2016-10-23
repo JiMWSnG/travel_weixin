@@ -2,6 +2,8 @@ package com.travel.dao;
 
 import com.travel.bean.Order;
 
+import java.util.List;
+
 public interface BaseOrderDao {
     /**
      *
@@ -10,4 +12,5 @@ public interface BaseOrderDao {
      */
     int addOrder(Order order);
     int removeOrder(Order order);
+    List<Order> getOrders(String status, int userId, String type);
 }
