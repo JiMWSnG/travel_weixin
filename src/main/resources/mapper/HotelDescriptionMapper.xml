@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.travel.bean.HoteleDescription">
+	<insert id="addHotelDescription" parameterType="HotelDescription" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into hotel_description (
+		hotel_id,
+		type_info,
+		summary,
+		attention,
+		facility,
+		around,
+		comment
+
+		)
+		values
+		(#{hotelId},#{typeInfo},#{summary},#{attention},#{facility},#{around},
+		#{comment})
+	</insert>
+	<select id="getHotelDescriptionByHotelId" parameterType="int" resultMap="HotelDescriptionMapper">
+		select * from route_description where hotel_id =#{hotelId}
+	</select>
+	<update id="updateRouteDescription">
+		update
+		route_description
+		<set>
+			<if test="calendar!=null">and calendar = #{calendar}</if>
+			<if test="calendar!=null">and calendar = #{calendar}</if>
+			<if test="calendar!=null">and calendar = #{calendar}</if>
+			<if test="calendar!=null">and calendar = #{calendar}</if>
+			<if test="calendar!=null">and calendar = #{calendar}</if>
+		</set>
+		where  id =#{id} and route_id =#{routeID}
+	</update>
+	<delete id="deleteRouteDescription">
+	delete from route_description where id =#{id}
+	</delete>
+	<resultMap type="HotelDescription" id="HotelDescriptionMapper">
+		<id column="id" property="id"/>
+		<result column="hotel_id" property="hotelId "/>
+		<result column="type_info" property="typeInfo"/>
+		<result column="summary" property="summary"/>
+		<result column="attention" property="attention"/>
+		<result column="facility" property="facility"/>
+		<result column="around" property="around"/>
+		<result column="comment" property="comment"/>
+	</resultMap>
+</mapper>

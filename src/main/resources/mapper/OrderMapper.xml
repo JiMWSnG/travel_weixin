@@ -19,10 +19,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order_from,
 		create_time,
 		update_time,
-		name)
+		oid,
+		name,
+		start_time,
+		end_time)
 		values(
 		#{type},#{userId},#{productId},#{couponId},#{description},#{status},#{statusMsg},#{discount},#{price},#{num},#{orderFrom},
-		#{createTime},#{updateTime},#{name})
+		#{createTime},#{updateTime},#{oid},#{name},#{startTime},#{endTime})
 	</insert>
 
 	<select id="getOrderById" parameterType="int" resultMap="OrderResultMap">
@@ -79,6 +82,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="updateTime" column="update_time" />
 		<result property="orderFrom" column="order_from" />
 		<result property="name" column="name" />
+		<result property="oid" column="oid" />
+		<result property="startTime" column="start_time" />
+		<result property="endTime" column="end_time" />
 	</resultMap>
 
 

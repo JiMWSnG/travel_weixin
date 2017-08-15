@@ -176,11 +176,19 @@ public class MD5Util {
     }
     public static void main(String[] args) throws Exception {
         //Vector<Point> lineVector = new Vectr<Point>();
-           // List<double> a  = new ArrayList<double>();
+           // List<doubleode 0> a  = new ArrayList<double>();
      //   a.toString()
         //        String md5String = getMD5String("111111"+"");
 //        System.out.println(md5String);
         // 96e79218965eb72c92a549dd5a330112   2d1a16e0b26a285fd8cc84c46e2cd363 2d1a16e0b26a285fd8cc84c46e2cd363
     }
+//    public static int a (int a ){
+//        if(a==1){
+//            return 1;
+//        }else{
+//            return 0;
+//        }
+//
+//    }
 
 }

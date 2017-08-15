@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace = "com.travel.bean.RouteDescription">
 	<insert id="addRouteDescription" parameterType="RouteDescription" useGeneratedKeys="true"
 		keyProperty="id">
-		insert into route_price ( 	
+		insert into route_description (
 		route_id,
 		arrange_info,
 		price_info,

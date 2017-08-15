@@ -3,6 +3,29 @@
 slideBox place: index route
 插入数据库的时间单位为s，gettime()/1000
 
+disco   menpiao   order.评价的填写 xianlu_detail.图片的保存格式
+
+
+/index/slideBox  主页轮播窗                                                                              ok
+return： {
+          "success": true,
+          "code": 0,
+          "msg": null,
+          "data": [
+            {
+              "id": 1,
+              "type": "route",
+              "productId": 0,
+              "picture": "",
+              "status": 1,
+              "place": "index",
+              "ct": 1470467135,
+              "ut": 1470467135
+            }
+          ]
+        }
+
+
 /login  登录                                                                                           ok
 params:username,passwd,CAPTCHA,authorization,token  可以少，但名字要一样，用表单或json都行
 return： success {"success":true,"code":0,"msg":null,"data":userId}
@@ -81,11 +104,14 @@ params:type:产品类型
        discount:折扣暂定默认为1；以后添加折扣规则后更改
        price:价格，congestion产品的calendar中取
        productId:
+       couponId：
        num:数量
        cname:联系人姓名
        IdType:证件类型
        IdCard:证件号码
        phone:电话
+       startTime:订单开始时间，线路是出发时间，酒店是入住时间
+       endTIme: 订单结束时间，酒店是离店时间
        manInfo:入住人信息或投保人信息，格式一样;门票订单不需要[{name:wangji,ID:330481199212195231,phone:18810528262},{```}]
        roomType:房型，只有酒店订单需要
        day:入住天数，只有酒店订单需要

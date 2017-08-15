@@ -16,6 +16,10 @@ public   class Order {
 	private long createTime;
 	private long updateTime;
 	private String orderFrom;
+	private String oid;
+	private Long startTime;
+	private Long endTime;
+
 	public Order(){
 
 	}
@@ -35,6 +39,9 @@ public   class Order {
 		this.createTime = order.getCreateTime();
 		this.updateTime = order.getUpdateTime();
 		this.orderFrom = order.getOrderFrom();
+		this.oid = order.getOid();
+		this.startTime = order.getStartTime();
+		this.endTime = order.getEndTime();
 	}
 
 	public int getId() {
@@ -155,5 +162,29 @@ public   class Order {
 
 	public void setOrderFrom(String orderFrom) {
 		this.orderFrom = orderFrom;
+	}
+
+	public String getOid() {
+		return oid;
+	}
+
+	public void setOid(String oid) {
+		this.oid = oid;
+	}
+
+	public Long getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(Long startTime) {
+		this.startTime = startTime;
+	}
+
+	public Long getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Long endTime) {
+		this.endTime = endTime;
 	}
 }

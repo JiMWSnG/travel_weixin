@@ -6,6 +6,7 @@ import com.travel.bean.Order;
 import com.travel.bean.RouteOrder;
 import com.travel.contants.Contants;
 import com.travel.service.OrderService;
+import com.travel.util.RandomStringUtil;
 import com.travel.web.OrderRequest;
 import com.travel.web.Response;
 import org.springframework.stereotype.Controller;
@@ -40,17 +41,20 @@ public class OrderController {
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Response addOrder(OrderRequest order, Contact contact){
         String kind =order.getType();
-        order.setStatus(Contants.ORDER_STATUS_TOVERIFY);
-        //TODO: 通过session得到userId
-        order.setUserId(11);
+        order.setStatus(Contants.ORDER_STATUS_TOVERIFY);//设置订单状态
+        //TODO: 通过session得到userId,如果传入的开始结束时间格式不是以秒为单位的话要处理
+           order.setUserId(11);
         if("route".equals(kind)){
+            order.setOid("R"+ RandomStringUtil.getRandomString3(11));
             RouteOrder routeOrder = new RouteOrder(order,order.getManInfo());
             return routeOrderService.addOrder(routeOrder,contact);
         }else if("hotel".equals(kind)){
+            order.setOid("H"+ RandomStringUtil.getRandomString3(11));
             HotelOrder hotelOrder = new HotelOrder(order,order.getManInfo(),order.getRoomType(),order.getDay());
             return hotelOrderService.addOrder(hotelOrder,contact);
         }else if("ticket".equals(kind)){
             //TODO:
+            order.setOid("T"+ RandomStringUtil.getRandomString3(11));
             return null;
         }else{
             //error

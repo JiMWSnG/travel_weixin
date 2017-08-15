@@ -61,7 +61,7 @@ public class HotelServiceImpl implements HotelService,ProductService {
     }
 
     @Override
-    public Response getById(int id) {
+    public Response getById(int id) {//TODO:写到这里，正准备添加 hoteldescriptipn
         Response response = new Response();
         Hotel hotel = (Hotel) hotelDao.queryById(id);;
         if(hotel==null){

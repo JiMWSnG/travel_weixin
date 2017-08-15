@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.bean.Coupon">
+	<insert id="addCoupon" parameterType="Coupon" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into coupon(
+		user_id,
+		product_id,
+		order_id,
+		`limit`,
+		status,
+		code,
+		priority,
+		price,
+		category,
+		end_time,
+		create_time,
+		start_time,
+		effective,
+		name,
+		update_time)
+		values(
+		#{userId},#{productId},#{orderId},#{limit},#{status},#{code},#{priority},#{price},#{category},#{endTime},
+		#{createTime},#{startTime},#{effective},#{name},#{updateTime})
+	</insert>
+    <select id="getCouponListByUserId" parameterType="map" resultMap="CouponResultMap" >
+        SELECT  * from coupon
+        <where>
+            user_id =#{userId}
+            <if test="category!=null">and category =#{category}</if>
+            <if test="status!=null"> and status = #{status}</if>
+
+        </where>
+         ORDER  BY update_time DESC
+    </select>
+
+	<update id="updateCoupon" parameterType="Coupon">
+		update coupon o
+		<set>
+			update_time = sysdate()
+			<if test="category!=null">and o.category = #{category}</if>
+			<if test="description!=null">and o.description=#{description}</if>
+			<if test="discount!=null">and o.discount =#{discount}</if>
+			<if test="price!=null">and o.price = #{price}</if>
+			<if test="stateMsg!=null">and o.state_msg =#{stateMsg}</if>
+			<if test="name!=null">and o.name=#{name}</if>
+			<if test="status!=null">and o.status = #{status}</if>
+		</set>where o.id = #{id}
+	</update>
+
+
+
+	
+
+
+
+
+	<resultMap id="CouponResultMap" type="Coupon">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="price" column="price" />
+		<result property="productId" column="product_id" />
+		<result property="priority" column="priority" />
+		<result property="code" column="code" />
+		<result property="status" column="status" />
+		<result property="category" column="category" />
+		<result property="orderId" column="order_id" />
+		<result property="userId" column="user_id" />
+		<result property="createTime" column="create_time" />
+		<result property="startTime" column="start_time" />
+		<result property="endTime" column="end_time" />
+		<result property="effective" column="effective" />
+		<result property="limit" column="limit" />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+
+
+</mapper>

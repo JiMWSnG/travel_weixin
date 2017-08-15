@@ -49,10 +49,10 @@
 		  parent="abstractDao" />
 	 <bean id="ContactDao" class="com.travel.dao.impl.ContactDaoImpl"
 		parent="abstractDao" />
-	<!-- <bean id="TouristDao" class="com.travel.dao.impl.TouristDaoImpl"
+	 <bean id="couponDao" class="com.travel.dao.impl.CouponDaoImpl"
 		parent="abstractDao" />
-	<bean id="TravelNoteDao" class="com.travel.dao.impl.TravelNoteDaoImpl"
-		parent="abstractDao" /> -->
+	<!--<bean id="TravelNoteDao" class="com.travel.dao.impl.TravelNoteDaoImpl"-->
+		<!--parent="abstractDao" />-->
 	<!--  -->
 		
 </beans>

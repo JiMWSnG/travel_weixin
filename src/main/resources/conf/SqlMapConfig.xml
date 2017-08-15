@@ -20,8 +20,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.RouteItem" alias="RouteItem" />
 		<typeAlias type="com.travel.bean.Tag" alias="Tag" />
 		<typeAlias type="com.travel.bean.Theme" alias="Theme" />
-		<typeAlias type="com.travel.bean.TravelNote" alias="TravelNote" />
+
 		<typeAlias type="com.travel.bean.User" alias="User" /> -->
+		<typeAlias type="com.travel.bean.Coupon" alias="Coupon" />
 		<typeAlias type="com.travel.bean.Route" alias="Route" />
 		<typeAlias type="com.travel.bean.Ticket" alias="Ticket" />
 		<typeAlias type="com.travel.bean.SlideBox" alias="SlideBox" />
@@ -38,6 +39,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.travel.bean.Theme" alias="Theme" />
 		<typeAlias type="com.travel.bean.TicketOrder" alias="TicketOrder" />
 		<typeAlias type="com.travel.bean.RouteDescription" alias="RouteDescription" />
+		<typeAlias type="com.travel.bean.HotelDescription" alias="HotelDescription" />
 
 	</typeAliases>
 
@@ -62,7 +64,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="com/travel/bean/mapper/TagMapper.xml" />
 		<mapper resource="com/travel/bean/mapper/ThemeMapper.xml" />
 		<mapper resource="com/travel/bean/mapper/TravelNoteMapper.xml" />
-		<mapper resource="com/travel/bean/mapper/UserMapper.xml" /> -->
+		 -->
+		<mapper resource="mapper/CouponMapper.xml" />
 		<mapper resource="mapper/RouteMapper.xml" />
 		<mapper resource="mapper/TicketMapper.xml" />
 		<mapper resource="mapper/SlideBoxMapper.xml" />
@@ -76,6 +79,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="mapper/RouteOrderMapper.xml" />
 		<mapper resource="mapper/UserMapper.xml" />
 		<mapper resource="mapper/RouteDescriptionMapper.xml" />
+		<mapper resource="mapper/HotelDescriptionMapper.xml" />
 
 	</mappers>
 </configuration>

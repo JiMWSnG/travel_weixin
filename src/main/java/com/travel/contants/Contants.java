@@ -2,6 +2,10 @@ package com.travel.contants;
 
 public class Contants {
 
+	private static final int COUPON_STATUS_AVAILABLE = 0;
+	private static final int COUPON_STATUS_USED = 1;
+	private static final int COUPON_STATUS_EXPIRED = -1;
+
 
 	public static  final int  INITIAL_CODE = 9999;
 	/**

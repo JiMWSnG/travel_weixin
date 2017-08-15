@@ -33,5 +33,12 @@ public class Dialect {
     public String getLimitString(String sql, int offset,String offsetPlaceholder, int limit,String limitPlaceholder) {
     	throw new UnsupportedOperationException("paged queries not supported");
     }
+    public static void main(String args[]){
+        try{
+           System.out.println( Class.forName("com.mysql.jdbc.Driver"));
+        }catch(Exception e){
+
+        }
+    }
     
 }

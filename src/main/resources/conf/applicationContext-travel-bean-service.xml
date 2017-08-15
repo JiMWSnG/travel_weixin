@@ -46,5 +46,8 @@
 	<bean id="routeDescriptionService" class="com.travel.service.impl.RouteDescriptionServiceImpl">
 		<!--<property name="routeDescription" ref="routeDescription"/>-->
 	</bean>
+	<bean id="couponService" class="com.travel.service.impl.CouponServiceImpl">
+		<property name="couponDao" ref="couponDao"/>
+	</bean>
 	
 </beans>
